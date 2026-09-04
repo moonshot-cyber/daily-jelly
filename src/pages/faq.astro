@@ -1,0 +1,43 @@
+---
+import Base from '../layouts/Base.astro';
+
+const faqs = [
+  {
+    q: 'Are collagen jelly sticks safe?',
+    a: "They're a food supplement, not a medicine, so they aren't evaluated by the MHRA the way a drug would be. As with any supplement, check the ingredient list for allergens (fish/marine collagen and fruit concentrates are common), and if you're pregnant, breastfeeding, or on medication, check with a pharmacist or GP before starting any new supplement.",
+  },
+  {
+    q: "Will I have to pay customs or VAT ordering from Korea or the EU?",
+    a: "Possibly. Orders from outside the UK can attract import VAT, and above certain value thresholds, customs duty as well. EU-based retailers generally have simpler, more predictable customs handling than orders shipped directly from Korea. Check the retailer's own shipping and customs page before ordering — policies change.",
+  },
+  {
+    q: "How do you actually eat one?",
+    a: "Tear off the top of the pouch at the marked notch and either squeeze the jelly directly into your mouth or eat it with a spoon. No water or mixing required. Most are designed to be taken once daily.",
+  },
+  {
+    q: "What's the difference between a jelly stick and a collagen shot?",
+    a: "A collagen shot is a small liquid drink, usually sold in a glass or plastic bottle. A jelly stick is a soft-set gel in a flat foil pouch — thicker in texture, no bottle to dispose of, and generally more portable.",
+    },
+  {
+    q: "Is any UK retailer stocking jelly sticks yet?",
+    a: "Not on the high street as of publishing. A small number of UK-based online supplement brands have launched early jelly-format products, but the wide range of Korean brands seen in Olive Young and similar retailers is still import-only. See our where-to-buy guide for current options.",
+  },
+  {
+    q: "Do jelly sticks actually work?",
+    a: "The only authorised health claim connecting a nutrient to collagen in the UK is that vitamin C contributes to normal collagen formation for the normal function of skin. Beyond that, evidence for ingested collagen's effect on skin appearance is mixed and still being researched — treat marketing claims (in any format) with appropriate scepticism, and don't expect a supplement to replace a skincare routine, diet, or sun protection.",
+  },
+];
+---
+
+<Base title="FAQ" description="Common questions about Korean collagen jelly sticks — safety, customs, how to take them, and UK availability." activeNav="faq">
+  <h1 style="font-size: 30px; margin: 0 0 24px;">Frequently Asked Questions</h1>
+
+  <div>
+    {faqs.map(f => (
+      <div class="faq-item">
+        <h3>{f.q}</h3>
+        <p>{f.a}</p>
+      </div>
+    ))}
+  </div>
+</Base>

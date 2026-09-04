@@ -1,0 +1,56 @@
+---
+import Base from '../layouts/Base.astro';
+import GuideCard from '../components/GuideCard.astro';
+import EmailCapture from '../components/EmailCapture.astro';
+import { getCollection } from 'astro:content';
+import { SITE, PRODUCTS } from '../lib/config';
+import ProductImage from '../components/ProductImage.astro';
+
+const guides = (await getCollection('guides')).sort(
+  (a, b) => new Date(b.data.publishDate).valueOf() - new Date(a.data.publishDate).valueOf()
+);
+const heroProduct = PRODUCTS[0];
+---
+
+<Base activeNav="home">
+  <div class="hero">
+    <div class="hero__copy">
+      <p class="hero-eyebrow">{SITE.tagline}</p>
+      <h1>A new way to take collagen —<br /><span style="color: var(--accent);">no water needed.</span></h1>
+      <p>
+        Most collagen in the UK comes as gummies, powders, or tablets. In Korea, the format
+        people actually reach for is a jelly stick: a ready-to-eat pouch you tear and drink
+        or eat directly, no mixing or swallowing required. We're tracking how — and whether —
+        that format makes it to UK shelves.
+      </p>
+    </div>
+    <ProductImage
+      name={heroProduct.name}
+      retailer={heroProduct.retailer}
+      image={heroProduct.image}
+      href={heroProduct.href}
+      size="hero"
+      priority
+    />
+  </div>
+
+  <div class="claim-box">
+    <strong>Vitamin C contributes to normal collagen formation for the normal function of skin.</strong>
+    This is the only collagen-related health claim authorised for use in the UK/EU. Any product
+    claiming to "boost," "restore," or "reverse" skin ageing is going beyond what's currently permitted —
+    treat those claims with caution wherever you see them.
+  </div>
+
+  <div style="margin: 28px 0;">
+    <a href="/where-to-buy" class="btn">See where to buy jelly sticks in the UK →</a>
+  </div>
+
+  <EmailCapture compact />
+
+  <h2 style="font-size: 22px; margin: 8px 0 16px;">Start here</h2>
+  <div>
+    {guides.map(guide => (
+      <GuideCard slug={guide.slug} title={guide.data.title} excerpt={guide.data.excerpt} readTime={guide.data.readTime} />
+    ))}
+  </div>
+</Base>

@@ -1,0 +1,57 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../lib/config';
+---
+
+<Base title="About & Disclosure" description={`Who runs ${SITE.name}, and our affiliate disclosure.`} activeNav="about">
+  <h1 style="font-size: 30px; margin: 0 0 24px;">About &amp; Disclosure</h1>
+
+  <div class="content-sections">
+    <section>
+      <h2>What this site is</h2>
+      <p>
+        {SITE.name} is an independent, editorially-run guide to Korean collagen jelly sticks and
+        inner-beauty snack formats, written for a UK audience. We're not affiliated with any brand
+        or retailer we mention, and we don't manufacture or sell any product ourselves.
+      </p>
+    </section>
+
+    <section>
+      <h2>Affiliate disclosure</h2>
+      <p>
+        This site contains affiliate links to third-party retailers. If you click through and make
+        a purchase, we may earn a small commission. This doesn't change the price you pay, and it
+        doesn't influence which retailers or products we choose to write about — we link to
+        retailers that genuinely stock the format, not the ones that pay the most.
+      </p>
+      <p>
+        Where we haven't yet been accepted into a retailer's affiliate programme, links are plain,
+        untracked outbound links.
+      </p>
+      <p>
+        Product photos on this site are hotlinked directly from the retailer's own product pages —
+        we don't download, edit, or rehost them. Each photo is credited to its retailer and clicks
+        straight through to that product. If you're a brand or retailer and would rather we didn't
+        use a particular image, email us and we'll take it down.
+      </p>
+    </section>
+
+    <section>
+      <h2>Editorial approach</h2>
+      <p>
+        We only make health claims that are actually authorised under UK/EU rules — most relevantly,
+        that vitamin C contributes to normal collagen formation for the normal function of skin. We
+        won't claim a product "boosts collagen" or reverses skin ageing, and we'd encourage healthy
+        scepticism toward any brand that does.
+      </p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>
+        Spotted an error, a broken link, or a UK retailer we should know about? Get in touch at
+        <a href="mailto:hello@dailyjelly.co.uk">hello@dailyjelly.co.uk</a>.
+      </p>
+    </section>
+  </div>
+</Base>

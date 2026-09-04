@@ -1,0 +1,25 @@
+---
+import { SITE } from '../lib/config';
+
+interface Props {
+  compact?: boolean;
+}
+const { compact = false } = Astro.props;
+---
+<!--
+  Form has no working submit endpoint yet. Point `action` at a form backend
+  (Formspree, ConvertKit, Mailchimp embed, etc.) once one is chosen — see
+  README.md "Wiring up the email capture".
+-->
+<div class="capture">
+  <div class="capture__orb"></div>
+  <div class="capture__title">{compact ? 'Get the UK jelly stick guide' : 'New formats land in the UK slowly. Don’t miss it.'}</div>
+  <p class="capture__text">
+    One email when we publish a new guide or a UK retailer starts stocking jelly sticks. No spam, unsubscribe any time.
+  </p>
+  <form class="capture__form" action="#" method="post">
+    <input type="email" name="email" placeholder="you@example.com" required />
+    <button type="submit" class="btn btn--outline" style="background:#fff;">Notify me</button>
+  </form>
+  <p class="capture__note">By subscribing you agree to receive occasional emails from {SITE.name}. See our <a href="/privacy" style="color:inherit;">privacy policy</a>.</p>
+</div>

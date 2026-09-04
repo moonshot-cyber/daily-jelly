@@ -1,0 +1,15 @@
+---
+interface Props {
+  slug: string;
+  title: string;
+  excerpt: string;
+  readTime: string;
+}
+const { slug, title, excerpt, readTime } = Astro.props;
+---
+
+<a href={`/guides/${slug}`} class="post-card">
+  <div class="post-card__title">{title}</div>
+  <p class="post-card__excerpt">{excerpt}</p>
+  <div class="post-card__meta">{readTime} read</div>
+</a>

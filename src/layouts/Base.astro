@@ -1,0 +1,53 @@
+---
+import { SITE } from '../lib/config';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  activeNav?: string;
+}
+
+const { title, description, activeNav = 'home' } = Astro.props;
+const pageTitle = title ? `${title} — ${SITE.name}` : `${SITE.name} — ${SITE.tagline}`;
+const pageDescription = description || SITE.description;
+---
+
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content={pageDescription} />
+  <title>{pageTitle}</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="site-logo">
+        <div class="site-logo-icon">🍇</div>
+        <span class="site-logo-text">{SITE.name}</span>
+      </a>
+      <nav class="site-nav">
+        <a href="/" class:list={[{ active: activeNav === 'home' }]}>Home</a>
+        <a href="/guides" class:list={[{ active: activeNav === 'guides' }]}>Guides</a>
+        <a href="/where-to-buy" class:list={[{ active: activeNav === 'where-to-buy' }]}>Where to Buy</a>
+        <a href="/faq" class:list={[{ active: activeNav === 'faq' }]}>FAQ</a>
+        <a href="/about" class:list={[{ active: activeNav === 'about' }]}>About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top: 24px; padding-bottom: 48px;">
+    <slot />
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; {SITE.year} {SITE.name}. {SITE.affiliateDisclosure}</p>
+      <p>Independent, unofficial guide — not affiliated with any brand mentioned. <a href="/about">About &amp; disclosure</a> · <a href="/privacy">Privacy</a></p>
+    </div>
+  </footer>
+</body>
+</html>

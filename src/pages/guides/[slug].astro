@@ -1,0 +1,28 @@
+---
+import Base from '../../layouts/Base.astro';
+import EmailCapture from '../../components/EmailCapture.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const guides = await getCollection('guides');
+  return guides.map(guide => ({
+    params: { slug: guide.slug },
+    props: { guide },
+  }));
+}
+
+const { guide } = Astro.props;
+const { Content } = await guide.render();
+---
+
+<Base title={guide.data.title} description={guide.data.excerpt} activeNav="guides">
+  <a href="/guides" style="font-size: 13px; color: var(--text-muted);">← All guides</a>
+  <h1 style="font-size: 30px; margin: 14px 0 8px; max-width: 620px;">{guide.data.title}</h1>
+  <p style="color: var(--text-muted); margin: 0 0 28px; font-size: 13px;">{guide.data.readTime} read</p>
+
+  <div class="post-body">
+    <Content />
+  </div>
+
+  <EmailCapture />
+</Base>

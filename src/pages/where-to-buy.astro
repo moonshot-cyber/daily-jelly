@@ -1,0 +1,42 @@
+---
+import Base from '../layouts/Base.astro';
+import RetailerCard from '../components/RetailerCard.astro';
+import ProductImage from '../components/ProductImage.astro';
+import Disclosure from '../components/Disclosure.astro';
+import { RETAILERS, PRODUCTS } from '../lib/config';
+---
+
+<Base title="Where to Buy Jelly Sticks in the UK" description="The retailers currently shipping Korean collagen jelly sticks to the UK, compared on selection, shipping speed, and trust." activeNav="where-to-buy">
+  <h1 style="font-size: 30px; margin: 0 0 8px;">Where to Buy Jelly Sticks in the UK</h1>
+  <p style="color: var(--text-muted); margin: 0 0 24px; font-size: 15px; max-width: 540px;">
+    No UK high-street retailer stocks jelly sticks yet, so every option here is an international
+    or EU retailer shipping to UK addresses. We've listed the ones with real jelly-stick stock —
+    not just general K-beauty catalogues.
+  </p>
+
+  <Disclosure />
+
+  <h2 style="font-size: 16px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin: 0 0 4px;">Actual SKUs in stock right now</h2>
+  <p style="font-size: 13px; color: var(--text-muted); margin: 0 0 4px;">Tap a photo to go straight to that product on YesStyle.</p>
+  <div class="product-strip">
+    {PRODUCTS.map(p => (
+      <ProductImage name={p.name} retailer={p.retailer} image={p.image} href={p.href} showName />
+    ))}
+  </div>
+
+  <div>
+    {RETAILERS.map(r => (
+      <RetailerCard name={r.name} blurb={r.blurb} href={r.href} tag={r.tag} />
+    ))}
+  </div>
+
+  <h2 style="font-size: 20px; margin: 32px 0 12px;">A few things to know before you order</h2>
+  <div class="post-body" style="font-size: 15px;">
+    <ul>
+      <li><strong>Customs and VAT:</strong> orders from outside the UK can attract import VAT and, above certain thresholds, customs duty. Retailers shipping from the EU (like Little Wonderland) tend to have simpler, faster customs handling than orders shipped directly from Korea.</li>
+      <li><strong>Delivery times vary a lot.</strong> EU-based retailers are typically fastest. Worldwide-shipping retailers can take 10–14 business days or longer.</li>
+      <li><strong>Check the ingredient label</strong> for anything you're allergic to — pomegranate, peach, and other fruit concentrates are common flavour bases, and some formulations include shellfish- or fish-derived collagen.</li>
+      <li>The "Shop" buttons above link to each retailer's jelly-stick or supplements category page rather than a single product, since specific SKUs go in and out of stock. The product photos link straight to the exact SKU pictured.</li>
+    </ul>
+  </div>
+</Base>

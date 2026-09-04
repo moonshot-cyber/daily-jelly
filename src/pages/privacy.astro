@@ -1,0 +1,76 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../lib/config';
+---
+
+<Base title="Privacy Policy" description={`Privacy policy for ${SITE.name} — how we handle your data, cookies, email sign-ups, and affiliate links.`}>
+  <h1 style="font-size: 30px; margin: 0 0 8px;">Privacy Policy</h1>
+  <p style="color: var(--text-muted); margin: 0 0 32px; font-size: 15px;">Last updated: 4 September 2026</p>
+
+  <div class="content-sections">
+    <section>
+      <h2>Who we are</h2>
+      <p>
+        {SITE.name} (<a href={SITE.url}>{SITE.url}</a>) is an independent site publishing guides
+        to Korean collagen jelly sticks and inner-beauty snack formats for a UK audience.
+      </p>
+    </section>
+
+    <section>
+      <h2>Affiliate links</h2>
+      <p>
+        This site contains affiliate links to retailers including YesStyle, Little Wonderland, and
+        Soko Glam. If you click through and buy something, we may receive a small commission at no
+        extra cost to you. Affiliate relationships don't influence our editorial choices.
+      </p>
+    </section>
+
+    <section>
+      <h2>Email sign-ups</h2>
+      <p>
+        If you subscribe via the email capture form, we collect your email address for the sole
+        purpose of sending occasional updates about new guides and UK availability. We don't sell
+        or share your email address with third parties for marketing purposes. You can unsubscribe
+        at any time via the link in any email we send.
+      </p>
+    </section>
+
+    <section>
+      <h2>Cookies</h2>
+      <p>This site does not set first-party tracking cookies. Third-party services may set their own:</p>
+      <ul>
+        <li><strong>Retailer partners</strong> (YesStyle, Little Wonderland, Soko Glam) — affiliate tracking cookies are set when you click through to their site, so purchases can be attributed to our referral.</li>
+        <li><strong>Vercel</strong> — our hosting provider may collect anonymous, aggregated usage data.</li>
+      </ul>
+      <p>You can manage or delete cookies at any time through your browser settings.</p>
+    </section>
+
+    <section>
+      <h2>Third-party services</h2>
+      <p>We rely on the following third-party services to operate this site:</p>
+      <ul>
+        <li><strong>YesStyle, Little Wonderland, Soko Glam</strong> &mdash; product information and affiliate programmes. Subject to each retailer's own privacy policy.</li>
+        <li><strong>Vercel</strong> &mdash; site hosting and deployment. Subject to <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">Vercel's Privacy Policy</a>.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Your rights</h2>
+      <p>
+        Under UK data protection law (UK GDPR), you have the right to access, correct, or delete
+        any personal data we hold about you — primarily your email address if you've subscribed.
+        Contact us to exercise these rights.
+      </p>
+    </section>
+
+    <section>
+      <h2>Changes to this policy</h2>
+      <p>We may update this policy from time to time. Changes will be posted on this page with an updated revision date.</p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>Questions about this policy? Email <a href="mailto:hello@dailyjelly.co.uk">hello@dailyjelly.co.uk</a>.</p>
+    </section>
+  </div>
+</Base>

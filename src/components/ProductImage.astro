@@ -1,0 +1,27 @@
+---
+// Renders a hotlinked product photo (never downloaded/rehosted — see
+// PRODUCTS in lib/config.ts) with a visible retailer credit and a click-through
+// to the real product page. `size` controls the thumbnail vs hero treatment.
+interface Props {
+  name: string;
+  retailer: string;
+  image: string;
+  href: string;
+  size?: 'hero' | 'thumb';
+  priority?: boolean;
+  showName?: boolean;
+}
+const { name, retailer, image, href, size = 'thumb', priority = false, showName = false } = Astro.props;
+---
+
+<a class={`product-photo product-photo--${size}`} href={href} target="_blank" rel="noopener sponsored">
+  <img
+    src={image}
+    alt={`${name} — product photo from ${retailer}`}
+    loading={priority ? 'eager' : 'lazy'}
+    width={size === 'hero' ? 480 : 160}
+    height={size === 'hero' ? 480 : 160}
+  />
+  {showName && <span class="product-photo__name">{name}</span>}
+  <span class="product-photo__credit">Image: {retailer}</span>
+</a>
