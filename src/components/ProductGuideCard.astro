@@ -1,0 +1,68 @@
+---
+interface UkPathLink { name: string; href: string }
+interface Props {
+  slug: string;
+  name: string;
+  bestFor: string;
+  type: string;
+  packSize: string;
+  dose: string;
+  dailyUse: string;
+  priceGBP: string;
+  pricePerServing: string;
+  ukPath: UkPathLink[];
+  pros: string[];
+  cons: string[];
+  image: string;
+  imageRetailer: string;
+}
+const {
+  slug, name, bestFor, type, packSize, dose, dailyUse,
+  priceGBP, pricePerServing, ukPath, pros, cons, image, imageRetailer,
+} = Astro.props;
+const [primary, ...secondary] = ukPath;
+---
+
+<article class="guide-card" id={slug}>
+  <a class="guide-card__photo" href={primary.href} target="_blank" rel="noopener sponsored">
+    <img src={image} alt={`${name} — product photo from ${imageRetailer}`} loading="lazy" width={160} height={160} />
+    <span class="product-photo__credit">Image: {imageRetailer}</span>
+  </a>
+
+  <div class="guide-card__body">
+    <h3>{name}</h3>
+    <p class="guide-card__bestfor">{bestFor}</p>
+
+    <dl class="guide-card__facts">
+      <div><dt>Type</dt><dd>{type}</dd></div>
+      <div><dt>Pack</dt><dd>{packSize}</dd></div>
+      <div><dt>Dose</dt><dd>{dose}</dd></div>
+      <div><dt>Daily use</dt><dd>{dailyUse}</dd></div>
+      <div><dt>Price</dt><dd>{priceGBP} ({pricePerServing})</dd></div>
+    </dl>
+
+    <div class="proscons">
+      <div class="proscons__col proscons__col--pros">
+        <div class="proscons__title proscons__title--pros">Pros</div>
+        {pros.map(p => <div class="proscons__item">{p}</div>)}
+      </div>
+      <div class="proscons__col proscons__col--cons">
+        <div class="proscons__title proscons__title--cons">Cons</div>
+        {cons.map(c => <div class="proscons__item">{c}</div>)}
+      </div>
+    </div>
+
+    <p class="guide-card__claims">
+      We don't repeat brand beauty claims here. If a product contains Vitamin C, the only
+      collagen-related health claim authorised in the UK/EU is that Vitamin C contributes to
+      normal collagen formation for the normal function of skin — always read the label.
+    </p>
+
+    <div class="guide-card__ctas">
+      <a class="btn" href={primary.href} target="_blank" rel="noopener sponsored">Check price / buy at {primary.name}</a>
+      {secondary.map(s => (
+        <a class="guide-card__alt" href={s.href} target="_blank" rel="noopener sponsored">Also at {s.name}</a>
+      ))}
+    </div>
+  </div>
+</article>

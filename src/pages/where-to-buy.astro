@@ -1,42 +1,110 @@
 ---
 import Base from '../layouts/Base.astro';
-import RetailerCard from '../components/RetailerCard.astro';
-import ProductImage from '../components/ProductImage.astro';
 import Disclosure from '../components/Disclosure.astro';
-import { RETAILERS, PRODUCTS } from '../lib/config';
+import ProductGuideCard from '../components/ProductGuideCard.astro';
+import EmailCapture from '../components/EmailCapture.astro';
+import { GUIDE_PRODUCTS } from '../lib/config';
+
+const quickPicks = [
+  { key: 'overall', label: 'Best overall' },
+  { key: 'uk-path', label: 'Best for UK retailer choice' },
+  { key: 'vegan', label: 'Best vegan' },
+].map(qp => ({ ...qp, product: GUIDE_PRODUCTS.find(p => p.quickPick === qp.key) }));
 ---
 
-<Base title="Where to Buy Jelly Sticks in the UK" description="The retailers currently shipping Korean collagen jelly sticks to the UK, compared on selection, shipping speed, and trust." activeNav="where-to-buy">
-  <h1 style="font-size: 30px; margin: 0 0 8px;">Where to Buy Jelly Sticks in the UK</h1>
-  <p style="color: var(--text-muted); margin: 0 0 24px; font-size: 15px; max-width: 540px;">
-    No UK high-street retailer stocks jelly sticks yet, so every option here is an international
-    or EU retailer shipping to UK addresses. We've listed the ones with real jelly-stick stock —
-    not just general K-beauty catalogues.
+<Base
+  title="Where to Buy Collagen Jelly Sticks in the UK"
+  description="Compare BB LAB, FOODOLOGY, Cloo9, YIXO and NOW Foods jelly sticks — UK delivery paths, pack maths, and an affiliate disclosure."
+  activeNav="where-to-buy"
+>
+  <p style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin: 0 0 10px;">Guide · updated September 2026</p>
+  <h1 style="font-size: 30px; margin: 0 0 10px; max-width: 620px;">Where to buy collagen jelly sticks in the UK</h1>
+  <p style="color: var(--text-muted); margin: 0 0 20px; font-size: 15px; max-width: 560px;">
+    Most UK collagen is still gummies, powders, or tablets. True ready-to-eat jelly sticks — tear-open
+    pouches, no water needed — are easier to find from Korea-focused shops and a handful of UK DTC
+    brands. Here's a straight comparison of five real, currently-available sticks.
   </p>
 
   <Disclosure />
 
-  <h2 style="font-size: 16px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin: 0 0 4px;">Actual SKUs in stock right now</h2>
-  <p style="font-size: 13px; color: var(--text-muted); margin: 0 0 4px;">Tap a photo to go straight to that product on YesStyle.</p>
-  <div class="product-strip">
-    {PRODUCTS.map(p => (
-      <ProductImage name={p.name} retailer={p.retailer} image={p.image} href={p.href} showName />
+  <h2 style="font-size: 16px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin: 28px 0 12px;">Quick picks</h2>
+  <div class="quick-picks">
+    {quickPicks.map(qp => qp.product && (
+      <a class="quick-pick" href={`#${qp.product.slug}`}>
+        <div class="quick-pick__label">{qp.label}</div>
+        <div class="quick-pick__name">{qp.product.name}</div>
+      </a>
     ))}
   </div>
 
-  <div>
-    {RETAILERS.map(r => (
-      <RetailerCard name={r.name} blurb={r.blurb} href={r.href} tag={r.tag} />
-    ))}
+  <h2 style="font-size: 20px; margin: 8px 0 12px;">Compare at a glance</h2>
+  <div class="table-scroll">
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Brand / product</th>
+          <th>Pack</th>
+          <th>Type</th>
+          <th>Price</th>
+          <th>Per serving</th>
+          <th>UK delivery path</th>
+          <th>Best for</th>
+        </tr>
+      </thead>
+      <tbody>
+        {GUIDE_PRODUCTS.map(p => (
+          <tr>
+            <td><a href={`#${p.slug}`}>{p.name}</a></td>
+            <td>{p.packSize}</td>
+            <td>{p.type}</td>
+            <td>{p.priceGBP}</td>
+            <td>{p.pricePerServing}</td>
+            <td>{p.ukPath.map(u => u.name).join(' / ')}</td>
+            <td>{p.bestFor}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
   </div>
+  <p style="font-size: 12px; color: var(--text-muted); margin: -20px 0 32px;">Prices are indicative bands checked September 2026 — retailers change prices often, so check the live price before buying.</p>
 
-  <h2 style="font-size: 20px; margin: 32px 0 12px;">A few things to know before you order</h2>
+  <h2 style="font-size: 20px; margin: 8px 0 20px;">The five sticks, in detail</h2>
+  {GUIDE_PRODUCTS.map(p => <ProductGuideCard {...p} />)}
+
+  <h2 style="font-size: 20px; margin: 32px 0 12px;">How we choose</h2>
   <div class="post-body" style="font-size: 15px;">
     <ul>
-      <li><strong>Customs and VAT:</strong> orders from outside the UK can attract import VAT and, above certain thresholds, customs duty. Retailers shipping from the EU (like Little Wonderland) tend to have simpler, faster customs handling than orders shipped directly from Korea.</li>
-      <li><strong>Delivery times vary a lot.</strong> EU-based retailers are typically fastest. Worldwide-shipping retailers can take 10–14 business days or longer.</li>
-      <li><strong>Check the ingredient label</strong> for anything you're allergic to — pomegranate, peach, and other fruit concentrates are common flavour bases, and some formulations include shellfish- or fish-derived collagen.</li>
-      <li>The "Shop" buttons above link to each retailer's jelly-stick or supplements category page rather than a single product, since specific SKUs go in and out of stock. The product photos link straight to the exact SKU pictured.</li>
+      <li>Must be a ready-to-eat jelly stick — not a powder, gummy, or topical cream</li>
+      <li>A clear UK purchase path: a UK site, a UK stockist, or reliable ship-to-UK</li>
+      <li>Transparent dose labelling is preferred, and we say so plainly when we can't confirm one</li>
+      <li>No no-name Amazon third-party listings with thin reviews, at least for this first pass</li>
+      <li>Prices are bands, not live feeds — always re-check before buying</li>
     </ul>
   </div>
+
+  <div class="claim-box">
+    <strong>Not on this list (for now):</strong> generic Amazon no-names, topical "collagen jelly cream"
+    (that's a skincare product, not something you eat), powder sticks you mix with water, and retailers
+    that don't reliably ship to the UK.
+  </div>
+
+  <h2 style="font-size: 20px; margin: 32px 0 12px;">Sticks vs. gummies</h2>
+  <p style="font-size: 15px; color: var(--text-muted); max-width: 560px; margin: 0 0 8px;">
+    If you're not sure the format is worth switching for, read our full breakdown of how jelly sticks
+    actually compare to the gummies and powders already on UK shelves — convenience, dosing, and price
+    per serving, side by side.
+  </p>
+  <p style="margin: 0 0 32px;"><a href="/guides/jelly-sticks-vs-gummies-powders">Jelly Sticks vs Gummies vs Powders →</a></p>
+
+  <div class="disclosure">
+    <strong>A reminder on claims:</strong> the only collagen-related health claim authorised in the UK/EU
+    is that Vitamin C contributes to normal collagen formation for the normal function of skin. Daily
+    Jelly is an editorial guide, not a manufacturer — this page is not medical advice, and food
+    supplements are not a substitute for a varied and balanced diet.
+  </div>
+
+  <EmailCapture
+    title="Get UK stock & price alerts"
+    body="One email when a new UK retailer stocks jelly sticks, or when a featured product drops in price. No spam, unsubscribe any time."
+  />
 </Base>

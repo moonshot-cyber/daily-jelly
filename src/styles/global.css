@@ -328,42 +328,6 @@ img {
   color: var(--text-muted);
 }
 
-/* --- RETAILER CARD --- */
-.retailer-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 22px 24px;
-  margin-bottom: 16px;
-  display: flex;
-  gap: 18px;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-.retailer-card__body {
-  flex: 1;
-  min-width: 220px;
-}
-.retailer-card__title {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 6px;
-}
-.retailer-card__title h3 {
-  font-family: 'Fraunces', serif;
-  font-size: 19px;
-}
-.retailer-card p {
-  font-size: 14px;
-  color: var(--text-muted);
-  line-height: 1.6;
-}
-.retailer-card__cta {
-  align-self: center;
-}
-
 /* --- EMAIL CAPTURE --- */
 .capture {
   background: linear-gradient(135deg, var(--bg-dark) 0%, #56202F 100%);
@@ -527,10 +491,151 @@ img {
   margin-bottom: 6px;
 }
 
+/* --- QUICK PICKS --- */
+.quick-picks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 18px 0 32px;
+}
+.quick-pick {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 20px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s, transform 0.15s;
+}
+.quick-pick:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+.quick-pick__label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.quick-pick__name {
+  font-family: 'Fraunces', serif;
+  font-size: 16px;
+}
+
+/* --- SCROLLABLE TABLE WRAPPER --- */
+.table-scroll {
+  overflow-x: auto;
+  margin: 0 0 32px;
+  -webkit-overflow-scrolling: touch;
+}
+.table-scroll .compare-table {
+  min-width: 760px;
+  margin: 0;
+}
+
+/* --- PRODUCT GUIDE CARD --- */
+.guide-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 22px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  scroll-margin-top: 24px;
+}
+.guide-card__photo {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  margin: 0 auto;
+}
+.guide-card__photo img {
+  width: 140px;
+  height: 140px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--img-bg);
+  object-fit: cover;
+}
+.guide-card__body {
+  flex: 1 1 280px;
+  min-width: 240px;
+}
+.guide-card__body h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+.guide-card__bestfor {
+  font-size: 13px;
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+.guide-card__facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 20px;
+  margin-bottom: 16px;
+  font-size: 13px;
+}
+.guide-card__facts > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.guide-card__facts dt {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+.guide-card__facts dd {
+  color: var(--text);
+  line-height: 1.4;
+}
+.guide-card__claims {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  background: var(--tag-bg);
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin: 4px 0 16px;
+}
+.guide-card__ctas {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.guide-card__alt {
+  font-size: 13px;
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-decoration-color: var(--border);
+  text-underline-offset: 2px;
+}
+.guide-card__alt:hover {
+  color: var(--accent);
+}
+
 /* --- RESPONSIVE --- */
 @media (max-width: 640px) {
   .hero h1 { font-size: 28px; }
-  .retailer-card { flex-direction: column; }
   .capture { padding: 22px; }
   .site-logo-text { font-size: 18px; }
+  .quick-picks { grid-template-columns: 1fr; }
+  .guide-card { flex-direction: column; }
+  .guide-card__facts { grid-template-columns: 1fr; }
+  .site-nav { gap: 2px; }
+  .site-nav a { padding: 6px 9px; font-size: 12px; }
 }
