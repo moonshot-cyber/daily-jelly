@@ -382,6 +382,13 @@ img {
   position: relative;
   z-index: 1;
 }
+.capture__result {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
 
 /* --- DISCLOSURE --- */
 .disclosure {

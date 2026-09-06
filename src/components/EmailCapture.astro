@@ -11,9 +11,9 @@ const heading = title ?? (compact ? 'Get the UK jelly stick guide' : 'New format
 const copy = body ?? 'One email when we publish a new guide or a UK retailer starts stocking jelly sticks. No spam, unsubscribe any time.';
 ---
 <!--
-  Form has no working submit endpoint yet. Point `action` at a form backend
-  (Formspree, ConvertKit, Mailchimp embed, etc.) once one is chosen — see
-  README.md "Wiring up the email capture".
+  Submits to /api/subscribe (Vercel serverless function, api/subscribe.js) which
+  holds the Buttondown API key server-side and forwards to Buttondown's
+  subscribers endpoint. See README.md "Wiring up the email capture".
 -->
 <div class="capture">
   <div class="capture__orb"></div>
@@ -21,9 +21,56 @@ const copy = body ?? 'One email when we publish a new guide or a UK retailer sta
   <p class="capture__text">
     {copy}
   </p>
-  <form class="capture__form" action="#" method="post">
+  <form class="capture__form js-capture-form" data-state="idle">
     <input type="email" name="email" placeholder="you@example.com" required />
     <button type="submit" class="btn btn--outline" style="background:#fff;">Notify me</button>
   </form>
+  <p class="capture__result" role="status" aria-live="polite" hidden></p>
   <p class="capture__note">By subscribing you agree to receive occasional emails from {SITE.name}. See our <a href="/privacy" style="color:inherit;">privacy policy</a>.</p>
 </div>
+
+<script>
+  document.querySelectorAll('.js-capture-form').forEach((form) => {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (form.dataset.state === 'loading') return;
+
+      const input = form.querySelector('input[type="email"]');
+      const button = form.querySelector('button');
+      const result = form.parentElement.querySelector('.capture__result');
+      const email = input.value.trim();
+
+      form.dataset.state = 'loading';
+      button.disabled = true;
+      const originalLabel = button.textContent;
+      button.textContent = 'Sending…';
+
+      try {
+        const res = await fetch('/api/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email }),
+        });
+        const data = await res.json();
+
+        if (data.ok) {
+          result.textContent = data.alreadySubscribed
+            ? "You're already on the list."
+            : "You're in — thanks for subscribing.";
+          result.hidden = false;
+          form.hidden = true;
+        } else {
+          result.textContent = data.error || 'Something went wrong — please try again.';
+          result.hidden = false;
+        }
+      } catch (err) {
+        result.textContent = 'Something went wrong — please try again.';
+        result.hidden = false;
+      } finally {
+        form.dataset.state = 'idle';
+        button.disabled = false;
+        button.textContent = originalLabel;
+      }
+    });
+  });
+</script>
