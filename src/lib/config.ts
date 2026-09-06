@@ -9,8 +9,15 @@ export const SITE = {
   url: 'https://dailyjelly.co.uk',
   affiliateDisclosure:
     'This site contains affiliate links. If you buy through one, we may earn a small commission at no extra cost to you. See our disclosure for details.',
+  // Amazon's Operating Agreement requires this exact sentence, verbatim, wherever
+  // Amazon links are promoted (and site-wide) — no paraphrasing it.
+  amazonDisclosure: 'As an Amazon Associate I earn from qualifying purchases.',
   year: new Date().getFullYear(),
 };
+
+// Replace with the real Associates tracking ID once issued from Associates
+// Central (Account Settings → Manage Your Tracking IDs). Do not invent one.
+export const AMAZON_ASSOCIATES_TAG = 'TODO-DAILYJELLY-TAG';
 
 // Homepage teaser strip — real jelly-stick product photography, hotlinked
 // directly from each retailer's own product page (not downloaded/rehosted).
@@ -41,7 +48,7 @@ export const PRODUCTS = [
   },
 ];
 
-// The researched "where to buy" buying guide — five products, checked live
+// The researched "where to buy" buying guide — six products, checked live
 // against each brand/retailer's own product page (2026-09-05). Facts here
 // are sourced from the seller's own listing (pack size, price, labelled
 // dose) — treat prices as a snapshot, not a live feed, and re-check before
@@ -114,7 +121,7 @@ export const GUIDE_PRODUCTS = [
       { name: 'Cloo9 (direct)', href: 'https://www.cloo9.com/products/collagen-jelly-peach' },
     ],
     pros: [
-      'The highest labelled dose of the five (5,000mg vs. ~1,000–2,500mg elsewhere)',
+      'The highest labelled dose on this list (5,000mg vs. ~1,000–2,500mg elsewhere)',
       'Sold direct in GBP with UK delivery — no international checkout',
     ],
     cons: [
@@ -139,7 +146,7 @@ export const GUIDE_PRODUCTS = [
       { name: 'YIXO (direct)', href: 'https://yixo.co.uk/pages/collagen-jelly' },
     ],
     pros: [
-      'UK-based brand — the fastest, simplest delivery of the five',
+      'UK-based brand — one of the fastest, simplest deliveries here alongside the Amazon UK option',
       'The only genuinely vegan option on this list',
     ],
     cons: [
@@ -173,5 +180,31 @@ export const GUIDE_PRODUCTS = [
     ],
     image: 'https://welzo.com/cdn/shop/files/image_2024-07-05_6687c4b04b07d.jpg?v=1752225608&width=1500',
     imageRetailer: 'Welzo',
+  },
+  {
+    slug: 'hamchorok-rg-pomegranate-collagen-jelly',
+    name: 'HAMCHOROK Rg+ Pomegranate Collagen Jelly Stick',
+    bestFor: "Best if you'd rather use Amazon's own checkout and delivery",
+    quickPick: 'amazon',
+    type: 'Marine (fish) collagen',
+    packSize: '30 sticks, 20g each (confirmed from the nutrition label)',
+    dose: 'Pomegranate concentrate, fermented black ginseng concentrate, and low-molecular-weight fish collagen — exact mg not stated on the listing',
+    dailyUse: '1 stick a day',
+    priceGBP: '£38.99 per pack of 30',
+    pricePerServing: '~£1.30 per stick',
+    ukPath: [
+      { name: `Amazon UK`, href: `https://www.amazon.co.uk/dp/B0C4KQPXQ8?tag=${AMAZON_ASSOCIATES_TAG}` },
+    ],
+    pros: [
+      '727 ratings at 4.4 stars on Amazon UK — the most reviewed product on this list by far',
+      'Dispatched by Amazon, so Prime-speed UK delivery and Amazon\'s own returns process',
+    ],
+    cons: [
+      "The most expensive per-stick price after Cloo9's",
+      'The Amazon listing itself leans on unproven claims (anti-ageing, immunity) — we don\'t repeat those; go by the ingredients, not the title',
+    ],
+    image: 'https://m.media-amazon.com/images/I/61a0OWzY8wL._AC_SY450_.jpg',
+    imageRetailer: 'Amazon UK',
+    isAmazon: true,
   },
 ];

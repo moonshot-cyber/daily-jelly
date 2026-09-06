@@ -1,4 +1,6 @@
 ---
+import { SITE } from '../lib/config';
+
 interface UkPathLink { name: string; href: string }
 interface Props {
   slug: string;
@@ -15,10 +17,11 @@ interface Props {
   cons: string[];
   image: string;
   imageRetailer: string;
+  isAmazon?: boolean;
 }
 const {
   slug, name, bestFor, type, packSize, dose, dailyUse,
-  priceGBP, pricePerServing, ukPath, pros, cons, image, imageRetailer,
+  priceGBP, pricePerServing, ukPath, pros, cons, image, imageRetailer, isAmazon = false,
 } = Astro.props;
 const [primary, ...secondary] = ukPath;
 ---
@@ -57,6 +60,10 @@ const [primary, ...secondary] = ukPath;
       collagen-related health claim authorised in the UK/EU is that Vitamin C contributes to
       normal collagen formation for the normal function of skin — always read the label.
     </p>
+
+    {isAmazon && (
+      <p class="guide-card__claims" style="margin-top: -6px;"><strong>{SITE.amazonDisclosure}</strong></p>
+    )}
 
     <div class="guide-card__ctas">
       <a class="btn" href={primary.href} target="_blank" rel="noopener sponsored">Check price / buy at {primary.name}</a>

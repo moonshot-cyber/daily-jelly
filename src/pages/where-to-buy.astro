@@ -3,29 +3,32 @@ import Base from '../layouts/Base.astro';
 import Disclosure from '../components/Disclosure.astro';
 import ProductGuideCard from '../components/ProductGuideCard.astro';
 import EmailCapture from '../components/EmailCapture.astro';
-import { GUIDE_PRODUCTS } from '../lib/config';
+import { GUIDE_PRODUCTS, SITE } from '../lib/config';
 
 const quickPicks = [
   { key: 'overall', label: 'Best overall' },
   { key: 'uk-path', label: 'Best for UK retailer choice' },
   { key: 'vegan', label: 'Best vegan' },
+  { key: 'amazon', label: "Best if you're already on Amazon" },
 ].map(qp => ({ ...qp, product: GUIDE_PRODUCTS.find(p => p.quickPick === qp.key) }));
 ---
 
 <Base
   title="Where to Buy Collagen Jelly Sticks in the UK"
-  description="Compare BB LAB, FOODOLOGY, Cloo9, YIXO and NOW Foods jelly sticks — UK delivery paths, pack maths, and an affiliate disclosure."
+  description="Compare BB LAB, FOODOLOGY, Cloo9, YIXO, NOW Foods and HAMCHOROK jelly sticks — UK delivery paths, pack maths, and an affiliate disclosure."
   activeNav="where-to-buy"
 >
   <p style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin: 0 0 10px;">Guide · updated September 2026</p>
   <h1 style="font-size: 30px; margin: 0 0 10px; max-width: 620px;">Where to buy collagen jelly sticks in the UK</h1>
   <p style="color: var(--text-muted); margin: 0 0 20px; font-size: 15px; max-width: 560px;">
     Most UK collagen is still gummies, powders, or tablets. True ready-to-eat jelly sticks — tear-open
-    pouches, no water needed — are easier to find from Korea-focused shops and a handful of UK DTC
-    brands. Here's a straight comparison of five real, currently-available sticks.
+    pouches, no water needed — are easier to find from Korea-focused shops, a handful of UK DTC brands,
+    and (for one vetted pick) Amazon UK. Here's a straight comparison of six real, currently-available
+    sticks.
   </p>
 
   <Disclosure />
+  <p style="font-size: 13px; color: var(--text-muted); margin: -18px 0 24px;"><strong>{SITE.amazonDisclosure}</strong></p>
 
   <h2 style="font-size: 16px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin: 28px 0 12px;">Quick picks</h2>
   <div class="quick-picks">
@@ -68,7 +71,7 @@ const quickPicks = [
   </div>
   <p style="font-size: 12px; color: var(--text-muted); margin: -20px 0 32px;">Prices are indicative bands checked September 2026 — retailers change prices often, so check the live price before buying.</p>
 
-  <h2 style="font-size: 20px; margin: 8px 0 20px;">The five sticks, in detail</h2>
+  <h2 style="font-size: 20px; margin: 8px 0 20px;">The six sticks, in detail</h2>
   {GUIDE_PRODUCTS.map(p => <ProductGuideCard {...p} />)}
 
   <h2 style="font-size: 20px; margin: 32px 0 12px;">How we choose</h2>
@@ -77,15 +80,16 @@ const quickPicks = [
       <li>Must be a ready-to-eat jelly stick — not a powder, gummy, or topical cream</li>
       <li>A clear UK purchase path: a UK site, a UK stockist, or reliable ship-to-UK</li>
       <li>Transparent dose labelling is preferred, and we say so plainly when we can't confirm one</li>
-      <li>No no-name Amazon third-party listings with thin reviews, at least for this first pass</li>
+      <li>We skip unverified Amazon third-party listings with thin reviews or unclear sellers — but we do link Amazon UK when a listing is a genuine ready-to-eat jelly stick with a real seller track record and a usable UK delivery path</li>
       <li>Prices are bands, not live feeds — always re-check before buying</li>
     </ul>
   </div>
 
   <div class="claim-box">
-    <strong>Not on this list (for now):</strong> generic Amazon no-names, topical "collagen jelly cream"
-    (that's a skincare product, not something you eat), powder sticks you mix with water, and retailers
-    that don't reliably ship to the UK.
+    <strong>Not on this list (for now):</strong> unverified Amazon listings from unbranded or brand-new
+    sellers with no review history, topical "collagen jelly cream" (that's a skincare product, not
+    something you eat), powder sticks you mix with water, and retailers that don't reliably ship to
+    the UK.
   </div>
 
   <h2 style="font-size: 20px; margin: 32px 0 12px;">Sticks vs. gummies</h2>
