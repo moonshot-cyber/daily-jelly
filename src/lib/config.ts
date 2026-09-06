@@ -19,6 +19,27 @@ export const SITE = {
 // (Account Settings → Manage Your Tracking IDs).
 export const AMAZON_ASSOCIATES_TAG = 'dailyjelly-21';
 
+// eBay Partner Network campaign ID — application submitted 2026-09-14,
+// pending approval. Once approved, do NOT hand-build rover.ebay.com links
+// with this ID — use EPN's own Link Generator tool in the dashboard to
+// wrap each URL correctly, then swap the plain hrefs below for the
+// generated tracking links.
+export const EBAY_PARTNER_CAMPAIGN_ID = 'PENDING-EPN-APPROVAL';
+
+// eBay listings for jelly-stick products, checked individually for seller
+// reliability (2026-09-14) — most eBay listings in this niche are private
+// sellers with no-returns policies, which don't meet the bar used
+// elsewhere on this site. Only list sellers that are registered
+// businesses with a real returns policy.
+export const EBAY_LISTINGS = [
+  {
+    name: 'Chunho N Care Pomegranate Collagen Jelly Sticks (50 Pack)',
+    seller: 'Mode Global Market (business seller, 272 ratings, 98.2% positive, 30-day returns)',
+    priceGBP: '£38.40 + £13.40 delivery from South Korea',
+    href: 'https://www.ebay.co.uk/itm/318364144761',
+  },
+];
+
 // Homepage teaser strip — real jelly-stick product photography, hotlinked
 // directly from each retailer's own product page (not downloaded/rehosted).
 // Verified live on YesStyle (2026-09-04). Re-check occasionally — retailers

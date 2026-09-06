@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import Disclosure from '../components/Disclosure.astro';
 import ProductGuideCard from '../components/ProductGuideCard.astro';
 import EmailCapture from '../components/EmailCapture.astro';
-import { GUIDE_PRODUCTS, SITE } from '../lib/config';
+import { GUIDE_PRODUCTS, SITE, EBAY_LISTINGS } from '../lib/config';
 
 const quickPicks = [
   { key: 'overall', label: 'Best overall' },
@@ -73,6 +73,23 @@ const quickPicks = [
 
   <h2 style="font-size: 20px; margin: 8px 0 20px;">The six sticks, in detail</h2>
   {GUIDE_PRODUCTS.map(p => <ProductGuideCard {...p} />)}
+
+  <h2 style="font-size: 20px; margin: 32px 0 12px;">Also available on eBay</h2>
+  <p style="font-size: 15px; color: var(--text-muted); max-width: 560px; margin: 0 0 16px;">
+    eBay has a lot of jelly-stick listings, but most are private sellers with no returns policy — fine
+    for some buyers, but it doesn't meet the bar we use for the six sticks above. Here's the one listing
+    we found from a registered business seller with a real returns policy:
+  </p>
+  <div class="post-body" style="font-size: 15px;">
+    <ul>
+      {EBAY_LISTINGS.map(l => (
+        <li>
+          <a href={l.href} target="_blank" rel="noopener sponsored"><strong>{l.name}</strong></a> — {l.priceGBP}.
+          Sold by {l.seller}.
+        </li>
+      ))}
+    </ul>
+  </div>
 
   <h2 style="font-size: 20px; margin: 32px 0 12px;">How we choose</h2>
   <div class="post-body" style="font-size: 15px;">
