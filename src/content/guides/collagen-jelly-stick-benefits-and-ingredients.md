@@ -15,6 +15,8 @@ publishDate: "2026-09-06"
 
 **Vegan "collagen-support" blends**, like [YIXO's](/where-to-buy), don't contain collagen at all — there's no plant source of animal collagen. These use plant-based peptides alongside Vitamin C and hyaluronic acid, marketed as supporting the body's own collagen production rather than supplying collagen directly. Worth knowing if you're choosing vegan specifically for ethical reasons rather than assuming it's nutritionally equivalent.
 
+*Correction/addition:* EVERYDAZE's Essential Collagen Solution Jelly Stick — featured elsewhere on this site — is also in this vegan category, using a hibiscus-derived plant collagen booster rather than marine or bovine collagen. We've rounded up every vegan option we could verify, with real pricing and sourcing, in a [dedicated vegan guide](/guides/vegan-and-plant-based-collagen-jelly-sticks).
+
 ## The doses, side by side
 
 | Product | Collagen source | Labelled dose |
