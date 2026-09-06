@@ -3,13 +3,14 @@ import Base from '../layouts/Base.astro';
 import GuideCard from '../components/GuideCard.astro';
 import EmailCapture from '../components/EmailCapture.astro';
 import { getCollection } from 'astro:content';
-import { SITE, PRODUCTS } from '../lib/config';
+import { SITE, PRODUCTS, GUIDE_PRODUCTS } from '../lib/config';
 import ProductImage from '../components/ProductImage.astro';
 
 const guides = (await getCollection('guides')).sort(
   (a, b) => new Date(b.data.publishDate).valueOf() - new Date(a.data.publishDate).valueOf()
 );
 const heroProduct = PRODUCTS[0];
+const amazonProduct = GUIDE_PRODUCTS.find(p => p.isAmazon);
 ---
 
 <Base activeNav="home">
@@ -45,6 +46,23 @@ const heroProduct = PRODUCTS[0];
     <a href="/where-to-buy" class="btn">See where to buy jelly sticks in the UK →</a>
     <p style="font-size: 13px; color: var(--text-muted); margin: 10px 0 0;">Compare BB LAB, FOODOLOGY, Cloo9, YIXO, NOW &amp; Amazon UK — delivery paths compared.</p>
   </div>
+
+  {amazonProduct && (
+    <div class="amazon-feature">
+      <ProductImage
+        name={amazonProduct.name}
+        retailer={amazonProduct.imageRetailer}
+        image={amazonProduct.image}
+        href={amazonProduct.ukPath[0].href}
+      />
+      <div class="amazon-feature__body">
+        <p class="amazon-feature__eyebrow">Available on Amazon UK</p>
+        <p class="amazon-feature__name">{amazonProduct.name}</p>
+        <p class="amazon-feature__meta">{amazonProduct.priceGBP} · {SITE.amazonDisclosure}</p>
+        <a class="btn" href={amazonProduct.ukPath[0].href} target="_blank" rel="noopener sponsored">Check on Amazon UK →</a>
+      </div>
+    </div>
+  )}
 
   <EmailCapture compact />
 

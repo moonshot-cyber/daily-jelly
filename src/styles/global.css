@@ -628,6 +628,43 @@ img {
   color: var(--accent);
 }
 
+/* --- AMAZON FEATURE CALLOUT --- */
+.amazon-feature {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 4px solid #FF9900;
+  border-radius: 8px;
+  padding: 18px 22px;
+  margin: 24px 0;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.amazon-feature__body {
+  flex: 1;
+  min-width: 200px;
+}
+.amazon-feature__eyebrow {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #B25900;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+.amazon-feature__name {
+  margin: 0 0 6px;
+  font-weight: 700;
+  color: var(--text);
+}
+.amazon-feature__meta {
+  margin: 0 0 12px;
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
 /* --- RESPONSIVE --- */
 @media (max-width: 640px) {
   .hero h1 { font-size: 28px; }
