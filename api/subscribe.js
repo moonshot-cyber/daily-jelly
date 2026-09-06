@@ -50,9 +50,10 @@ export default async function handler(req, res) {
     }
 
     console.error('Buttondown API error', bdRes.status, errBody);
-    return res.status(502).json({ ok: false, error: 'Signup failed — please try again.' });
+    // TEMPORARY (round 2) — same non-sensitive debug approach as before.
+    return res.status(502).json({ ok: false, error: 'Signup failed — please try again.', debug: { status: bdRes.status, body: errBody } });
   } catch (err) {
     console.error('Buttondown request failed', err);
-    return res.status(502).json({ ok: false, error: 'Signup failed — please try again.' });
+    return res.status(502).json({ ok: false, error: 'Signup failed — please try again.', debug: { message: err.message, name: err.name } });
   }
 }
