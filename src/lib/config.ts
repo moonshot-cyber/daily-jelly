@@ -19,12 +19,12 @@ export const SITE = {
 // (Account Settings → Manage Your Tracking IDs).
 export const AMAZON_ASSOCIATES_TAG = 'dailyjelly-21';
 
-// eBay Partner Network campaign ID — application submitted 2026-09-14,
-// pending approval. Once approved, do NOT hand-build rover.ebay.com links
-// with this ID — use EPN's own Link Generator tool in the dashboard to
-// wrap each URL correctly, then swap the plain hrefs below for the
-// generated tracking links.
-export const EBAY_PARTNER_CAMPAIGN_ID = 'PENDING-EPN-APPROVAL';
+// eBay Partner Network campaign ID — approved 2026-09-06. Generated via
+// EPN's own Link Generator tool (not hand-built) — see EBAY_LISTINGS below
+// for the actual tracked href. If more eBay listings are added later,
+// generate each one's link through the same tool rather than pattern-
+// matching this URL's query params.
+export const EBAY_PARTNER_CAMPAIGN_ID = '5339204118';
 
 // eBay listings for jelly-stick products, checked individually for seller
 // reliability (2026-09-14) — most eBay listings in this niche are private
@@ -36,7 +36,7 @@ export const EBAY_LISTINGS = [
     name: 'Chunho N Care Pomegranate Collagen Jelly Sticks (50 Pack)',
     seller: 'Mode Global Market (business seller, 272 ratings, 98.2% positive, 30-day returns)',
     priceGBP: '£38.40 + £13.40 delivery from South Korea',
-    href: 'https://www.ebay.co.uk/itm/318364144761',
+    href: 'https://www.ebay.co.uk/itm/318364144761?mkcid=1&mkrid=710-53481-19255-0&siteid=3&campid=5339204118&customid=&toolid=10001&mkevt=1',
   },
 ];
 
