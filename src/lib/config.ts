@@ -6,7 +6,7 @@ export const SITE = {
   tagline: 'Collagen Jelly Sticks – coming to the UK',
   description:
     "An independent UK guide to Korean collagen jelly sticks and inner-beauty snacks — what they are, how they compare to gummies and powders, and where to buy them.",
-  url: 'https://www.dailyjelly.co.uk',
+  url: 'https://dailyjelly.co.uk',
   affiliateDisclosure:
     'This site contains affiliate links. If you buy through one, we may earn a small commission at no extra cost to you. See our disclosure for details.',
   year: new Date().getFullYear(),
