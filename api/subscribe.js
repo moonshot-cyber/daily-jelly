@@ -43,17 +43,19 @@ export default async function handler(req, res) {
     }
 
     const errBody = await bdRes.json().catch(() => null);
-    const detail = errBody && Array.isArray(errBody.detail) ? errBody.detail[0] : null;
-    const alreadySubscribed = detail && /already|duplicate|exists/i.test(`${detail.code || ''} ${detail.detail || ''}`);
-    if (alreadySubscribed) {
+    // Buttondown's error shape varies: validation errors wrap in a top-level
+    // `detail` array of {code, detail}; single logical errors (e.g. blocked,
+    // duplicate) put {code, detail} directly at the top level. Check both.
+    const errItem = errBody && Array.isArray(errBody.detail) ? errBody.detail[0] : errBody;
+    const errText = errItem ? `${errItem.code || ''} ${errItem.detail || ''}` : '';
+    if (/already|duplicate|exists/i.test(errText)) {
       return res.status(200).json({ ok: true, alreadySubscribed: true });
     }
 
     console.error('Buttondown API error', bdRes.status, errBody);
-    // TEMPORARY (round 2) — same non-sensitive debug approach as before.
-    return res.status(502).json({ ok: false, error: 'Signup failed — please try again.', debug: { status: bdRes.status, body: errBody } });
+    return res.status(502).json({ ok: false, error: 'Signup failed — please try again.' });
   } catch (err) {
     console.error('Buttondown request failed', err);
-    return res.status(502).json({ ok: false, error: 'Signup failed — please try again.', debug: { message: err.message, name: err.name } });
+    return res.status(502).json({ ok: false, error: 'Signup failed — please try again.' });
   }
 }
