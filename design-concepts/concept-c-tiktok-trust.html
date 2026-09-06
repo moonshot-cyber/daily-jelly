@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Daily Jelly — Concept C: TikTok → Trust</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Source+Sans+3:wght@400;600;700;800;900&display=swap');
+
+  :root{
+    --bg:#FFF9F6;
+    --bg-soft:#FDEDEF;
+    --card:#FFFFFF;
+    --ink:#1D1013;
+    --ink-soft:#5C4A4E;
+    --muted:#8C7B7E;
+    --accent:#E23F63;
+    --accent-hover:#C22C4E;
+    --accent-tint:#FCE1E7;
+    --pop:#22B573;
+    --pop-tint:#DEF7EA;
+    --line:#F1DCE0;
+    --radius:22px;
+    --radius-sm:14px;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:'Source Sans 3',-apple-system,sans-serif;
+    color:var(--ink);
+    background:#F0E5E2;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{font-family:'Source Sans 3',sans-serif;font-weight:900;color:var(--ink);line-height:1.05;letter-spacing:-0.01em;}
+  .serif{font-family:'Fraunces',serif;font-weight:600;}
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+
+  .review-banner{position:sticky;top:0;z-index:100;background:var(--ink);color:#fff;padding:10px 20px;font-size:12px;
+    letter-spacing:.04em;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;}
+  .review-banner strong{color:#FF9CB4;}
+  .jump{position:sticky;top:37px;z-index:99;background:#fff;border-bottom:1px solid var(--line);padding:10px 20px;
+    display:flex;gap:18px;overflow-x:auto;font-size:13px;font-weight:700;}
+  .jump a{white-space:nowrap;padding:4px 0;border-bottom:2px solid transparent;}
+  .jump a:hover{border-bottom-color:var(--accent);color:var(--accent);}
+
+  .concept-section{padding:64px 20px;max-width:1180px;margin:0 auto;}
+  .concept-section.narrow{max-width:820px;}
+  .section-label{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);font-weight:800;margin-bottom:10px;}
+  .section-title{font-size:32px;margin-bottom:14px;}
+  .section-intro{color:var(--ink-soft);max-width:640px;margin-bottom:36px;font-size:16px;}
+
+  .mood-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-bottom:32px;}
+  .swatch{aspect-ratio:1;border-radius:var(--radius-sm);display:flex;align-items:flex-end;padding:10px;font-size:11px;color:#fff;font-weight:700;}
+  .swatch.dark-text{color:var(--ink);}
+  .mood-photos{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+  .mood-photo{background:linear-gradient(160deg,#FDEDEF,#FBDDE2);border-radius:var(--radius);overflow:hidden;aspect-ratio:4/5;
+    display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px -18px rgba(226,63,99,.4);}
+  .mood-photo img{width:72%;height:72%;object-fit:contain;filter:drop-shadow(0 10px 14px rgba(0,0,0,.18));}
+  .type-specimen{background:var(--card);padding:36px;border-radius:var(--radius);margin-top:28px;border:1px solid var(--line);}
+  .type-specimen .display{font-size:36px;text-transform:uppercase;margin-bottom:8px;}
+  .type-specimen .sub{font-size:13px;color:var(--muted);margin-bottom:20px;}
+  .type-specimen .body-txt{font-size:15px;max-width:520px;color:var(--ink-soft);}
+
+  .tokens-table{width:100%;border-collapse:collapse;font-size:14px;}
+  .tokens-table th,.tokens-table td{text-align:left;padding:12px 16px;border-bottom:1px solid var(--line);}
+  .tokens-table th{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:800;}
+  .swatch-dot{display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:8px;vertical-align:-2px;border:1px solid rgba(0,0,0,.1);}
+
+  .frame-label{font-size:13px;font-weight:800;color:var(--muted);margin:0 0 10px;text-transform:uppercase;letter-spacing:.06em;}
+  .browser-frame{border:1px solid var(--line);border-radius:24px;overflow:hidden;background:#fff;box-shadow:0 24px 60px -30px rgba(226,63,99,.35);}
+  .browser-chrome{background:#FBE6EA;padding:10px 14px;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--line);}
+  .browser-dot{width:9px;height:9px;border-radius:50%;background:#F3C4CF;}
+  .browser-url{margin-left:10px;background:#fff;border-radius:20px;padding:4px 14px;font-size:12px;color:var(--muted);}
+  .phone-frame{width:375px;margin:0 auto;border:10px solid var(--ink);border-radius:44px;overflow:hidden;background:#fff;
+    box-shadow:0 24px 60px -30px rgba(226,63,99,.5);}
+  .phone-notch{background:var(--ink);height:22px;position:relative;}
+  .phone-notch::after{content:'';position:absolute;left:50%;top:6px;transform:translateX(-50%);width:70px;height:10px;background:#000;border-radius:6px;}
+  .phone-scroll{max-height:660px;overflow-y:auto;}
+  .sticky-cta{position:sticky;bottom:0;background:#fff;padding:12px 16px;border-top:1px solid var(--line);
+    box-shadow:0 -10px 20px -15px rgba(0,0,0,.15);}
+
+  .site-header{display:flex;align-items:center;justify-content:space-between;padding:18px 32px;}
+  .site-logo{font-family:'Fraunces';font-weight:600;font-size:20px;}
+  .site-logo b{color:var(--accent);}
+  .site-nav{display:flex;gap:26px;font-size:13px;font-weight:700;}
+  .site-nav a.active{color:var(--accent);}
+  .burger{width:38px;height:38px;border-radius:50%;background:var(--bg-soft);display:flex;align-items:center;justify-content:center;font-size:16px;}
+
+  .btn{display:inline-block;background:var(--accent);color:#fff;padding:15px 28px;font-size:14px;font-weight:800;
+    border-radius:999px;text-align:center;min-height:44px;line-height:1;box-shadow:0 10px 22px -10px rgba(226,63,99,.6);}
+  .btn:hover{background:var(--accent-hover);}
+  .btn-outline{display:inline-block;border:2px solid var(--ink);color:var(--ink);padding:13px 26px;font-size:13px;
+    font-weight:800;border-radius:999px;text-align:center;}
+  .btn-pop{background:var(--pop);box-shadow:0 10px 22px -10px rgba(34,181,115,.6);}
+
+  .tag{display:inline-flex;align-items:center;gap:5px;background:var(--accent-tint);color:var(--accent);
+    font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.03em;padding:6px 12px;border-radius:999px;}
+  .tag.pop{background:var(--pop-tint);color:#1B8A57;}
+  .tag.muted{background:#F3ECE9;color:var(--ink-soft);}
+
+  /* hook / first screen */
+  .hook{background:linear-gradient(160deg,#1D1013,#3A1620);color:#fff;padding:64px 32px;text-align:center;position:relative;overflow:hidden;}
+  .hook::before{content:'';position:absolute;top:-80px;right:-80px;width:280px;height:280px;border-radius:50%;
+    background:radial-gradient(circle,rgba(226,63,99,.5),transparent 70%);}
+  .hook h1{font-size:34px;color:#fff;margin:14px 0;max-width:520px;margin-left:auto;margin-right:auto;position:relative;}
+  .hook p{color:#E7C9CF;max-width:420px;margin:0 auto 22px;font-size:15px;position:relative;}
+  .hook-imgs{display:flex;justify-content:center;gap:14px;margin:24px 0;position:relative;}
+  .hook-imgs .mood-photo{width:110px;aspect-ratio:3/4;box-shadow:0 16px 30px -14px rgba(0,0,0,.5);}
+
+  .pick-of-week{padding:44px 32px;}
+  .pick-card{display:grid;grid-template-columns:200px 1fr;gap:24px;align-items:center;background:var(--card);
+    border-radius:var(--radius);padding:24px;box-shadow:0 20px 40px -30px rgba(0,0,0,.2);}
+  .pick-card .plinth{background:var(--bg-soft);border-radius:var(--radius-sm);aspect-ratio:1;display:flex;align-items:center;justify-content:center;padding:14px;}
+  .pick-card .plinth img{width:78%;}
+  .pick-card h3{font-size:22px;margin:10px 0 8px;}
+  .pick-meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;}
+  .price-row{display:flex;align-items:center;justify-content:space-between;margin-top:14px;flex-wrap:wrap;gap:10px;}
+  .price-row .price{font-family:'Fraunces';font-size:26px;}
+
+  .product-grid-wrap{padding:44px 32px;}
+  .product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .p-card{background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:0 16px 34px -26px rgba(0,0,0,.25);}
+  .p-card .plinth{background:var(--bg-soft);aspect-ratio:1;display:flex;align-items:center;justify-content:center;padding:22px;}
+  .p-card .plinth img{width:66%;}
+  .p-card .body{padding:18px;}
+  .p-card .body h4{font-size:15px;font-weight:700;margin:8px 0 4px;text-transform:none;letter-spacing:0;}
+  .p-card .body .best-for{font-size:12.5px;color:var(--muted);margin-bottom:12px;min-height:32px;}
+  .p-card .body .pcta{display:flex;justify-content:space-between;align-items:center;}
+  .p-card .body .price{font-family:'Fraunces';font-size:17px;}
+
+  .email-cta{padding:52px 32px;background:var(--accent);color:#fff;text-align:center;border-radius:var(--radius);margin:0 32px 0;}
+  .email-cta h3{color:#fff;font-size:26px;margin-bottom:10px;text-transform:none;}
+  .email-cta p{color:#FFE0E8;max-width:420px;margin:0 auto 20px;font-size:14px;}
+  .email-form{display:flex;gap:10px;max-width:380px;margin:0 auto;}
+  .email-form input{flex:1;padding:14px 16px;border:none;border-radius:999px;font-size:14px;}
+  .email-form button{background:var(--ink);color:#fff;border:none;padding:0 22px;border-radius:999px;font-size:13px;font-weight:800;min-height:44px;}
+
+  .mock-footer{padding:36px 32px;font-size:12px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+
+  .article-mock{background:#fff;}
+  .article-hero{padding:0;}
+  .article-hero .hero-media{background:linear-gradient(160deg,#FDEDEF,#FBDDE2);padding:36px;display:flex;justify-content:center;}
+  .article-hero .hero-media img{width:140px;filter:drop-shadow(0 16px 20px rgba(0,0,0,.2));}
+  .article-hero-copy{padding:28px 28px 8px;}
+  .article-eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);font-weight:800;margin-bottom:10px;}
+  .article-hero h1{font-size:28px;margin-bottom:10px;text-transform:none;}
+  .article-hero .dek{font-size:15px;color:var(--ink-soft);font-weight:600;}
+  .article-body{padding:0 28px 40px;font-size:16px;}
+  .article-body h2{font-size:19px;margin:28px 0 12px;text-transform:none;}
+  .article-body p{margin-bottom:14px;color:var(--ink-soft);}
+  .takeaway{background:var(--accent-tint);padding:20px 22px;margin:22px 0;border-radius:var(--radius);}
+  .takeaway strong{display:flex;align-items:center;gap:8px;font-size:14px;margin-bottom:8px;color:var(--ink);}
+  .a-table{width:100%;border-collapse:separate;border-spacing:0 8px;margin:16px 0;font-size:13.5px;}
+  .a-table td{padding:12px 14px;background:#fff;border:1px solid var(--line);}
+  .a-table tr td:first-child{border-radius:14px 0 0 14px;font-weight:700;}
+  .a-table tr td:last-child{border-radius:0 14px 14px 0;}
+  .a-table th{padding:0 14px 6px;text-align:left;font-size:11px;text-transform:uppercase;color:var(--muted);}
+
+  .wtb-hero{padding:32px 28px 20px;}
+  .quickpicks{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:0 28px 32px;}
+  .qp-card{background:#fff;border-radius:var(--radius-sm);padding:16px;box-shadow:0 12px 26px -20px rgba(0,0,0,.25);}
+  .qp-card .qp-label{font-size:10.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--accent);font-weight:800;margin-bottom:6px;}
+  .qp-card .qp-name{font-size:13.5px;font-weight:700;}
+  .compare-wrap{padding:0 28px 32px;overflow-x:auto;}
+  .wtb-detail{padding:0 28px 40px;display:flex;flex-direction:column;gap:16px;}
+  .detail-card{display:grid;grid-template-columns:160px 1fr;gap:20px;background:#fff;border-radius:var(--radius);
+    padding:20px;box-shadow:0 16px 34px -26px rgba(0,0,0,.2);}
+  .detail-card .plinth{background:var(--bg-soft);border-radius:var(--radius-sm);aspect-ratio:1;display:flex;align-items:center;justify-content:center;padding:12px;}
+  .detail-card .plinth img{width:82%;}
+  .detail-card h4{font-size:17px;margin:6px 0 6px;}
+  .detail-meta{display:flex;gap:14px;font-size:12.5px;color:var(--ink-soft);margin:6px 0;flex-wrap:wrap;}
+  .disclosure-box{margin:0 28px 32px;background:var(--bg-soft);padding:18px 20px;font-size:12.5px;color:var(--ink-soft);border-radius:var(--radius-sm);}
+
+  .notes-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+  .note-card{background:var(--card);padding:22px;border-radius:var(--radius);box-shadow:0 14px 30px -26px rgba(0,0,0,.2);}
+  .note-card h4{font-size:14px;margin-bottom:8px;text-transform:uppercase;letter-spacing:.02em;color:var(--accent);}
+  .note-card p, .note-card li{font-size:14px;color:var(--ink-soft);font-weight:400;}
+  .note-card ul{padding-left:18px;margin-top:6px;}
+  .bullet-list{list-style:none;display:flex;flex-direction:column;gap:14px;}
+  .bullet-list li{background:#fff;padding:18px 22px;border-radius:var(--radius);font-size:15px;font-weight:400;
+    box-shadow:0 12px 26px -22px rgba(0,0,0,.25);}
+  .bullet-list li b{color:var(--accent);}
+  .risk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .risk-card{background:#fff;border-radius:var(--radius);border-top:4px solid var(--accent);padding:20px;box-shadow:0 12px 26px -22px rgba(0,0,0,.2);}
+  .risk-card h4{font-size:13px;text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px;}
+  .risk-card p{font-size:14px;color:var(--ink-soft);font-weight:400;}
+  .cost-row{display:flex;gap:16px;align-items:flex-start;padding:18px 0;border-bottom:1px solid var(--line);}
+  .cost-pill{flex-shrink:0;width:44px;height:44px;border-radius:50%;background:var(--accent);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-family:'Fraunces';font-weight:700;}
+  .cost-row p{font-size:14px;color:var(--ink-soft);font-weight:400;}
+  .cost-row strong{display:block;margin-bottom:4px;font-size:15px;color:var(--ink);}
+
+  @media (max-width: 900px){
+    .mood-grid{grid-template-columns:repeat(3,1fr);}
+    .mood-photos{grid-template-columns:repeat(2,1fr);}
+    .product-grid{grid-template-columns:repeat(2,1fr);}
+    .notes-grid,.risk-grid{grid-template-columns:1fr;}
+    .quickpicks{grid-template-columns:repeat(2,1fr);}
+  }
+</style>
+</head>
+<body>
+
+<div class="review-banner">
+  <span>🔒 <strong>DESIGN CONCEPT — internal review only.</strong> Not the live site. dailyjelly.co.uk is unaffected.</span>
+  <span>Concept C / 2 · <a href="concept-a-spacenk-strategist.html" style="color:#fff;text-decoration:underline;">View Concept A →</a></span>
+</div>
+<div class="jump">
+  <a href="#thesis">Thesis</a>
+  <a href="#moodboard">Mood board</a>
+  <a href="#tokens">Tokens</a>
+  <a href="#homepage-desktop">Homepage · Desktop</a>
+  <a href="#homepage-mobile">Homepage · Mobile</a>
+  <a href="#article">Article</a>
+  <a href="#wtb">Where to Buy</a>
+  <a href="#ux-notes">UX notes</a>
+  <a href="#fit">Gen-Z fit</a>
+  <a href="#risks">Risks</a>
+  <a href="#cost">Rebuild cost</a>
+</div>
+
+<!-- THESIS -->
+<section class="concept-section narrow" id="thesis">
+  <div class="section-label">Concept C</div>
+  <h1 class="section-title" style="font-size:40px;text-transform:none;">TikTok → Trust</h1>
+  <p class="section-intro" style="font-size:18px;font-weight:400;">A hooky first screen that meets the audience where
+  the confusion actually starts (the pouch, the "wait, is this the diet one?" moment), then drops straight into
+  clean, high-contrast buy modules. Bold condensed headlines and big product stills for pacing and scroll appeal —
+  <em>not</em> for glow-up energy. No "get glass skin," no urgency countdowns, no meme clutter.</p>
+</section>
+
+<!-- MOOD BOARD -->
+<section class="concept-section" id="moodboard" style="background:#fff;">
+  <div class="section-label">01 — Mood board</div>
+  <h2 class="section-title" style="text-transform:none;">High contrast, restrained gloss</h2>
+  <p class="section-intro" style="font-weight:400;">Warm blush background, one saturated pink-red for CTAs and
+  headline accents, one green reserved only for "verified" trust badges — never both loud at once. Big rounded
+  cards (jelly-pouch softness) instead of Concept A's sharp plinths. Product photography gets a soft gradient
+  stage and a drop-shadow "held up to camera" feel, not a flat plinth.</p>
+  <div class="mood-grid">
+    <div class="swatch" style="background:#FFF9F6;color:#1D1013;border:1px solid var(--line);">#FFF9F6 — Base</div>
+    <div class="swatch" style="background:#FDEDEF;color:#1D1013;">#FDEDEF — Blush</div>
+    <div class="swatch" style="background:#1D1013;">#1D1013 — Ink</div>
+    <div class="swatch" style="background:#E23F63;">#E23F63 — Gloss pink</div>
+    <div class="swatch" style="background:#22B573;">#22B573 — Verified green</div>
+    <div class="swatch" style="background:linear-gradient(135deg,#E23F63,#1D1013);">Gradient — hook screens only</div>
+  </div>
+  <div class="mood-photos">
+    <div class="mood-photo"><img src="https://d1flfk77wl2xk4.cloudfront.net/Assets/92/884/XXL_p0211888492.jpg" alt="EVERYDAZE"></div>
+    <div class="mood-photo"><img src="https://d1flfk77wl2xk4.cloudfront.net/Assets/19/869/XXL_p0189986919.jpg" alt="BB LAB"></div>
+    <div class="mood-photo"><img src="https://m.media-amazon.com/images/I/61a0OWzY8wL._AC_SY450_.jpg" alt="HAMCHOROK"></div>
+    <div class="mood-photo"><img src="https://welzo.com/cdn/shop/files/image_2024-07-05_6687c4b04b07d.jpg?v=1752225608&width=1500" alt="NOW Foods"></div>
+  </div>
+  <div class="type-specimen">
+    <div class="section-label" style="margin-bottom:6px;">Guide · Where to buy</div>
+    <div class="display">SIX STICKS. ONE HONEST ANSWER.</div>
+    <div class="sub">Source Sans 3, weight 900, all-caps, -0.01em tracking / Fraunces 600 for price figures only</div>
+    <div class="body-txt">Headlines shout a little — that's the TikTok cadence. Body copy stays calm, specific,
+    and un-hyped: dose, price per stick, real UK path. The contrast between loud headline and quiet body is the
+    whole trick.</div>
+  </div>
+</section>
+
+<!-- TOKENS -->
+<section class="concept-section" id="tokens">
+  <div class="section-label">02 — Design tokens</div>
+  <h2 class="section-title" style="text-transform:none;">Spec sheet</h2>
+  <table class="tokens-table">
+    <tr><th>Token</th><th>Value</th><th>Usage</th></tr>
+    <tr><td>Background</td><td><span class="swatch-dot" style="background:#FFF9F6;border:1px solid #ccc;"></span>#FFF9F6 / <span class="swatch-dot" style="background:#FDEDEF;"></span>#FDEDEF</td><td>Base + blush section wash</td></tr>
+    <tr><td>Ink</td><td><span class="swatch-dot" style="background:#1D1013;"></span>#1D1013</td><td>Headlines, hook-screen gradient base</td></tr>
+    <tr><td>Accent (gloss pink)</td><td><span class="swatch-dot" style="background:#E23F63;"></span>#E23F63</td><td>Primary CTA fill, headline highlight words, price badges</td></tr>
+    <tr><td>Verified green</td><td><span class="swatch-dot" style="background:#22B573;"></span>#22B573</td><td>"Verified UK price" / rating badges only</td></tr>
+    <tr><td>Display type</td><td>Source Sans 3, weight 800–900, uppercase, tight tracking</td><td>H1–H2, hook headlines</td></tr>
+    <tr><td>Price type</td><td>Fraunces, 600</td><td>Price figures — one serif accent to stop everything reading as an app</td></tr>
+    <tr><td>Radius</td><td>22px cards / 999px pills</td><td>Soft, jelly-pouch rounded — opposite of Concept A</td></tr>
+    <tr><td>Spacing</td><td>32–44px section padding, tighter vertical rhythm than A</td><td>Faster scroll pace, more sections per screen</td></tr>
+    <tr><td>Buttons</td><td>Full pill, solid gloss-pink fill, min 44px height</td><td>Every CTA — mobile tap targets first-class</td></tr>
+    <tr><td>Cards</td><td>Soft shadow at rest (not hover-only), 22px radius</td><td>Product grid, pick cards — always feels "liftable"</td></tr>
+  </table>
+</section>
+
+<!-- HOMEPAGE DESKTOP -->
+<section class="concept-section" id="homepage-desktop" style="background:#fff;">
+  <div class="section-label">03 — Mockups</div>
+  <h2 class="section-title" style="text-transform:none;">Homepage — desktop</h2>
+  <p class="section-intro" style="font-weight:400;">Opens on the hook (the actual point of confusion this niche has —
+  "wait, which jelly stick is this?") before settling into calm buy modules. Same tagline and claim text as the
+  live site.</p>
+  <div class="frame-label">1440px viewport</div>
+  <div class="browser-frame">
+    <div class="browser-chrome"><div class="browser-dot"></div><div class="browser-dot"></div><div class="browser-dot"></div>
+      <div class="browser-url">dailyjelly.co.uk</div></div>
+
+    <header class="site-header">
+      <div class="site-logo">Daily <b>Jelly</b></div>
+      <nav class="site-nav">
+        <a class="active" href="#">Home</a><a href="#">Guides</a><a href="#">Where to Buy</a><a href="#">FAQ</a><a href="#">About</a>
+      </nav>
+    </header>
+
+    <div class="hook">
+      <span class="tag" style="background:rgba(255,255,255,.12);color:#fff;">Collagen jelly sticks — coming to the UK</span>
+      <h1>A new way to take collagen — <span style="color:#FF9CB4;">no water needed.</span></h1>
+      <p>Ready-to-eat jelly pouches, the format Korea reaches for over gummies and powders. We're tracking how — and
+      whether — it makes it to UK shelves.</p>
+      <div class="hook-imgs">
+        <div class="mood-photo"><img src="https://d1flfk77wl2xk4.cloudfront.net/Assets/92/884/XXL_p0211888492.jpg"></div>
+        <div class="mood-photo"><img src="https://d1flfk77wl2xk4.cloudfront.net/Assets/19/869/XXL_p0189986919.jpg"></div>
+        <div class="mood-photo"><img src="https://yixo.co.uk/cdn/shop/files/YIXO_vegan_collagen_non-alcoholic_jellies.png?v=1777243406&width=1536"></div>
+      </div>
+      <a class="btn" href="#">See where to buy →</a>
+    </div>
+
+    <div class="pick-of-week">
+      <div class="section-label">Pick of the week</div>
+      <div class="pick-card">
+        <div class="plinth"><img src="https://m.media-amazon.com/images/I/61a0OWzY8wL._AC_SY450_.jpg" alt="HAMCHOROK"></div>
+        <div>
+          <div class="pick-meta"><span class="tag pop">✓ 4.4★ · 727 ratings</span><span class="tag muted">Amazon UK</span></div>
+          <h3 style="text-transform:none;">HAMCHOROK Rg+ Pomegranate Collagen Jelly Stick</h3>
+          <p style="color:var(--ink-soft);font-size:14px;font-weight:400;">The most-reviewed jelly stick we track —
+          Prime-speed delivery, Amazon's own returns.</p>
+          <div class="price-row">
+            <span class="price">£38.99 <span style="font-size:13px;color:var(--muted);font-family:'Source Sans 3';">· ~£1.30/stick</span></span>
+            <a class="btn" href="#">Check on Amazon UK</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-grid-wrap">
+      <div class="section-label">Compare the six sticks</div>
+      <div class="product-grid">
+        <div class="p-card">
+          <div class="plinth"><img src="https://d1flfk77wl2xk4.cloudfront.net/Assets/19/869/XXL_p0189986919.jpg"></div>
+          <div class="body"><span class="tag">Best overall</span><h4>BB LAB Pomegranate Collagen S</h4>
+          <div class="best-for">Marine collagen · 14 sticks</div>
+          <div class="pcta"><span class="price">£18–24</span><a class="btn-outline" style="padding:8px 16px;font-size:11px;">View →</a></div></div>
+        </div>
+        <div class="p-card">
+          <div class="plinth"><img src="https://www.cloo9.com/cdn/shop/files/Peach_Collagen_Jelly.1_1919611a-4725-44a0-b1d0-2110b5d05e77.jpg?v=1761239312&width=800"></div>
+          <div class="body"><span class="tag muted">Highest dose</span><h4>Cloo9 Collagen Jelly</h4>
+          <div class="best-for">5,000mg marine collagen</div>
+          <div class="pcta"><span class="price">£64</span><a class="btn-outline" style="padding:8px 16px;font-size:11px;">View →</a></div></div>
+        </div>
+        <div class="p-card">
+          <div class="plinth"><img src="https://yixo.co.uk/cdn/shop/files/YIXO_vegan_collagen_non-alcoholic_jellies.png?v=1777243406&width=1536"></div>
+          <div class="body"><span class="tag pop">Best vegan</span><h4>YIXO Vegan Collagen Jelly</h4>
+          <div class="best-for">Plant-based · UK-based brand</div>
+          <div class="pcta"><span class="price">£26</span><a class="btn-outline" style="padding:8px 16px;font-size:11px;">View →</a></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding:0 32px 44px;">
+      <div class="email-cta">
+        <h3>Get UK stock &amp; price alerts</h3>
+        <p>One email when a new UK retailer stocks jelly sticks, or a featured product drops in price. No spam.</p>
+        <div class="email-form"><input placeholder="you@email.com" /><button>Notify me</button></div>
+      </div>
+    </div>
+
+    <footer class="mock-footer">
+      <span>© 2026 Daily Jelly. This site contains affiliate links — see our disclosure.</span>
+      <span>As an Amazon Associate I earn from qualifying purchases.</span>
+    </footer>
+  </div>
+</section>
+
+<!-- HOMEPAGE MOBILE -->
+<section class="concept-section" id="homepage-mobile">
+  <h2 class="section-title" style="font-size:24px;text-transform:none;">Homepage — mobile</h2>
+  <p class="section-intro" style="font-weight:400;">This is the primary surface for this concept — the whole point is
+  a mobile-first "story scroll." Sticky bottom CTA stays on screen through the whole scroll, matching TikTok Shop's
+  own persistent buy bar.</p>
+  <div class="frame-label" style="text-align:center;">iPhone 13 / 375px</div>
+  <div class="phone-frame">
+    <div class="phone-notch"></div>
+    <div class="phone-scroll">
+      <div style="padding:14px 16px;display:flex;justify-content:space-between;align-items:center;">
+        <div class="site-logo" style="font-size:16px;">Daily <b>Jelly</b></div>
+        <div class="burger">☰</div>
+      </div>
+      <div class="hook" style="padding:32px 20px;border-radius:0;">
+        <span class="tag" style="background:rgba(255,255,255,.12);color:#fff;font-size:10px;">Coming to the UK</span>
+        <h1 style="font-size:23px;margin:10px 0;">A new way to take collagen — <span style="color:#FF9CB4;">no water needed.</span></h1>
+        <div class="hook-imgs" style="gap:8px;">
+          <div class="mood-photo" style="width:80px;"><img src="https://d1flfk77wl2xk4.cloudfront.net/Assets/92/884/XXL_p0211888492.jpg"></div>
+          <div class="mood-photo" style="width:80px;"><img src="https://d1flfk77wl2xk4.cloudfront.net/Assets/19/869/XXL_p0189986919.jpg"></div>
+        </div>
+        <a class="btn" style="display:block;margin-top:16px;">See where to buy →</a>
+      </div>
+      <div style="padding:24px 16px;">
+        <div class="section-label" style="font-size:10.5px;">Pick of the week</div>
+        <div style="background:var(--card);border-radius:22px;padding:16px;box-shadow:0 16px 30px -22px rgba(0,0,0,.25);">
+          <div class="plinth" style="aspect-ratio:1;padding:18px;margin-bottom:12px;background:var(--bg-soft);border-radius:14px;">
+            <img src="https://m.media-amazon.com/images/I/61a0OWzY8wL._AC_SY450_.jpg">
+          </div>
+          <span class="tag pop" style="font-size:10px;">✓ 4.4★ · 727 ratings</span>
+          <h3 style="font-size:16px;margin:8px 0 4px;text-transform:none;">HAMCHOROK Rg+ Pomegranate Jelly</h3>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px;">
+            <span style="font-family:'Fraunces';font-size:18px;">£38.99</span>
+            <a class="btn" style="padding:10px 18px;font-size:12px;">Check →</a>
+          </div>
+        </div>
+      </div>
+      <div style="padding:0 16px 24px;">
+        <div class="section-label" style="font-size:10.5px;">Compare the six sticks</div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div class="p-card" style="display:flex;gap:12px;padding:10px;align-items:center;border-radius:16px;">
+            <div class="plinth" style="width:56px;height:56px;padding:6px;flex-shrink:0;border-radius:10px;"><img src="https://d1flfk77wl2xk4.cloudfront.net/Assets/19/869/XXL_p0189986919.jpg"></div>
+            <div style="flex:1;"><div style="font-size:13px;font-weight:700;">BB LAB Pomegranate S</div><div style="font-size:11.5px;color:var(--muted);">£18–24 · Best overall</div></div>
+          </div>
+          <div class="p-card" style="display:flex;gap:12px;padding:10px;align-items:center;border-radius:16px;">
+            <div class="plinth" style="width:56px;height:56px;padding:6px;flex-shrink:0;border-radius:10px;"><img src="https://yixo.co.uk/cdn/shop/files/YIXO_vegan_collagen_non-alcoholic_jellies.png?v=1777243406&width=1536"></div>
+            <div style="flex:1;"><div style="font-size:13px;font-weight:700;">YIXO Vegan Jelly</div><div style="font-size:11.5px;color:var(--muted);">£26 · Best vegan</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="mock-footer" style="flex-direction:column;padding:16px;font-size:10.5px;">
+        <span>© 2026 Daily Jelly · Affiliate disclosure applies.</span>
+        <span>As an Amazon Associate I earn from qualifying purchases.</span>
+      </div>
+      <div class="sticky-cta">
+        <a class="btn" style="display:block;text-align:center;">See where to buy jelly sticks →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLE -->
+<section class="concept-section" id="article" style="background:#fff;padding-left:0;padding-right:0;max-width:100%;">
+  <div style="max-width:1180px;margin:0 auto;padding:0 20px;">
+    <div class="section-label">Mockup</div>
+    <h2 class="section-title" style="text-transform:none;">Article — "Cutting jelly vs collagen jelly sticks"</h2>
+    <p class="section-intro" style="font-weight:400;">This is the article where the format genuinely earns a hook —
+    it opens on the actual confusion (two pouches, one question) with a real product image up top, then drops into
+    a pill-styled comparison table and a blush takeaway card.</p>
+  </div>
+  <div class="browser-frame article-mock" style="max-width:680px;margin:0 auto;">
+    <div class="browser-chrome"><div class="browser-dot"></div><div class="browser-dot"></div><div class="browser-dot"></div>
+      <div class="browser-url">dailyjelly.co.uk/guides/cutting-jelly-vs-collagen-jelly</div></div>
+    <div class="article-hero">
+      <div class="hero-media">
+        <img src="https://d1flfk77wl2xk4.cloudfront.net/Assets/92/884/XXL_p0211888492.jpg" alt="Collagen jelly stick">
+      </div>
+      <div class="article-hero-copy">
+        <div class="article-eyebrow">6 min read · Updated September 2026</div>
+        <h1>Cutting jelly vs collagen jelly sticks</h1>
+        <p class="dek">Same pouch. Different job. Here's the split.</p>
+      </div>
+    </div>
+    <div class="article-body">
+      <div class="takeaway">
+        <strong>⚡ The short version</strong>
+        Cutting jelly = fibre/appetite snack, zero collagen. Collagen jelly sticks = beauty-from-within
+        supplement, zero cutting ingredient. Same pouch, not the same product.
+      </div>
+      <h2>Side by side</h2>
+      <table class="a-table">
+        <tr><th></th><th>Cutting jelly</th><th>Collagen jelly</th></tr>
+        <tr><td>Job</td><td>Fibre / appetite</td><td>Collagen peptides</td></tr>
+        <tr><td>UK high street</td><td>Not stocked</td><td>Not stocked (yet)</td></tr>
+        <tr><td>Daily Jelly</td><td>Explains, doesn't sell</td><td>Real UK buying paths</td></tr>
+      </table>
+      <h2>Shopping in the UK</h2>
+      <p>Want the collagen side? Our where-to-buy guide compares six genuine, currently-available sticks with real
+      UK delivery paths.</p>
+      <a class="btn" href="#">See where to buy →</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHERE TO BUY -->
+<section class="concept-section" id="wtb" style="padding-left:0;padding-right:0;max-width:100%;">
+  <div style="max-width:1180px;margin:0 auto;padding:0 20px;">
+    <div class="section-label">Mockup</div>
+    <h2 class="section-title" style="text-transform:none;">/where-to-buy</h2>
+  </div>
+  <div class="browser-frame" style="max-width:1180px;margin:0 auto;">
+    <div class="browser-chrome"><div class="browser-dot"></div><div class="browser-dot"></div><div class="browser-dot"></div>
+      <div class="browser-url">dailyjelly.co.uk/where-to-buy</div></div>
+    <div class="wtb-hero">
+      <div class="article-eyebrow">Updated September 2026</div>
+      <h1 style="font-size:27px;margin:8px 0 10px;text-transform:none;">Where to buy collagen jelly sticks in the UK</h1>
+      <p style="color:var(--ink-soft);font-size:14.5px;font-weight:400;">Six real, currently-available sticks —
+      YesStyle, direct UK brands, and one vetted Amazon UK listing.</p>
+    </div>
+    <div class="quickpicks">
+      <div class="qp-card"><div class="qp-label">Best overall</div><div class="qp-name">BB LAB Pomegranate S</div></div>
+      <div class="qp-card"><div class="qp-label">Best UK path</div><div class="qp-name">FOODOLOGY Centella</div></div>
+      <div class="qp-card"><div class="qp-label">Best vegan</div><div class="qp-name">YIXO Vegan Jelly</div></div>
+      <div class="qp-card"><div class="qp-label">Best on Amazon</div><div class="qp-name">HAMCHOROK Rg+</div></div>
+    </div>
+    <div class="compare-wrap">
+      <table class="a-table">
+        <tr><th>Product</th><th>Pack</th><th>Price</th><th>Per stick</th><th>UK path</th></tr>
+        <tr><td>BB LAB Pomegranate S</td><td>14 sticks</td><td>£18–24</td><td>~£1.50</td><td>YesStyle / Stylevana</td></tr>
+        <tr><td>Cloo9 Collagen Jelly</td><td>28 sticks</td><td>£64</td><td>~£2.29</td><td>Cloo9 direct</td></tr>
+        <tr><td>YIXO Vegan Jelly</td><td>21 jellies</td><td>£26</td><td>~£1.24</td><td>YIXO direct</td></tr>
+        <tr><td>NOW Foods Beauty Complex</td><td>10 sticks</td><td>£16.03</td><td>~£1.60</td><td>Welzo</td></tr>
+        <tr><td>HAMCHOROK Rg+</td><td>30 sticks</td><td>£38.99</td><td>~£1.30</td><td>Amazon UK</td></tr>
+      </table>
+    </div>
+    <div class="wtb-detail">
+      <div class="detail-card">
+        <div class="plinth"><img src="https://d1flfk77wl2xk4.cloudfront.net/Assets/19/869/XXL_p0189986919.jpg"></div>
+        <div>
+          <span class="tag">Best overall</span>
+          <h4>BB LAB Pomegranate Collagen S</h4>
+          <div class="detail-meta"><span>Marine collagen</span><span>14 sticks, 20g each</span><span>£18–24</span></div>
+          <p style="font-size:13.5px;color:var(--ink-soft);font-weight:400;">The Olive Young-famous format — the
+          closest thing to "the original" Korean jelly stick. Fish collagen and pomegranate concentrate amounts
+          clearly labelled.</p>
+        </div>
+      </div>
+    </div>
+    <div class="disclosure-box">
+      This site contains affiliate links. If you buy through one, we may earn a small commission at no extra cost
+      to you. <strong>As an Amazon Associate I earn from qualifying purchases.</strong>
+    </div>
+  </div>
+</section>
+
+<!-- UX NOTES -->
+<section class="concept-section" id="ux-notes" style="background:#fff;">
+  <div class="section-label">04 — UX notes</div>
+  <h2 class="section-title" style="text-transform:none;">How the mechanics carry over</h2>
+  <div class="notes-grid">
+    <div class="note-card"><h4>CTA hierarchy</h4><p>A sticky bottom CTA bar on mobile only (44px+ tap target,
+    always the same "See where to buy" action) — desktop keeps CTAs inline per section, no sticky bar, since
+    desktop shoppers don't need the same thumb-reach affordance.</p></div>
+    <div class="note-card"><h4>Amazon &amp; affiliate disclosure</h4><p>Same verbatim text as Concept A, styled as a
+    blush pill-card instead of a stone box — kept equally visible, just re-skinned to match the rounder system.
+    Never placed inside the hook screen itself, to avoid a legal-text tone undercutting the hook.</p></div>
+    <div class="note-card"><h4>Email capture</h4><p>Becomes a rounded gloss-pink card embedded mid-scroll (not a
+    full-bleed band) — matches the "module" pacing of the rest of the page rather than interrupting the story
+    scroll with a colour-inverted band.</p></div>
+    <div class="note-card"><h4>"Start here" / journal nav</h4><p>Kept as "Guides" (no relabel) — this concept's
+    Gen-Z signal comes from pacing and visuals, not from renaming things; over-clever nav labels are exactly the
+    kind of "try-hard" the brief warns against.</p></div>
+  </div>
+</section>
+
+<!-- FIT -->
+<section class="concept-section" id="fit">
+  <div class="section-label">05 — TikTok-gen fit, without trying hard</div>
+  <h2 class="section-title" style="text-transform:none;">Where the line is, and how this stays on the right side of it</h2>
+  <ul class="bullet-list">
+    <li><b>Borrow pacing, not vocabulary.</b> Short punchy sections and big product stills read as "made for
+    scrolling" without needing a single piece of slang, meme, or countdown timer — the format itself is the
+    Gen-Z signal, not the copy.</li>
+    <li><b>The hook is about confusion, not transformation.</b> Opening on "which jelly stick is this?" is
+    inherently un-hypey — it's a clarifying question, not a "your skin will thank you" promise, so the bold
+    visual energy has nothing glow-up-shaped to attach to.</li>
+    <li><b>One green badge, doing one job.</b> "Verified" and rating badges use the only non-pink accent in the
+    system — deliberately not decorative, so trust signals stay legible against the bolder visual language
+    instead of getting lost in it.</li>
+  </ul>
+</section>
+
+<!-- RISKS -->
+<section class="concept-section" id="risks" style="background:#fff;">
+  <div class="section-label">06 — Risks</div>
+  <h2 class="section-title" style="text-transform:none;">Where this could go wrong</h2>
+  <div class="risk-grid">
+    <div class="risk-card"><h4>Trust</h4><p>The single biggest risk of this whole direction: a bolder, glossier
+    visual system sitting next to a brand mandate of "no glow claims" needs constant copy discipline — every
+    headline needs a second read asking "does the design imply something the text doesn't claim?" Easiest to get
+    wrong on the hook screen specifically.</p></div>
+    <div class="risk-card"><h4>SEO</h4><p>All-caps display headings are a CSS text-transform, not literal
+    markup — H1/H2 text content must stay normal-case in the DOM so it doesn't read oddly to screen readers or
+    get mis-weighted; low risk if implemented correctly, worth a code-review flag either way.</p></div>
+    <div class="risk-card"><h4>Conversion</h4><p>A persistent sticky CTA is normally a conversion win, but on an
+    affiliate (not first-party checkout) site it can create false urgency mismatch — clicking "See where to buy"
+    repeatedly just to land on a comparison page, not a cart, so copy on that bar needs to set expectations
+    ("Compare 6 UK options" beats a bare "Buy now").</p></div>
+  </div>
+</section>
+
+<!-- COST -->
+<section class="concept-section narrow" id="cost">
+  <div class="section-label">07 — Rebuild cost sketch</div>
+  <h2 class="section-title" style="text-transform:none;">Size: M/L</h2>
+  <div class="cost-row"><div class="cost-pill">1</div><div><strong>Tokens, fonts &amp; radius system</strong><p>New
+  weight-900 headline treatment, pill radius system across every button/card — touches global.css broadly, more
+  surface area than Concept A's token swap.</p></div></div>
+  <div class="cost-row"><div class="cost-pill">2</div><div><strong>Hook-screen component</strong><p>New, unique
+  per page-type (homepage hook differs from article hook) — the most bespoke, highest-effort new component in
+  either concept.</p></div></div>
+  <div class="cost-row"><div class="cost-pill">3</div><div><strong>Sticky mobile CTA bar</strong><p>New global
+  component with scroll-position logic — small-to-medium effort, but needs real device testing (notch/safe-area
+  insets, viewport-height quirks on iOS Safari).</p></div></div>
+  <div class="cost-row"><div class="cost-pill">4</div><div><strong>Content</strong><p>Zero rewrite for body copy;
+  hook screens need short new headline variants per page (a few words each), not new claims.</p></div></div>
+</section>
+
+</body>
+</html>

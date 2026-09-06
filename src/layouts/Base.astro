@@ -25,10 +25,7 @@ const pageDescription = description || SITE.description;
 <body>
   <header class="site-header">
     <div class="container">
-      <a href="/" class="site-logo">
-        <div class="site-logo-icon">🍇</div>
-        <span class="site-logo-text">{SITE.name}</span>
-      </a>
+      <a href="/" class="site-logo">{SITE.name}</a>
       <nav class="site-nav">
         <a href="/" class:list={[{ active: activeNav === 'home' }]}>Home</a>
         <a href="/guides" class:list={[{ active: activeNav === 'guides' }]}>Guides</a>
