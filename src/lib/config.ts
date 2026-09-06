@@ -15,9 +15,9 @@ export const SITE = {
   year: new Date().getFullYear(),
 };
 
-// Replace with the real Associates tracking ID once issued from Associates
-// Central (Account Settings → Manage Your Tracking IDs). Do not invent one.
-export const AMAZON_ASSOCIATES_TAG = 'TODO-DAILYJELLY-TAG';
+// Associates tracking ID for Daily Jelly, created in Associates Central
+// (Account Settings → Manage Your Tracking IDs).
+export const AMAZON_ASSOCIATES_TAG = 'dailyjelly-21';
 
 // Homepage teaser strip — real jelly-stick product photography, hotlinked
 // directly from each retailer's own product page (not downloaded/rehosted).
