@@ -4,9 +4,10 @@
 // Vercel project environment variable (Production + Preview) — never commit it.
 //
 // Buttondown API reference: https://docs.buttondown.com/api-introduction
-// Verify the exact host/path below against that doc — Buttondown has changed
-// domains before (buttondown.email -> buttondown.com) and this was written
-// without a live account to test against.
+// Confirmed working 2026-09 against a live account: host/path/auth format
+// are correct, and the current API version expects `email_address`, not
+// `email` (the older field name — Buttondown returns a field_renamed error
+// if you send `email`).
 const BUTTONDOWN_SUBSCRIBERS_URL = 'https://api.buttondown.com/v1/subscribers';
 
 export default async function handler(req, res) {
@@ -34,7 +35,7 @@ export default async function handler(req, res) {
         'Authorization': `Token ${apiKey}`,
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ email }),
+      body: JSON.stringify({ email_address: email }),
     });
 
     if (bdRes.ok) {
@@ -42,18 +43,16 @@ export default async function handler(req, res) {
     }
 
     const errBody = await bdRes.json().catch(() => null);
-    if (bdRes.status === 400 && errBody) {
-      // Buttondown returns 400 for both "already subscribed" and invalid input —
-      // surface a friendly message either way rather than raw API error text.
+    const detail = errBody && Array.isArray(errBody.detail) ? errBody.detail[0] : null;
+    const alreadySubscribed = detail && /already|duplicate|exists/i.test(`${detail.code || ''} ${detail.detail || ''}`);
+    if (alreadySubscribed) {
       return res.status(200).json({ ok: true, alreadySubscribed: true });
     }
 
     console.error('Buttondown API error', bdRes.status, errBody);
-    // TEMPORARY: surfacing upstream status/body to diagnose the 502 without
-    // digging through Vercel function logs. Remove `debug` once this works.
-    return res.status(502).json({ ok: false, error: 'Signup failed — please try again.', debug: { status: bdRes.status, body: errBody } });
+    return res.status(502).json({ ok: false, error: 'Signup failed — please try again.' });
   } catch (err) {
     console.error('Buttondown request failed', err);
-    return res.status(502).json({ ok: false, error: 'Signup failed — please try again.', debug: { message: err.message } });
+    return res.status(502).json({ ok: false, error: 'Signup failed — please try again.' });
   }
 }
