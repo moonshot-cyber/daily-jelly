@@ -6,11 +6,36 @@ interface Props {
   title?: string;
   description?: string;
   activeNav?: string;
+  image?: string;
+  ogType?: 'website' | 'article';
+  jsonLd?: object | object[];
 }
 
-const { title, description, activeNav = 'home' } = Astro.props;
+const { title, description, activeNav = 'home', image, ogType = 'website', jsonLd } = Astro.props;
 const pageTitle = title ? `${title} — ${SITE.name}` : `${SITE.name} — ${SITE.tagline}`;
 const pageDescription = description || SITE.description;
+const canonicalURL = new URL(Astro.url.pathname, SITE.url).toString();
+const logoURL = `${SITE.url}/favicon.svg`;
+
+// Site-wide identity schema, present on every page — describes the
+// publisher/site itself, not any individual page's content.
+const siteSchema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: SITE.name,
+    url: SITE.url,
+    logo: logoURL,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: SITE.name,
+    url: SITE.url,
+  },
+];
+const pageSchema = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
+const allSchema = [...siteSchema, ...pageSchema];
 ---
 
 <!DOCTYPE html>
@@ -21,6 +46,23 @@ const pageDescription = description || SITE.description;
   <meta name="description" content={pageDescription} />
   <title>{pageTitle}</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="canonical" href={canonicalURL} />
+
+  <meta property="og:site_name" content={SITE.name} />
+  <meta property="og:title" content={pageTitle} />
+  <meta property="og:description" content={pageDescription} />
+  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:type" content={ogType} />
+  {image && <meta property="og:image" content={image} />}
+
+  <meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
+  <meta name="twitter:title" content={pageTitle} />
+  <meta name="twitter:description" content={pageDescription} />
+  {image && <meta name="twitter:image" content={image} />}
+
+  {allSchema.map(schema => (
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  ))}
 </head>
 <body>
   <header class="site-header">

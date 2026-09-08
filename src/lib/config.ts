@@ -79,6 +79,7 @@ export const GUIDE_PRODUCTS = [
   {
     slug: 'bb-lab-pomegranate-collagen-s',
     name: 'BB LAB Pomegranate Collagen S',
+    brand: 'BB LAB',
     bestFor: 'Best overall — the most "original" Korean stick',
     quickPick: 'overall',
     type: 'Marine (fish) collagen',
@@ -86,6 +87,8 @@ export const GUIDE_PRODUCTS = [
     dose: '~1,000mg fish collagen + 18,600mg pomegranate concentrate per stick (as labelled)',
     dailyUse: '1 stick a day',
     priceGBP: '£18–24 per pack of 14',
+    priceLowGBP: 18,
+    priceHighGBP: 24,
     pricePerServing: '~£1.30–1.70 per stick',
     ukPath: [
       { name: 'YesStyle', href: 'https://www.yesstyle.com/en/nutrione-bb-lab-pomegranate-collagen-s-20g-x-14-sticks/info.html/pid.1120234762' },
@@ -105,6 +108,7 @@ export const GUIDE_PRODUCTS = [
   {
     slug: 'foodology-collagen-centella',
     name: 'FOODOLOGY Collagen Centella Jelly',
+    brand: 'FOODOLOGY',
     bestFor: 'Best for wider retailer stock',
     quickPick: 'uk-path',
     type: 'As labelled by FOODOLOGY',
@@ -112,6 +116,8 @@ export const GUIDE_PRODUCTS = [
     dose: "Collagen peptides + Centella Asiatica extract — we couldn't confirm an exact mg figure from the listing, check the pack",
     dailyUse: '1 stick a day',
     priceGBP: '£14–22 per pack of 10',
+    priceLowGBP: 14,
+    priceHighGBP: 22,
     pricePerServing: '~£1.40–2.20 per stick',
     ukPath: [
       { name: 'YesStyle', href: 'https://www.yesstyle.com/en/foodology-collagen-centella-jelly-25g-x-10-sticks/info.html/pid.1134977380' },
@@ -130,6 +136,7 @@ export const GUIDE_PRODUCTS = [
   {
     slug: 'cloo9-collagen-jelly',
     name: 'Cloo9 Collagen Jelly',
+    brand: 'Cloo9',
     bestFor: 'Best high-dose, UK-facing DTC brand',
     quickPick: false,
     type: 'Marine collagen (hydrolysed, Type I)',
@@ -137,6 +144,8 @@ export const GUIDE_PRODUCTS = [
     dose: '5,000mg marine collagen per stick, as stated by Cloo9',
     dailyUse: '1 stick a day, no water needed',
     priceGBP: '£64 per pack of 28',
+    priceLowGBP: 64,
+    priceHighGBP: 64,
     pricePerServing: '~£2.29 per stick',
     ukPath: [
       { name: 'Cloo9 (direct)', href: 'https://www.cloo9.com/products/collagen-jelly-peach' },
@@ -155,6 +164,7 @@ export const GUIDE_PRODUCTS = [
   {
     slug: 'yixo-vegan-collagen-jelly',
     name: 'YIXO Vegan Collagen Jelly',
+    brand: 'YIXO',
     bestFor: 'Best vegan option',
     quickPick: 'vegan',
     type: 'Vegan / plant-based',
@@ -162,6 +172,8 @@ export const GUIDE_PRODUCTS = [
     dose: 'Plant-based collagen-support peptides + Vitamin C + Hyaluronic Acid, as labelled',
     dailyUse: '3 jellies a day for 7 days',
     priceGBP: '£26 per pack of 21',
+    priceLowGBP: 26,
+    priceHighGBP: 26,
     pricePerServing: '~£1.24 per jelly — but you eat 3 a day, so ~£3.71/day',
     ukPath: [
       { name: 'YIXO (direct)', href: 'https://yixo.co.uk/pages/collagen-jelly' },
@@ -180,6 +192,7 @@ export const GUIDE_PRODUCTS = [
   {
     slug: 'now-foods-collagen-jelly-beauty-complex',
     name: 'NOW Foods Collagen Jelly Beauty Complex',
+    brand: 'NOW Foods',
     bestFor: 'Best from a retailer you already trust',
     quickPick: false,
     type: 'Bovine collagen (VERISOL)',
@@ -187,6 +200,8 @@ export const GUIDE_PRODUCTS = [
     dose: '2.5g hydrolysed bovine collagen (Types I & III, VERISOL) per stick, as labelled',
     dailyUse: '1 stick a day',
     priceGBP: '£16.03 per pack of 10',
+    priceLowGBP: 16.03,
+    priceHighGBP: 16.03,
     pricePerServing: '~£1.60 per stick',
     ukPath: [
       { name: 'Welzo', href: 'https://welzo.com/products/now-foods-collagen-jelly-beauty-complex-10-jelly-sticks' },
@@ -205,6 +220,7 @@ export const GUIDE_PRODUCTS = [
   {
     slug: 'hamchorok-rg-pomegranate-collagen-jelly',
     name: 'HAMCHOROK Rg+ Pomegranate Collagen Jelly Stick',
+    brand: 'HAMCHOROK',
     bestFor: "Best if you'd rather use Amazon's own checkout and delivery",
     quickPick: 'amazon',
     type: 'Marine (fish) collagen',
@@ -212,7 +228,10 @@ export const GUIDE_PRODUCTS = [
     dose: 'Pomegranate concentrate, fermented black ginseng concentrate, and low-molecular-weight fish collagen — exact mg not stated on the listing',
     dailyUse: '1 stick a day',
     priceGBP: '£38.99 per pack of 30',
+    priceLowGBP: 38.99,
+    priceHighGBP: 38.99,
     pricePerServing: '~£1.30 per stick',
+    aggregateRating: { ratingValue: 4.4, reviewCount: 727 },
     ukPath: [
       { name: `Amazon UK`, href: `https://www.amazon.co.uk/dp/B0C4KQPXQ8?tag=${AMAZON_ASSOCIATES_TAG}` },
     ],

@@ -3,11 +3,23 @@ title: "What's Actually Inside a Collagen Jelly Stick? Ingredients and Doses Com
 excerpt: "Marine, bovine, and vegan collagen; pomegranate and Centella; the doses across six real UK-available sticks — what's genuinely in the pouch."
 readTime: "5 min"
 publishDate: "2026-09-06"
+dateModified: "2026-09-08"
+image: "https://www.cloo9.com/cdn/shop/files/Peach_Collagen_Jelly.1_1919611a-4725-44a0-b1d0-2110b5d05e77.jpg?v=1761239312&width=800"
+imageCredit: "Cloo9"
+faqs:
+  - q: "What's the difference between marine and bovine collagen?"
+    a: "Marine collagen is derived from fish, usually hydrolysed into low-molecular-weight peptides — the source used by BB LAB, Cloo9, and HAMCHOROK. Bovine collagen comes from cattle; NOW Foods' product uses VERISOL, a specific, patented, well-studied bovine peptide."
+  - q: "Do vegan collagen jelly sticks actually contain collagen?"
+    a: "No — there's no plant source of animal collagen. Vegan options like YIXO use plant-based peptides alongside Vitamin C and hyaluronic acid, marketed as supporting the body's own collagen production rather than supplying collagen directly."
+  - q: "Which collagen jelly stick has the highest labelled dose?"
+    a: "Cloo9 Collagen Jelly, at 5,000mg of marine collagen per stick as stated by the brand — more than double the next-highest option on our comparison."
+  - q: "Why does almost every collagen jelly stick contain Vitamin C?"
+    a: "Because it's the one ingredient with an actual authorised UK/EU health claim tied to collagen: Vitamin C contributes to normal collagen formation for the normal function of skin. A product without a meaningful Vitamin C dose can't really lean on that claim."
 ---
 
-"Collagen jelly stick" tells you the format, not what's actually in it. The six products in our [where-to-buy guide](/where-to-buy) span three different collagen sources and a wide dose range — worth knowing before you compare price tags.
+Collagen jelly sticks use one of three collagen sources — marine (fish), bovine, or a plant-based collagen-support blend — plus fruit flavouring and usually Vitamin C. "Collagen jelly stick" tells you the format, not what's actually in it. The six products in our [where-to-buy guide](/where-to-buy) span three different collagen sources and a wide dose range — worth knowing before you compare price tags.
 
-## The three collagen types you'll see
+## What are the three types of collagen used in jelly sticks?
 
 **Marine (fish) collagen** is the most common source in the Korean imports — [BB LAB](/where-to-buy), [Cloo9](/where-to-buy), and [HAMCHOROK](/where-to-buy) all use it. It's typically hydrolysed into low-molecular-weight peptides, which brands market as "faster absorbing" than larger collagen molecules — plausible in principle, but not something we can independently verify per product without lab data most brands don't publish.
 
@@ -30,7 +42,7 @@ publishDate: "2026-09-06"
 
 Two things worth flagging about this table. First, a higher number isn't automatically "better" — the VERISOL research behind NOW Foods' product used exactly 2.5g, not 5g, so more collagen isn't necessarily more effect; it's simply what that particular brand chose to put in. Second, where we've written "not stated," that's deliberate — we're not going to guess a number that isn't on the label just to fill a table cell.
 
-## The other ingredients doing the marketing work
+## What other ingredients are in collagen jelly sticks?
 
 **Vitamin C** appears in most of these, and for good reason: it's the one ingredient with an actual authorised UK/EU claim tied to collagen — *Vitamin C contributes to normal collagen formation for the normal function of skin.* If a product doesn't list a meaningful Vitamin C amount, that claim doesn't really apply to it.
 

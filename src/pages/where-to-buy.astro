@@ -11,13 +11,94 @@ const quickPicks = [
   { key: 'vegan', label: 'Best vegan' },
   { key: 'amazon', label: "Best if you're already on Amazon" },
 ].map(qp => ({ ...qp, product: GUIDE_PRODUCTS.find(p => p.quickPick === qp.key) }));
+
+const pageURL = new URL('/where-to-buy', SITE.url).toString();
+
+const productSchemas = GUIDE_PRODUCTS.map(p => ({
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: p.name,
+  description: p.bestFor,
+  brand: { '@type': 'Brand', name: p.brand },
+  image: p.image,
+  offers: p.priceLowGBP === p.priceHighGBP
+    ? {
+        '@type': 'Offer',
+        price: p.priceLowGBP,
+        priceCurrency: 'GBP',
+        url: p.ukPath[0].href,
+        seller: { '@type': 'Organization', name: p.ukPath[0].name },
+      }
+    : {
+        '@type': 'AggregateOffer',
+        lowPrice: p.priceLowGBP,
+        highPrice: p.priceHighGBP,
+        priceCurrency: 'GBP',
+        offerCount: p.ukPath.length,
+        url: p.ukPath[0].href,
+      },
+  ...(p.aggregateRating ? {
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: p.aggregateRating.ratingValue,
+      reviewCount: p.aggregateRating.reviewCount,
+    },
+  } : {}),
+}));
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url },
+    { '@type': 'ListItem', position: 2, name: 'Where to Buy', item: pageURL },
+  ],
+};
+
+// Every answer here restates a fact already verified and cited elsewhere on
+// the site (product detail cards, the FAQ page) — nothing new is asserted.
+const faqs = [
+  {
+    q: 'Which collagen jelly stick has the highest dose?',
+    a: "Cloo9's Collagen Jelly, at 5,000mg of marine collagen per stick as stated by the brand — the highest labelled dose of the six sticks we compare, though also the most expensive per stick (~£2.29).",
+  },
+  {
+    q: 'Is there a UK-based brand I can buy directly from?',
+    a: 'Yes — YIXO is a UK-based brand selling direct from its own site (yixo.co.uk), which means the fastest, simplest delivery of any option on this list, alongside the Amazon UK option.',
+  },
+  {
+    q: 'Can I buy a collagen jelly stick on Amazon UK?',
+    a: "Yes — HAMCHOROK Rg+ Pomegranate Collagen Jelly Stick is available on Amazon UK with Prime-speed delivery and Amazon's own returns process. It's also the most-reviewed product we track, with 727 ratings at 4.4 stars at time of writing.",
+  },
+  {
+    q: 'Do I have to pay customs or VAT ordering collagen jelly sticks from Korea?',
+    a: "Possibly. Orders from outside the UK can attract import VAT, and above certain value thresholds, customs duty as well. EU-based retailers generally have simpler, more predictable customs handling than orders shipped directly from Korea — check the retailer's own shipping and customs page before ordering.",
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(f => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+
+const jsonLd = [...productSchemas, breadcrumbSchema, faqSchema];
 ---
 
 <Base
   title="Where to Buy Collagen Jelly Sticks in the UK"
   description="Compare BB LAB, FOODOLOGY, Cloo9, YIXO, NOW Foods and HAMCHOROK jelly sticks — UK delivery paths, pack maths, and an affiliate disclosure."
   activeNav="where-to-buy"
+  image={GUIDE_PRODUCTS[0].image}
+  jsonLd={jsonLd}
 >
+  <nav aria-label="Breadcrumb" style="font-size: 13px; color: var(--text-muted); margin-bottom: 14px;">
+    <a href="/" style="color: var(--text-muted);">Home</a> / <span>Where to Buy</span>
+  </nav>
   <p style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin: 0 0 10px;">Guide · updated September 2026</p>
   <h1 style="font-size: 30px; margin: 0 0 10px; max-width: 620px;">Where to buy collagen jelly sticks in the UK</h1>
   <p style="color: var(--text-muted); margin: 0 0 20px; font-size: 15px; max-width: 560px;">
@@ -91,7 +172,7 @@ const quickPicks = [
     </ul>
   </div>
 
-  <h2 style="font-size: 20px; margin: 32px 0 12px;">How we choose</h2>
+  <h2 style="font-size: 20px; margin: 32px 0 12px;">How do we choose which sticks to feature?</h2>
   <div class="post-body" style="font-size: 15px;">
     <ul>
       <li>Must be a ready-to-eat jelly stick — not a powder, gummy, or topical cream</li>
@@ -115,7 +196,18 @@ const quickPicks = [
     actually compare to the gummies and powders already on UK shelves — convenience, dosing, and price
     per serving, side by side.
   </p>
-  <p style="margin: 0 0 32px;"><a href="/guides/jelly-sticks-vs-gummies-powders">Jelly Sticks vs Gummies vs Powders →</a></p>
+  <p style="margin: 0 0 8px;"><a href="/guides/jelly-sticks-vs-gummies-powders">Jelly Sticks vs Gummies vs Powders →</a></p>
+  <p style="margin: 0 0 32px;"><a href="/guides/cutting-jelly-vs-collagen-jelly">Confused by cutting jelly vs collagen jelly? Read the difference →</a></p>
+
+  <h2 style="font-size: 20px; margin: 32px 0 16px;">Common questions</h2>
+  <div>
+    {faqs.map(f => (
+      <div class="faq-item">
+        <h3>{f.q}</h3>
+        <p>{f.a}</p>
+      </div>
+    ))}
+  </div>
 
   <div class="disclosure">
     <strong>A reminder on claims:</strong> the only collagen-related health claim authorised in the UK/EU

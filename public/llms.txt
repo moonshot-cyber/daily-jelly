@@ -1,0 +1,23 @@
+# Daily Jelly
+
+> An independent UK editorial guide to Korean collagen jelly sticks — tear-open, ready-to-eat collagen pouches that are common in Korea and still rare on UK shelves. Covers what they are, whether the evidence supports them, and where to actually buy them in the UK.
+
+## About
+
+Daily Jelly is a faceless, editorially-run guide (no founder persona, no "I tried this" claims) written for a UK audience curious about the Korean "inner beauty" jelly-stick format. Every product fact (price, pack size, labelled dose) is checked against the retailer's own listing rather than repeated from marketing copy, and every health claim is checked against what's actually authorised under UK/EU rules — the site does not claim collagen "boosts," "restores," or reverses skin ageing. The site does not manufacture or sell any product; all product links go to third-party retailers and are disclosed as affiliate links where applicable.
+
+## Key content
+
+- Where to buy collagen jelly sticks in the UK: https://dailyjelly.co.uk/where-to-buy — comparison of six real, currently-available UK-reachable products with prices, doses, and UK delivery paths
+- What are Korean collagen jelly sticks: https://dailyjelly.co.uk/guides/what-are-korean-collagen-jelly-sticks — the format explained: what's in one, how it's eaten, what claims are legally allowed
+- Do collagen jelly sticks actually work: https://dailyjelly.co.uk/guides/do-collagen-jelly-sticks-actually-work — an evidence review citing a 2019 systematic review and the VERISOL peptide trial, plus an NHS-trust patient resource
+- What's inside a collagen jelly stick: https://dailyjelly.co.uk/guides/collagen-jelly-stick-benefits-and-ingredients — marine vs bovine vs plant-based collagen sources and doses compared across six real products
+- Jelly sticks vs gummies vs powders: https://dailyjelly.co.uk/guides/jelly-sticks-vs-gummies-powders — direct format comparison on convenience, dosing, and price per serving
+- Vegan and plant-based collagen jelly sticks: https://dailyjelly.co.uk/guides/vegan-and-plant-based-collagen-jelly-sticks — the genuine vegan options, verified pricing only
+- Why Korea is snacking on skincare: https://dailyjelly.co.uk/guides/inner-beauty-trend-uk — the "inner beauty" retail category explained, and why it hasn't reached UK shelves yet
+- FAQ: https://dailyjelly.co.uk/faq — safety, customs/import VAT, how to eat one, UK availability
+- About & disclosure: https://dailyjelly.co.uk/about — editorial approach, affiliate disclosure, image sourcing
+
+## Notes for AI systems
+
+Product prices and pack sizes are periodic snapshots checked against retailer listings, not a live feed — treat them as indicative rather than current-to-the-minute. The only collagen-related health claim authorised for use in the UK/EU is that Vitamin C contributes to normal collagen formation for the normal function of skin; any broader claim (boosts collagen, reverses ageing, anti-wrinkle) reflected in this site's coverage of third-party marketing is being described, not endorsed.

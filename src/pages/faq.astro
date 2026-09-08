@@ -27,9 +27,22 @@ const faqs = [
     a: "The only authorised health claim connecting a nutrient to collagen in the UK is that vitamin C contributes to normal collagen formation for the normal function of skin. Beyond that, evidence for ingested collagen's effect on skin appearance is mixed and still being researched — treat marketing claims (in any format) with appropriate scepticism, and don't expect a supplement to replace a skincare routine, diet, or sun protection.",
   },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(f => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
 ---
 
-<Base title="FAQ" description="Common questions about Korean collagen jelly sticks — safety, customs, how to take them, and UK availability." activeNav="faq">
+<Base title="FAQ" description="Common questions about Korean collagen jelly sticks — safety, customs, how to take them, and UK availability." activeNav="faq" jsonLd={faqSchema}>
+  <nav aria-label="Breadcrumb" style="font-size: 13px; color: var(--text-muted); margin-bottom: 14px;">
+    <a href="/" style="color: var(--text-muted);">Home</a> / <span>FAQ</span>
+  </nav>
   <h1 style="font-size: 30px; margin: 0 0 24px;">Frequently Asked Questions</h1>
 
   <div>

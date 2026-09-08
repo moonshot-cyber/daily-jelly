@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import EmailCapture from '../../components/EmailCapture.astro';
 import { getCollection } from 'astro:content';
+import { SITE } from '../../lib/config';
 
 export async function getStaticPaths() {
   const guides = await getCollection('guides');
@@ -13,16 +14,82 @@ export async function getStaticPaths() {
 
 const { guide } = Astro.props;
 const { Content } = await guide.render();
+const pageURL = new URL(`/guides/${guide.slug}`, SITE.url).toString();
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: guide.data.title,
+  description: guide.data.excerpt,
+  datePublished: guide.data.publishDate,
+  dateModified: guide.data.dateModified ?? guide.data.publishDate,
+  author: { '@type': 'Organization', name: SITE.name },
+  publisher: {
+    '@type': 'Organization',
+    name: SITE.name,
+    logo: { '@type': 'ImageObject', url: `${SITE.url}/favicon.svg` },
+  },
+  ...(guide.data.image ? { image: [guide.data.image] } : {}),
+  mainEntityOfPage: { '@type': 'WebPage', '@id': pageURL },
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url },
+    { '@type': 'ListItem', position: 2, name: 'Guides', item: `${SITE.url}/guides` },
+    { '@type': 'ListItem', position: 3, name: guide.data.title, item: pageURL },
+  ],
+};
+
+const faqSchema = guide.data.faqs && guide.data.faqs.length > 0 ? {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: guide.data.faqs.map(f => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+} : null;
+
+const jsonLd = [articleSchema, breadcrumbSchema, ...(faqSchema ? [faqSchema] : [])];
 ---
 
-<Base title={guide.data.title} description={guide.data.excerpt} activeNav="guides">
-  <a href="/guides" style="font-size: 13px; color: var(--text-muted);">← All guides</a>
-  <h1 style="font-size: 30px; margin: 14px 0 8px; max-width: 620px;">{guide.data.title}</h1>
-  <p style="color: var(--text-muted); margin: 0 0 28px; font-size: 13px;">{guide.data.readTime} read</p>
+<Base
+  title={guide.data.title}
+  description={guide.data.excerpt}
+  activeNav="guides"
+  image={guide.data.image}
+  ogType="article"
+  jsonLd={jsonLd}
+>
+  <nav aria-label="Breadcrumb" style="font-size: 13px; color: var(--text-muted); margin-bottom: 14px;">
+    <a href="/" style="color: var(--text-muted);">Home</a> /
+    <a href="/guides" style="color: var(--text-muted);">Guides</a> /
+    <span>{guide.data.title}</span>
+  </nav>
+  <h1 style="font-size: 30px; margin: 0 0 8px; max-width: 620px;">{guide.data.title}</h1>
+  <p style="color: var(--text-muted); margin: 0 0 28px; font-size: 13px;">
+    {guide.data.readTime} read · Published {guide.data.publishDate}
+    {guide.data.dateModified && guide.data.dateModified !== guide.data.publishDate && ` · Updated ${guide.data.dateModified}`}
+  </p>
 
   <div class="post-body">
     <Content />
   </div>
+
+  {guide.data.faqs && guide.data.faqs.length > 0 && (
+    <div style="margin: 32px 0;">
+      <h2 style="font-size: 22px; margin-bottom: 16px;">Frequently asked questions</h2>
+      {guide.data.faqs.map(f => (
+        <div class="faq-item">
+          <h3>{f.q}</h3>
+          <p>{f.a}</p>
+        </div>
+      ))}
+    </div>
+  )}
 
   <EmailCapture />
 </Base>

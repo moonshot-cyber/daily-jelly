@@ -3,9 +3,21 @@ title: "Do Collagen Jelly Sticks Actually Work? What the Evidence Actually Says"
 excerpt: "The single most-asked question about this format, answered honestly — what collagen research actually shows, and what's just marketing."
 readTime: "6 min"
 publishDate: "2026-09-06"
+dateModified: "2026-09-08"
+image: "https://welzo.com/cdn/shop/files/image_2024-07-05_6687c4b04b07d.jpg?v=1752225608&width=1500"
+imageCredit: "Welzo"
+faqs:
+  - q: "Do collagen jelly sticks work better than gummies or powders?"
+    a: "No — the delivery format doesn't change whether collagen works, only how convenient it is to take. Whatever evidence exists for a given collagen peptide applies the same way whether you eat it from a jelly pouch, a gummy, or a mixed powder."
+  - q: "What does the VERISOL research actually show?"
+    a: "A randomised, double-blind, placebo-controlled trial of 66 women aged 35–55 found that 2.5g of VERISOL bioactive collagen peptide daily for 8 weeks was associated with a 26% increase in skin hydration, a 9% improvement in elasticity, and a 25% reduction in wrinkle volume at the outer eye corner, versus placebo."
+  - q: "Is there independent (non-brand) evidence on collagen supplements?"
+    a: "UCLH (a UK NHS trust) publishes a patient resource describing 'moderate evidence' that hydrolysed collagen peptides may slightly improve skin elasticity and hydration, while cautioning that 'the marketing often runs well ahead of the evidence.'"
+  - q: "What's the only legally allowed collagen health claim in the UK?"
+    a: "That Vitamin C contributes to normal collagen formation for the normal function of skin. Claims like 'boosts collagen production' or 'reverses ageing' go beyond what's currently authorised in the UK and EU."
 ---
 
-This is, by a clear margin, the question people actually type into Google about this format. Not "where can I buy one" — "does it work." Fair question. Here's an honest answer, not a marketing one.
+The honest answer: modest evidence supports specific, well-studied collagen peptides — like VERISOL — taken consistently over 8+ weeks, but the jelly-stick format itself makes no difference to whether any of it works. This is, by a clear margin, the question people actually type into Google about this format. Not "where can I buy one" — "does it work." Fair question. Here's an honest answer, not a marketing one.
 
 ## The format isn't the thing that "works" or doesn't
 
@@ -13,7 +25,7 @@ Worth separating two questions that get merged together: does *ingested collagen
 
 So the real question is the first one.
 
-## What the research actually shows
+## What does the research actually show about collagen supplements?
 
 A 2019 systematic review in the *Journal of Drugs in Dermatology* (Choi et al.) looked at the available randomised controlled trials on oral collagen supplementation and found preliminary but promising results for skin ageing — increases in skin elasticity, hydration, and dermal collagen density were reported across the reviewed studies, with a good safety profile and no significant adverse events. The review's own conclusion was that further research is needed to nail down optimal dosing, not that the case is closed.
 
