@@ -21,7 +21,7 @@ FOODOLOGY shows up across more Korean-beauty resellers than any other brand here
 
 ## Cloo9 Collagen Jelly — highest dose, highest price
 
-At 5,000mg of marine collagen per stick, Cloo9 has by far the largest dose here — genuinely double the next-highest. It's also a UK-facing DTC brand, so checkout and delivery are straightforward in a way the Korean imports aren't. The trade-off is real: £64 for 28 sticks works out to roughly £2.29 each, the most expensive per-stick price on this list.
+At 5,000mg of marine collagen per stick, Cloo9 has by far the largest dose here — genuinely double the next-highest. It's also a UK-facing DTC brand, so checkout and delivery are straightforward in a way the Korean imports aren't. The trade-off is real: £64 for 28 sticks works out to roughly £2.29 each, the most expensive per-stick price on this list — though the cheapest per 1,000mg of collagen, since the dose is roughly double.
 
 **Skip it if:** budget matters more than dose — you can get three sticks from cheaper brands for the price of one Cloo9.
 

@@ -157,7 +157,7 @@ export const GUIDE_PRODUCTS = [
       'Sold direct in GBP with UK delivery — no international checkout',
     ],
     cons: [
-      'By far the most expensive per stick here',
+      'The highest price per stick and the highest pack cost (£64) — though it\'s the cheapest per 1,000mg, since the dose is roughly double the rest',
       "Newer, smaller brand — much less of a track record than the Korean imports",
     ],
     image: 'https://www.cloo9.com/cdn/shop/files/Peach_Collagen_Jelly.1_1919611a-4725-44a0-b1d0-2110b5d05e77.jpg?v=1761239312&width=800',

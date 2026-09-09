@@ -117,6 +117,29 @@ titles flagged "needs research."
 - **Peptide skincare cluster (6 titles)** — this is Cluster H in the original brief, explicitly marked "DEFERRED, do not build until Clusters A–F established." Left unbriefed on purpose, not an oversight.
 - **"Foodology Cutting Jelly vs Colla Q"** — questionable fit. Both are weight-management "cutting jelly" products, not collagen; a head-to-head comparison risks reading as an implicit recommendation for a weight-loss product, conflicting with the site's existing stance ("we explain cutting jelly, we don't sell or recommend it"). Recommend skipping this one rather than briefing it as-is.
 
+## Data ↔ prose coupling — watch on price/dose changes
+
+Several site facts are stated as numbers in `src/lib/config.ts` AND restated
+as prose claims in other files. The prose doesn't update automatically when
+the config number does, so a price or dose change needs a manual sweep or it
+goes stale. Known instance, found 2026-09-09 when the where-to-buy comparison
+table gained a "cost per 1,000mg" column and Cloo9 briefly read as
+self-contradictory (cheapest per 1,000mg in the table, "by far the most
+expensive per stick" in its own con):
+
+- **Cloo9's per-stick price/dose relationship** is asserted in prose in four
+  files, independent of the `priceGBP`/`doseMgPerStick` fields in
+  `GUIDE_PRODUCTS`: `src/lib/config.ts` (the con itself), `src/pages/where-to-buy.astro`
+  (FAQ block), `src/content/guides/collagen-jelly-stick-reviews-bb-lab-hamchorok-cloo9-yixo.md`,
+  and `src/content/guides/best-collagen-jelly-sticks-uk.md` (FAQ + body, two
+  instances). All four were updated together on 2026-09-09 to state both the
+  per-stick and per-1,000mg position rather than just one. If Cloo9's price
+  or pack size changes again, re-check these four files, not just the config
+  numbers — grep `Cloo9` and `expensive` across `src/` as a starting point.
+- This is a pattern, not a one-off: any product whose per-stick and
+  per-1,000mg rankings could plausibly invert (a high-dose, high-price
+  product) is a candidate for the same staleness next time a price changes.
+
 ## Notes on cluster-mapping honesty
 
 Several published/queued articles predate this taxonomy and were mapped to
