@@ -29,6 +29,7 @@ No orphans: every new article must map to a cluster before it gets written.
 | Why Boots/Superdrug/H&B Don't Stock Jelly Sticks | `why-boots-superdrug-holland-barrett-dont-stock-jelly-sticks` | D | 2026-09-07 |
 | Jelly Sticks vs Liquid Collagen Sachets | `jelly-sticks-vs-liquid-collagen-sachets` | F | 2026-09-07 |
 | Six-Way Jelly Stick Reviews | `collagen-jelly-stick-reviews-bb-lab-hamchorok-cloo9-yixo` | B | 2026-09-09 |
+| Cutting Jelly vs Collagen Jelly Sticks | `cutting-jelly-vs-collagen-jelly` | D | 2026-09-09 — pulled forward from its 2026-09-16 slot to fix a live 404 from `/where-to-buy`; scheduled task `daily-jelly-publish-cutting-jelly` deleted |
 
 ## Scheduled (queued, drip-fed every other day)
 
@@ -37,7 +38,6 @@ No orphans: every new article must map to a cluster before it gets written.
 | Are Collagen Jelly Sticks Halal? | `are-collagen-jelly-sticks-halal` | B — matches planned "Is collagen halal?" title | 2026-09-10 |
 | Does the NHS Recommend Collagen Supplements? | `does-the-nhs-recommend-collagen-supplements` | E | 2026-09-12 |
 | Costco Sells a 42-Pack (US comparison) | `costco-collagen-jelly-sticks-uk-alternative` | D | 2026-09-14 |
-| Cutting Jelly vs Collagen Jelly Sticks | `cutting-jelly-vs-collagen-jelly` | D — matches planned "the missing page" title exactly | 2026-09-16 |
 | Collagen on the Go (travel/commuting) | `collagen-jelly-sticks-vs-powders-on-the-go` | C | 2026-09-18 |
 | PDRN in a Jelly Stick? | `pdrn-jelly-sticks-explained` | B | 2026-09-20 |
 | Are Collagen Jelly Sticks Only for Women? | `are-collagen-jelly-sticks-only-for-women` | E | 2026-09-22 |

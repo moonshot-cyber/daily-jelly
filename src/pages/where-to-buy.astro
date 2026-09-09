@@ -5,6 +5,23 @@ import ProductGuideCard from '../components/ProductGuideCard.astro';
 import EmailCapture from '../components/EmailCapture.astro';
 import { GUIDE_PRODUCTS, SITE, EBAY_LISTINGS } from '../lib/config';
 
+// Cost per 1,000mg — same method as /collagen-price-index (pack price ÷ total
+// labelled collagen content, scaled to a 1,000mg unit), computed here from
+// GUIDE_PRODUCTS rather than hardcoded so the two pages can't drift apart.
+// Only products with a confirmed per-stick mg dose (doseMgPerStick) get a
+// figure; FOODOLOGY and HAMCHOROK don't state one, and YIXO is a
+// collagen-support blend rather than collagen, so it's excluded on principle,
+// not because the number can't be computed.
+const costPer1000mg = (p: typeof GUIDE_PRODUCTS[number]) => {
+  if (p.collagenNotComparable) return 'Not comparable — see entry';
+  if (!p.doseMgPerStick) return 'Dose not stated';
+  const sticks = parseInt(p.packSize.match(/(\d+)/)?.[1] ?? '0', 10);
+  const totalMgThousands = (sticks * p.doseMgPerStick) / 1000;
+  const low = p.priceLowGBP / totalMgThousands;
+  const high = p.priceHighGBP / totalMgThousands;
+  return low === high ? `£${low.toFixed(2)}` : `£${low.toFixed(2)}–${high.toFixed(2)}`;
+};
+
 const quickPicks = [
   { key: 'overall', label: 'Best overall' },
   { key: 'uk-path', label: 'Best for UK retailer choice' },
@@ -133,6 +150,7 @@ const jsonLd = [...productSchemas, breadcrumbSchema, faqSchema];
           <th>Type</th>
           <th>Price</th>
           <th>Per serving</th>
+          <th>Cost / 1,000mg</th>
           <th>UK delivery path</th>
           <th>Best for</th>
         </tr>
@@ -145,6 +163,7 @@ const jsonLd = [...productSchemas, breadcrumbSchema, faqSchema];
             <td>{p.type}</td>
             <td>{p.priceGBP}</td>
             <td>{p.pricePerServing}</td>
+            <td>{costPer1000mg(p)}</td>
             <td>{p.ukPath.map(u => u.name).join(' / ')}</td>
             <td>{p.bestFor}</td>
           </tr>
@@ -152,7 +171,7 @@ const jsonLd = [...productSchemas, breadcrumbSchema, faqSchema];
       </tbody>
     </table>
   </div>
-  <p style="font-size: 12px; color: var(--text-muted); margin: -20px 0 32px;">Prices are indicative bands checked September 2026 — retailers change prices often, so check the live price before buying.</p>
+  <p style="font-size: 12px; color: var(--text-muted); margin: -20px 0 32px;">Prices are indicative bands checked September 2026 — retailers change prices often, so check the live price before buying. Cost per 1,000mg uses only doses confirmed on the retailer's own listing — see our <a href="/collagen-price-index">full price index</a> for the wider comparison against powders and sachets.</p>
 
   <h2 style="font-size: 20px; margin: 8px 0 20px;">The six sticks, in detail</h2>
   {GUIDE_PRODUCTS.map(p => <ProductGuideCard {...p} />)}
