@@ -32,6 +32,17 @@ const rows = PRICE_INDEX.map(p => {
 
 const fmt = (n: number) => `£${n.toFixed(2)}`;
 
+// The "cost of convenience" multiplier — computed from the same live data,
+// not a guessed range. Cheapest non-jelly-stick cost vs the low/high spread
+// of jelly-stick costs in this table.
+const nonStickCosts = rows.filter(p => p.format !== 'Jelly stick').map(p => p.costPer1000mgLow ?? p.costPer1000mg);
+const stickLowCosts = rows.filter(p => p.format === 'Jelly stick').map(p => p.costPer1000mgLow ?? p.costPer1000mg);
+const stickHighCosts = rows.filter(p => p.format === 'Jelly stick').map(p => p.costPer1000mgHigh ?? p.costPer1000mg);
+const cheapestNonStick = Math.min(...nonStickCosts);
+const multiplierLow = Math.min(...stickLowCosts) / cheapestNonStick;
+const multiplierHigh = Math.max(...stickHighCosts) / cheapestNonStick;
+const fmtX = (n: number) => `${n.toFixed(1)}x`;
+
 const productSchemas = PRICE_INDEX.map(p => ({
   '@context': 'https://schema.org',
   '@type': 'Product',
@@ -141,6 +152,14 @@ const jsonLd = [...productSchemas, breadcrumbSchema, faqSchema];
     Prices checked {PRICE_INDEX_LAST_CHECKED} against each retailer's own listing — one-time purchase prices, not
     subscription-discounted prices, for a consistent comparison. Always re-check the live price before buying.
   </p>
+
+  <div class="claim-box">
+    <strong>What you're actually paying the premium for:</strong> jelly sticks in this comparison cost roughly
+    {fmtX(multiplierLow)}–{fmtX(multiplierHigh)} more per 1,000mg than the cheapest sachet here. That premium buys
+    no water, no mixing, and no shaker bottle — one tear-open pouch, a fixed dose, done. If price per mg is your
+    only priority, sachets win outright. If daily consistency and convenience matter more to you than getting the
+    cheapest 1,000mg on paper, that's what the extra cost is actually for.
+  </div>
 
   <h2 style="font-size: 20px; margin: 32px 0 16px;">What this table doesn't tell you</h2>
   <div class="post-body" style="font-size: 15px;">
