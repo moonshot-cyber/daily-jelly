@@ -1,0 +1,143 @@
+---
+import Base from '../layouts/Base.astro';
+import Disclosure from '../components/Disclosure.astro';
+import EmailCapture from '../components/EmailCapture.astro';
+import { SITE, GUIDE_PRODUCTS } from '../lib/config';
+
+const pageURL = new URL('/collagen', SITE.url).toString();
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url },
+    { '@type': 'ListItem', position: 2, name: 'Collagen Supplements Explained', item: pageURL },
+  ],
+};
+
+const faqs = [
+  {
+    q: 'What is collagen, and why is it in a supplement?',
+    a: "Collagen is a structural protein — the most abundant protein in the human body, found in skin, connective tissue, bone, and cartilage. Supplements typically contain hydrolysed collagen peptides, broken down into smaller units for easier absorption, sourced from fish (marine), cattle (bovine), or replaced with plant-based collagen-support ingredients in 'vegan collagen' products.",
+  },
+  {
+    q: "What's the difference between Type I, II, and III collagen?",
+    a: 'Type I is the most abundant in the body and the type most collagen-for-skin supplements (including every jelly stick on this site) actually contain. Type II is found in cartilage and is the type used in joint-specific supplements — a different product category from the skin-focused sticks we cover. Type III often occurs alongside Type I in skin and blood vessels. None of the products we feature are marketed as Type II joint supplements.',
+  },
+  {
+    q: 'What collagen format should I actually buy?',
+    a: "There's no universally best format — powders and sachets are generally cheaper per 1,000mg (see our price index), while jelly sticks and gummies win on convenience. See our full format comparison for the actual trade-offs.",
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(f => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+
+const jsonLd = [breadcrumbSchema, faqSchema];
+---
+
+<Base
+  title="Collagen Supplements Explained: Formats, Doses & What Actually Works"
+  description="A plain-English guide to collagen supplements — formats, types, doses, evidence, and UK buying paths, with jelly sticks (our specialism) covered in the most depth."
+  activeNav="collagen"
+  image={GUIDE_PRODUCTS[0].image}
+  jsonLd={jsonLd}
+>
+  <nav aria-label="Breadcrumb" style="font-size: 13px; color: var(--text-muted); margin-bottom: 14px;">
+    <a href="/" style="color: var(--text-muted);">Home</a> / <span>Collagen Supplements Explained</span>
+  </nav>
+  <p style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin: 0 0 10px;">Guide hub · updated September 2026</p>
+  <h1 style="font-size: 30px; margin: 0 0 10px; max-width: 640px;">Collagen Supplements Explained: Formats, Doses & What Actually Works</h1>
+  <p style="color: var(--text-muted); margin: 0 0 24px; font-size: 15px; max-width: 640px;">
+    Collagen supplements are hydrolysed collagen peptides — usually marine (fish) or bovine (cattle) sourced, sometimes
+    replaced with a plant-based collagen-support blend — sold as powders, sachets, gummies, capsules, or jelly sticks.
+    Modest evidence supports specific, well-studied peptides taken consistently over 8+ weeks; format doesn't change
+    whether it works, only how convenient it is to take. This page is the starting point for everything we cover —
+    jelly sticks are this site's specialism and get the deepest coverage, but the sections below apply across the
+    whole category.
+  </p>
+
+  <Disclosure />
+
+  <div class="claim-box">
+    <strong>The one claim that's actually authorised:</strong> Vitamin C contributes to normal collagen formation
+    for the normal function of skin — that's the only collagen-related health claim permitted under UK/EU rules.
+    Nothing on this site claims a product "boosts," "restores," or reverses skin ageing.
+  </div>
+
+  <h2 style="font-size: 20px; margin: 32px 0 12px;">Does collagen actually work?</h2>
+  <p style="font-size: 15px; color: var(--text-muted); max-width: 640px; margin: 0 0 8px;">
+    Modest, real evidence exists for specific peptides like VERISOL at meaningful doses over 8+ weeks — not the
+    dramatic transformation the marketing often implies. Full evidence roundup, sources included:
+  </p>
+  <p style="margin: 0 0 28px;"><a href="/guides/do-collagen-jelly-sticks-actually-work">Do collagen jelly sticks actually work? →</a></p>
+
+  <h2 style="font-size: 20px; margin: 32px 0 16px;">Formats, types, and dose</h2>
+  <p style="font-size: 15px; color: var(--text-muted); max-width: 640px; margin: 0 0 16px;">
+    Collagen comes in three main types relevant to supplements. <strong>Type I</strong> is the most abundant in the
+    body and what nearly every skin-focused collagen product — including every jelly stick we track — actually
+    contains. <strong>Type II</strong> is cartilage-specific and used in a different category of joint supplements,
+    not the sticks on this site. <strong>Type III</strong> often occurs alongside Type I in skin and blood vessels.
+    Sources vary by product: marine (fish), bovine (cattle), or plant-based collagen-support blends that don't
+    contain real collagen at all, since no plant source of animal collagen exists.
+  </p>
+  <ul class="post-body" style="font-size: 15px; margin: 0 0 28px;">
+    <li><a href="/guides/what-are-korean-collagen-jelly-sticks">What are Korean collagen jelly sticks?</a> — the format explained</li>
+    <li><a href="/guides/collagen-jelly-stick-benefits-and-ingredients">What's actually inside a collagen jelly stick</a> — marine vs bovine vs plant, doses compared</li>
+    <li><a href="/guides/jelly-sticks-vs-gummies-powders">Jelly sticks vs gummies vs powders</a> — the full format comparison</li>
+    <li><a href="/guides/vegan-and-plant-based-collagen-jelly-sticks">Vegan collagen jelly sticks</a> — the genuine plant-based options, verified pricing</li>
+    <li><a href="/guides/collagen-jelly-stick-reviews-bb-lab-hamchorok-cloo9-yixo">Six-way jelly stick reviews</a> — head-to-head on the products we track</li>
+  </ul>
+
+  <h2 style="font-size: 20px; margin: 32px 0 16px;">Buying and pricing</h2>
+  <p style="font-size: 15px; color: var(--text-muted); max-width: 640px; margin: 0 0 16px;">
+    Pack price alone is a bad way to compare collagen products — packs vary wildly in size and dose. We check price
+    per 1,000mg instead, across jelly sticks and mainstream UK sachets/powders alike.
+  </p>
+  <ul class="post-body" style="font-size: 15px; margin: 0 0 28px;">
+    <li><a href="/where-to-buy">Where to buy collagen jelly sticks in the UK</a> — full comparison, six real products</li>
+    <li><a href="/guides/best-collagen-jelly-sticks-uk">Best collagen jelly sticks UK</a> — quick picks</li>
+    <li><a href="/collagen-price-index">UK collagen price index</a> — cost per 1,000mg, jelly sticks vs sachets and powders</li>
+    <li><a href="/guides/jelly-sticks-vs-liquid-collagen-sachets">Jelly sticks vs liquid collagen sachets</a> — vs the bigger UK incumbent category</li>
+  </ul>
+
+  <h2 style="font-size: 20px; margin: 32px 0 16px;">Korean imports and UK availability</h2>
+  <p style="font-size: 15px; color: var(--text-muted); max-width: 640px; margin: 0 0 16px;">
+    Jelly sticks specifically are a Korean "inner beauty" import format, genuinely available to UK buyers but not yet
+    on the UK high street — worth understanding before you order internationally.
+  </p>
+  <ul class="post-body" style="font-size: 15px; margin: 0 0 28px;">
+    <li><a href="/guides/inner-beauty-trend-uk">Why Korea is snacking on skincare</a> — the inner-beauty category explained</li>
+    <li><a href="/guides/why-boots-superdrug-holland-barrett-dont-stock-jelly-sticks">Why Boots, Superdrug & H&B don't stock jelly sticks</a></li>
+    <li><a href="/guides/costco-collagen-jelly-sticks-uk-alternative">The Costco US comparison</a> — a real distribution gap explained</li>
+  </ul>
+
+  <h2 style="font-size: 20px; margin: 32px 0 16px;">Common questions</h2>
+  <div>
+    {faqs.map(f => (
+      <div class="faq-item">
+        <h3>{f.q}</h3>
+        <p>{f.a}</p>
+      </div>
+    ))}
+  </div>
+
+  <div class="disclosure">
+    <strong>A reminder on claims:</strong> the only collagen-related health claim authorised in the UK/EU is that
+    Vitamin C contributes to normal collagen formation for the normal function of skin. Daily Jelly is an editorial
+    guide, not a manufacturer — this page is not medical advice, and food supplements are not a substitute for a
+    varied and balanced diet.
+  </div>
+
+  <EmailCapture
+    title="Get UK stock & price alerts"
+    body="One email when a new UK retailer stocks jelly sticks, or when a featured product drops in price. No spam, unsubscribe any time."
+  />
+</Base>
