@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 import GuideCard from '../../components/GuideCard.astro';
 import { getCollection } from 'astro:content';
 
-const guides = (await getCollection('guides')).sort(
+const guides = (await getCollection('guides', (g) => !g.data.draft)).sort(
   (a, b) => new Date(b.data.publishDate).valueOf() - new Date(a.data.publishDate).valueOf()
 );
 ---

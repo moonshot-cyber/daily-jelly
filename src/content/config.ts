@@ -7,6 +7,11 @@ const guides = defineCollection({
     excerpt: z.string(),
     readTime: z.string(),
     publishDate: z.string(),
+    // Written but not yet due to ship, per the staggered publish schedule.
+    // Filtered out of every collection read (index, [slug] routes, homepage)
+    // so committing a draft has zero effect on the live site — publishing is
+    // the draft:true -> false flip, not the first commit.
+    draft: z.boolean().default(false),
     dateModified: z.string().optional(),
     // Real, already-hotlinked retailer product photography reused for this
     // article's social-share preview and Article schema image — never a new

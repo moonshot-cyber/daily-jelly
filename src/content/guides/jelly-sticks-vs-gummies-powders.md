@@ -2,8 +2,8 @@
 title: "Jelly Sticks vs Gummies vs Powders: Which Collagen Format Actually Suits You"
 excerpt: "A straight comparison of the three main collagen formats on convenience, taste, dosing, and price per serving — no format is objectively 'best'."
 readTime: "6 min"
-publishDate: "2026-09-02"
-dateModified: "2026-09-08"
+publishDate: "2026-09-04"
+dateModified: "2026-09-09"
 image: "https://d1flfk77wl2xk4.cloudfront.net/Assets/92/884/XXL_p0211888492.jpg"
 imageCredit: "YesStyle"
 ---
@@ -47,4 +47,4 @@ Jelly sticks win on convenience and portion control — no water, no mixing, one
 
 If convenience is the thing that's stopped you from sticking with a collagen routine, jelly sticks are worth trying — accepting the import cost and delivery time. If you already have a gummy or powder habit that works for you, there's no compelling reason in the ingredients themselves to switch; the format, not the collagen, is what's different.
 
-See our [full guide to what's actually in a jelly stick](/guides/what-are-korean-collagen-jelly-sticks), or jump straight to [where to buy them in the UK](/where-to-buy). If portability specifically is what's driving your decision, we've gone deeper on that one question in [collagen on the go: jelly sticks vs powders for travel and commuting](/guides/collagen-jelly-sticks-vs-powders-on-the-go).
+See our [full guide to what's actually in a jelly stick](/guides/what-are-korean-collagen-jelly-sticks), or jump straight to [where to buy them in the UK](/where-to-buy). If portability specifically is what's driving your decision, our dedicated piece on [collagen and commuting](/guides/collagen-jelly-sticks-vs-powders-on-the-go) covers that one question in more depth.

@@ -1,0 +1,18 @@
+---
+// Links to a /guides/<slug> article only if that article exists and isn't a
+// draft — otherwise renders the slot as plain text. Lets .astro templates
+// reference not-yet-published (or not-yet-written) guides without producing
+// a live 404; the link activates itself the moment the target ships.
+// Markdown article bodies get the equivalent behaviour automatically via the
+// rehype-guide-links plugin in astro.config.mjs — this component exists
+// because .astro templates aren't processed by that markdown pipeline.
+import { getCollection } from 'astro:content';
+
+interface Props {
+  slug: string;
+}
+
+const { slug } = Astro.props;
+const isLive = (await getCollection('guides', (g) => !g.data.draft)).some(g => g.slug === slug);
+---
+{isLive ? <a href={`/guides/${slug}`}><slot /></a> : <slot />}

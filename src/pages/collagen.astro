@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import Disclosure from '../components/Disclosure.astro';
 import EmailCapture from '../components/EmailCapture.astro';
+import GuideLink from '../components/GuideLink.astro';
 import { SITE, GUIDE_PRODUCTS } from '../lib/config';
 
 const pageURL = new URL('/collagen', SITE.url).toString();
@@ -103,7 +104,7 @@ const jsonLd = [breadcrumbSchema, faqSchema];
   </p>
   <ul class="post-body" style="font-size: 15px; margin: 0 0 28px;">
     <li><a href="/where-to-buy">Where to buy collagen jelly sticks in the UK</a> — full comparison, six real products</li>
-    <li><a href="/guides/best-collagen-jelly-sticks-uk">Best collagen jelly sticks UK</a> — quick picks</li>
+    <li><GuideLink slug="best-collagen-jelly-sticks-uk">Best collagen jelly sticks UK</GuideLink> — quick picks</li>
     <li><a href="/collagen-price-index">UK collagen price index</a> — cost per 1,000mg, jelly sticks vs sachets and powders</li>
     <li><a href="/guides/jelly-sticks-vs-liquid-collagen-sachets">Jelly sticks vs liquid collagen sachets</a> — vs the bigger UK incumbent category</li>
   </ul>
@@ -116,7 +117,7 @@ const jsonLd = [breadcrumbSchema, faqSchema];
   <ul class="post-body" style="font-size: 15px; margin: 0 0 28px;">
     <li><a href="/guides/inner-beauty-trend-uk">Why Korea is snacking on skincare</a> — the inner-beauty category explained</li>
     <li><a href="/guides/why-boots-superdrug-holland-barrett-dont-stock-jelly-sticks">Why Boots, Superdrug & H&B don't stock jelly sticks</a></li>
-    <li><a href="/guides/costco-collagen-jelly-sticks-uk-alternative">The Costco US comparison</a> — a real distribution gap explained</li>
+    <li><GuideLink slug="costco-collagen-jelly-sticks-uk-alternative">The Costco US comparison</GuideLink> — a real distribution gap explained</li>
   </ul>
 
   <h2 style="font-size: 20px; margin: 32px 0 16px;">Common questions</h2>
