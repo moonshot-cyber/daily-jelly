@@ -1,0 +1,177 @@
+---
+import Base from '../layouts/Base.astro';
+import Disclosure from '../components/Disclosure.astro';
+import { PRICE_INDEX, PRICE_INDEX_LAST_CHECKED, SITE } from '../lib/config';
+
+const pageURL = new URL('/collagen-price-index', SITE.url).toString();
+
+// Cost per 1,000mg, computed from the raw price/dose data — not a hardcoded
+// figure, so updating a price or dose in config.ts automatically recalculates
+// this and the ranking below. Range-priced entries (a low/high band rather
+// than one fixed price) get a low and high cost-per-1000mg instead of one
+// number, same honesty pattern as the rest of the site's price bands.
+const rows = PRICE_INDEX.map(p => {
+  const totalDoseG = (p.packSize.match(/(\d+)/)?.[1] ?? '0');
+  const units = parseInt(totalDoseG, 10);
+  const totalMg = units * p.doseMg;
+  const totalMgThousands = totalMg / 1000;
+  if (p.priceGBPLow !== undefined) {
+    return {
+      ...p,
+      costPer1000mgLow: p.priceGBPLow / totalMgThousands,
+      costPer1000mgHigh: p.priceGBPHigh / totalMgThousands,
+      sortValue: p.priceGBPLow / totalMgThousands,
+    };
+  }
+  return {
+    ...p,
+    costPer1000mg: p.priceGBP / totalMgThousands,
+    sortValue: p.priceGBP / totalMgThousands,
+  };
+}).sort((a, b) => a.sortValue - b.sortValue);
+
+const fmt = (n: number) => `£${n.toFixed(2)}`;
+
+const productSchemas = PRICE_INDEX.map(p => ({
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: p.name,
+  brand: { '@type': 'Brand', name: p.brand },
+  offers: p.priceGBPLow !== undefined
+    ? { '@type': 'AggregateOffer', lowPrice: p.priceGBPLow, highPrice: p.priceGBPHigh, priceCurrency: 'GBP', url: p.href, offerCount: 1 }
+    : { '@type': 'Offer', price: p.priceGBP, priceCurrency: 'GBP', url: p.href },
+}));
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url },
+    { '@type': 'ListItem', position: 2, name: 'UK Collagen Price Index', item: pageURL },
+  ],
+};
+
+const faqs = [
+  {
+    q: 'What is the cheapest way to buy collagen in the UK by dose?',
+    a: `Currently ${rows[0].name}, at roughly ${fmt(rows[0].costPer1000mgLow ?? rows[0].costPer1000mg)} per 1,000mg of collagen — a powder sachet, not a jelly stick. Checked ${PRICE_INDEX_LAST_CHECKED}.`,
+  },
+  {
+    q: 'Are collagen jelly sticks more expensive than powders or liquid sachets, per mg of collagen?',
+    a: 'Generally yes, in this comparison — the two liquid/powder sachet products checked here work out cheaper per 1,000mg of collagen than most of the jelly sticks. Jelly sticks compete on convenience (no water, no mixing, one fixed dose), not on being the cheapest way to get collagen.',
+  },
+  {
+    q: 'How is "cost per 1,000mg" calculated on this page?',
+    a: "Pack price divided by total collagen content of the whole pack (dose per serving × number of servings), then scaled to a 1,000mg unit. Only products with a collagen dose actually stated on the retailer's own listing are included — nothing here is an estimated or invented figure.",
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(f => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+
+const jsonLd = [...productSchemas, breadcrumbSchema, faqSchema];
+---
+
+<Base
+  title="UK Collagen Price Index — Cost Per 1,000mg Compared"
+  description="What collagen actually costs in the UK, per 1,000mg, across sachets, powders and jelly sticks — real prices and doses, checked against each retailer's own listing."
+  activeNav="price-index"
+  image="https://d1flfk77wl2xk4.cloudfront.net/Assets/19/869/XXL_p0189986919.jpg"
+  jsonLd={jsonLd}
+>
+  <nav aria-label="Breadcrumb" style="font-size: 13px; color: var(--text-muted); margin-bottom: 14px;">
+    <a href="/" style="color: var(--text-muted);">Home</a> / <span>UK Collagen Price Index</span>
+  </nav>
+  <p style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin: 0 0 10px;">Standing reference · checked {PRICE_INDEX_LAST_CHECKED}, updated periodically</p>
+  <h1 style="font-size: 30px; margin: 0 0 10px; max-width: 640px;">UK Collagen Price Index: Cost Per 1,000mg, Compared</h1>
+  <p style="color: var(--text-muted); margin: 0 0 20px; font-size: 15px; max-width: 620px;">
+    The honest answer up front: {rows[0].name} is currently the cheapest way to buy collagen in the UK by dose,
+    at roughly {fmt(rows[0].costPer1000mgLow ?? rows[0].costPer1000mg)} per 1,000mg — a powder sachet, not a jelly stick.
+    This page compares real, currently-available UK collagen products (jelly sticks and otherwise) on price per 1,000mg
+    of actual labelled collagen, not pack price alone, so a £64 pack and a £16 pack can be compared fairly.
+  </p>
+
+  <Disclosure />
+
+  <div class="claim-box">
+    <strong>Why this exists:</strong> pack price alone is a bad way to compare collagen products — packs vary wildly
+    in size and dose. Every figure below is pack price ÷ total collagen content of the pack, using only the dose
+    stated on the retailer's own listing. Nothing here is an estimated or invented dose.
+  </div>
+
+  <h2 style="font-size: 20px; margin: 32px 0 16px;">Cost per 1,000mg, cheapest first</h2>
+  <div class="table-scroll">
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Format</th>
+          <th>Pack</th>
+          <th>Dose</th>
+          <th>Price</th>
+          <th>Cost / 1,000mg</th>
+        </tr>
+      </thead>
+      <tbody>
+        {rows.map(p => (
+          <tr>
+            <td><a href={p.href} target="_blank" rel="noopener sponsored">{p.name}</a></td>
+            <td>{p.format}</td>
+            <td>{p.packSize}</td>
+            <td>{p.doseMg.toLocaleString()}mg / serving</td>
+            <td>{p.priceGBPLow !== undefined ? `£${p.priceGBPLow}–${p.priceGBPHigh}` : `£${p.priceGBP}`}</td>
+            <td>
+              {p.costPer1000mgLow !== undefined
+                ? `${fmt(p.costPer1000mgLow)}–${fmt(p.costPer1000mgHigh)}`
+                : fmt(p.costPer1000mg)}
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size: 12px; color: var(--text-muted); margin: -20px 0 32px;">
+    Prices checked {PRICE_INDEX_LAST_CHECKED} against each retailer's own listing — one-time purchase prices, not
+    subscription-discounted prices, for a consistent comparison. Always re-check the live price before buying.
+  </p>
+
+  <h2 style="font-size: 20px; margin: 32px 0 16px;">What this table doesn't tell you</h2>
+  <div class="post-body" style="font-size: 15px;">
+    <ul>
+      <li>Cost per 1,000mg is not the same as "best product" — marine, bovine, and plant-based collagen aren't
+        interchangeable, and this table doesn't distinguish quality or bioavailability, only price against
+        labelled quantity.</li>
+      <li>It doesn't measure convenience. Jelly sticks need no water or mixing; the sachet and powder products
+        here generally do. Cheaper per mg isn't the same as easier to actually use daily — see our
+        <a href="/guides/jelly-sticks-vs-gummies-powders">full format comparison</a> for that trade-off.</li>
+      <li>Only products with a dose stated on the retailer's own listing are included. Several jelly sticks we
+        track elsewhere on this site (FOODOLOGY, YIXO, HAMCHOROK) aren't here because their listing doesn't state
+        an exact mg figure — see our <a href="/where-to-buy">full where-to-buy guide</a> for those, honestly
+        labelled as "not stated."</li>
+    </ul>
+  </div>
+
+  <h2 style="font-size: 20px; margin: 32px 0 16px;">Common questions</h2>
+  <div>
+    {faqs.map(f => (
+      <div class="faq-item">
+        <h3>{f.q}</h3>
+        <p>{f.a}</p>
+      </div>
+    ))}
+  </div>
+
+  <div class="disclosure">
+    <strong>A reminder on claims:</strong> the only collagen-related health claim authorised in the UK/EU is that
+    Vitamin C contributes to normal collagen formation for the normal function of skin. This page compares price
+    and labelled dose only — it isn't a claim that any product here "works" better than another; see our
+    <a href="/guides/do-collagen-jelly-sticks-actually-work">evidence roundup</a> for what the research actually says.
+  </div>
+</Base>

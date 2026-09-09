@@ -248,3 +248,69 @@ export const GUIDE_PRODUCTS = [
     isAmazon: true,
   },
 ];
+
+// UK Collagen Price Index — cost per 1,000mg of collagen across real,
+// currently-available UK products, jelly sticks and otherwise. Every price
+// and dose here is checked against the retailer's own listing (not a brand's
+// marketing copy) on the date noted below. This is a living reference page,
+// not a one-off — re-check and expand it periodically rather than treating
+// it as finished. Entries are ONLY included if a genuine mg dose is stated
+// on the listing; several jelly sticks already in GUIDE_PRODUCTS are
+// deliberately excluded here (FOODOLOGY, YIXO, HAMCHOROK) because their
+// dose isn't stated, and inventing one to compute a cost-per-1000mg figure
+// would be exactly the kind of fabricated number this site doesn't do.
+export const PRICE_INDEX_LAST_CHECKED = 'September 2026';
+
+export const PRICE_INDEX = [
+  {
+    name: 'Zooki Marine Collagen (Regular Strength)',
+    brand: 'Zooki',
+    format: 'Liquid sachet',
+    packSize: '14 sachets',
+    doseMg: 5000,
+    priceGBP: 23.99,
+    href: 'https://zooki.com/products/marine-collagen-liquid-5000mg',
+    sourceNote: "Brand's own site, one-time price (not the subscription-discounted price)",
+  },
+  {
+    name: 'Absolute Collagen Premium Marine Collagen Powder',
+    brand: 'Absolute Collagen',
+    format: 'Powder sachet',
+    packSize: '14 sachets',
+    doseMg: 8000,
+    priceGBP: 33.99,
+    href: 'https://www.absolutecollagen.com/products/premium-marine-collagen-powder',
+    sourceNote: "Brand's own site, one-time price (subscription price is £27.99)",
+  },
+  {
+    name: 'NOW Foods Collagen Jelly Beauty Complex',
+    brand: 'NOW Foods',
+    format: 'Jelly stick',
+    packSize: '10 sticks',
+    doseMg: 2500,
+    priceGBP: 16.03,
+    href: 'https://welzo.com/products/now-foods-collagen-jelly-beauty-complex-10-jelly-sticks',
+    sourceNote: 'Welzo listing — VERISOL bovine collagen peptide',
+  },
+  {
+    name: 'Cloo9 Collagen Jelly',
+    brand: 'Cloo9',
+    format: 'Jelly stick',
+    packSize: '28 sticks',
+    doseMg: 5000,
+    priceGBP: 64,
+    href: 'https://www.cloo9.com/products/collagen-jelly-peach',
+    sourceNote: "Brand's own site — marine collagen",
+  },
+  {
+    name: 'BB LAB Pomegranate Collagen S',
+    brand: 'BB LAB',
+    format: 'Jelly stick',
+    packSize: '14 sticks',
+    doseMg: 1000,
+    priceGBPLow: 18,
+    priceGBPHigh: 24,
+    href: 'https://www.yesstyle.com/en/nutrione-bb-lab-pomegranate-collagen-s-20g-x-14-sticks/info.html/pid.1120234762',
+    sourceNote: 'YesStyle listing — marine collagen, price checked as a band not a fixed figure',
+  },
+];
