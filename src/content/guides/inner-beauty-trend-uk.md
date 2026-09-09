@@ -2,8 +2,8 @@
 title: "Why Korea Is Snacking on Skincare — and the UK Isn't (Yet)"
 excerpt: "'Inner beauty' treats skincare as something you eat as much as something you apply. Here's why the format is everywhere in Korea and still rare on UK shelves."
 readTime: "4 min"
-publishDate: "2026-09-03"
-dateModified: "2026-09-08"
+publishDate: "2026-09-04"
+dateModified: "2026-09-09"
 image: "https://d1flfk77wl2xk4.cloudfront.net/Assets/grn-volume-up-collagen-jelly-15g-x-14-sticks/12/264/XXL_p0219426412.jpg"
 imageCredit: "YesStyle"
 ---
