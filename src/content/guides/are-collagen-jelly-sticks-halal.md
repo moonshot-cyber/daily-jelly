@@ -3,7 +3,7 @@ title: "Are Collagen Jelly Sticks Halal? Marine vs Bovine Collagen Explained"
 excerpt: "A genuine question with no simple yes — how collagen source affects halal status, and what we could (and couldn't) verify about the six sticks in our guide."
 readTime: "5 min"
 publishDate: "2026-09-10"
-draft: true
+draft: false
 ---
 
 This is a real, specific question we saw people searching, and it deserves a properly researched answer rather than a guess — collagen source matters a lot here, and "probably fine" isn't good enough when it comes to dietary compliance. Please treat this as a starting point for your own checking, not a final answer for any specific product.
