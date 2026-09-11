@@ -43,6 +43,10 @@ No orphans: every new article must map to a cluster before it gets written.
 | Are Collagen Jelly Sticks Only for Women? | `are-collagen-jelly-sticks-only-for-women` | E | 2026-09-22 |
 | Best Collagen Jelly Sticks UK (2026) | `best-collagen-jelly-sticks-uk` | F | 2026-09-24 |
 | Is There Gelatine in Collagen Jelly Sticks? | `is-there-gelatine-in-collagen-jelly-sticks` | B | 2026-09-26 |
+| Is Collagen Good for Men? What the Evidence Actually Says | `is-collagen-good-for-men` | E | 2026-09-28 |
+| Collagen in your 60s and beyond: joints and muscle, not skin | `collagen-in-your-60s-and-beyond` | E | 2026-09-30 |
+
+**The last two rows are dates, not ready articles** — unlike everything above them, neither has a file in `src/content/guides/` yet, both are still status "needs research" in the Cluster E briefed section below (guardrails and sources already noted there), and neither has a scheduled task created. Continues the every-other-day cadence from `gelatine` (2026-09-26). Before 2026-09-28: draft `is-collagen-good-for-men`, commit it with `draft: true`, and create a `daily-jelly-publish-*` scheduled task for it (same pattern as the existing 8 — flip `draft: false` on the day, don't do a first commit then). Same for `collagen-in-your-60s-and-beyond` before 2026-09-30.
 
 ## Standing pages (not part of the drip-feed — updated in place)
 
