@@ -46,7 +46,7 @@ No orphans: every new article must map to a cluster before it gets written.
 | Is Collagen Good for Men? What the Evidence Actually Says | `is-collagen-good-for-men` | E | 2026-09-28 |
 | Collagen in your 60s and beyond: joints and muscle, not skin | `collagen-in-your-60s-and-beyond` | E | 2026-09-30 |
 
-`is-collagen-good-for-men` is now drafted (2026-09-11) and committed with `draft: true` — same state as the other pre-2026-09-28 rows above it. Still needs a `daily-jelly-publish-*` scheduled task created before 2026-09-28 (flip `draft: false` on the day, same pattern as the existing 8 — not created yet).
+`is-collagen-good-for-men` is fully ready — drafted 2026-09-11, committed with `draft: true`, and its scheduled task (`daily-jelly-publish-men-angle`, fires 2026-09-28 11:15 UTC) is created. Same state as the other 8 rows above it.
 
 **`collagen-in-your-60s-and-beyond` (2026-09-30) is still just a date** — no file in `src/content/guides/` yet, still status "needs research" in the Cluster E briefed section below (guardrails and sources already noted there), no scheduled task. Before 2026-09-30: draft it, commit with `draft: true`, and create its scheduled task.
 
