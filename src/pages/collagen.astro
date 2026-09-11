@@ -125,7 +125,14 @@ const jsonLd = [breadcrumbSchema, faqSchema];
     {faqs.map(f => (
       <div class="faq-item">
         <h3>{f.q}</h3>
-        <p>{f.a}</p>
+        {f.q === 'What collagen format should I actually buy?' ? (
+          // {f.a} above is plain text for FAQPage schema (Answer.text can't hold markup) — this
+          // JSX version is the visible rendering with real links. Keep both in sync if this
+          // answer's wording changes.
+          <p>There's no universally best format — powders and sachets are generally cheaper per 1,000mg (see our <a href="/collagen-price-index">price index</a>), while jelly sticks and gummies win on convenience. See our <a href="/guides/jelly-sticks-vs-gummies-powders">full format comparison</a> for the actual trade-offs.</p>
+        ) : (
+          <p>{f.a}</p>
+        )}
       </div>
     ))}
   </div>
