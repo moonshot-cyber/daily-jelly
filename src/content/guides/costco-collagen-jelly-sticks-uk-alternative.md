@@ -3,6 +3,7 @@ title: "Costco Sells a 42-Pack of These in America — Here's the Closest You Ca
 excerpt: "EVERYDAZE's jelly sticks come in a cheap 42-count value pack at US Costco. Costco UK doesn't carry it — here's what's actually available here instead."
 readTime: "4 min"
 publishDate: "2026-09-14"
+cluster: korean-imports
 draft: true
 ---
 

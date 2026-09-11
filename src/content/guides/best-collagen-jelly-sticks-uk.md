@@ -4,6 +4,7 @@ excerpt: "Our current top picks across six real, currently-available collagen je
 readTime: "4 min"
 publishDate: "2026-09-24"
 dateModified: "2026-09-24"
+cluster: comparisons
 image: "https://d1flfk77wl2xk4.cloudfront.net/Assets/19/869/XXL_p0189986919.jpg"
 imageCredit: "YesStyle"
 draft: true

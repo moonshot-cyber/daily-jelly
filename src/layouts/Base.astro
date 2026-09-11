@@ -1,5 +1,5 @@
 ---
-import { SITE } from '../lib/config';
+import { SITE, CLUSTERS } from '../lib/config';
 import '../styles/global.css';
 
 interface Props {
@@ -86,6 +86,14 @@ const allSchema = [...siteSchema, ...pageSchema];
 
   <footer class="site-footer">
     <div class="container">
+      <p style="font-size: 13px; margin: 0 0 14px;">
+        {CLUSTERS.map((cluster, i) => (
+          <>
+            {i > 0 && ' · '}
+            <a href={`/guides/${cluster.slug}`}>{cluster.name}</a>
+          </>
+        ))}
+      </p>
       <p>&copy; {SITE.year} {SITE.name}. {SITE.affiliateDisclosure}</p>
       <p>{SITE.amazonDisclosure}</p>
       <p>Independent, unofficial guide — not affiliated with any brand mentioned. <a href="/about">About &amp; disclosure</a> · <a href="/privacy">Privacy</a></p>

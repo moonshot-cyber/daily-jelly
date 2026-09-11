@@ -3,6 +3,7 @@ title: "Collagen Jelly Stick Reviews: BB LAB vs HAMCHOROK vs Cloo9 vs YIXO vs NO
 excerpt: "Six real jelly sticks, reviewed head to head — who each one actually suits, and where the price-per-stick maths gets uncomfortable."
 readTime: "7 min"
 publishDate: "2026-09-08"
+cluster: types-and-ingredients
 ---
 
 Our [where-to-buy guide](/where-to-buy) is built for comparing specs and buying. This is the more opinionated version — six real products, what we actually think of each, and who should skip them.

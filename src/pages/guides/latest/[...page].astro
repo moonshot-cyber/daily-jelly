@@ -1,6 +1,6 @@
 ---
-import Base from '../../layouts/Base.astro';
-import GuideCard from '../../components/GuideCard.astro';
+import Base from '../../../layouts/Base.astro';
+import GuideCard from '../../../components/GuideCard.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths({ paginate }) {
@@ -11,17 +11,18 @@ export async function getStaticPaths({ paginate }) {
 }
 
 const { page } = Astro.props;
-const pageTitle = page.currentPage === 1 ? 'Guides' : `Guides — Page ${page.currentPage}`;
+const pageTitle = page.currentPage === 1 ? 'All Guides — Newest First' : `All Guides — Page ${page.currentPage}`;
 ---
 
-<Base title={pageTitle} description="Educational guides to Korean collagen jelly sticks and inner-beauty snack formats, written for a UK audience." activeNav="guides">
-  <h1 style="font-size: 30px; margin: 0 0 8px;">Guides</h1>
-  <p style="color: var(--text-muted); margin: 0 0 12px; font-size: 15px; max-width: 500px;">
-    Everything we've published on the jelly-stick format, in plain English.
-  </p>
+<Base title={pageTitle} description="Every guide on Daily Jelly, newest first." activeNav="guides">
+  <nav aria-label="Breadcrumb" style="font-size: 13px; color: var(--text-muted); margin-bottom: 14px;">
+    <a href="/" style="color: var(--text-muted);">Home</a> /
+    <a href="/guides" style="color: var(--text-muted);">Guides</a> /
+    <span>All, newest first</span>
+  </nav>
+  <h1 style="font-size: 30px; margin: 0 0 8px;">All Guides, Newest First</h1>
   <p style="color: var(--text-muted); margin: 0 0 28px; font-size: 15px; max-width: 500px;">
-    Looking for the wider picture? See our <a href="/collagen">collagen guide hub</a> — formats, types, doses, and
-    buying paths across the whole category, not just jelly sticks.
+    Prefer to browse by topic? See <a href="/guides">guides grouped by cluster</a> instead.
   </p>
 
   <div>

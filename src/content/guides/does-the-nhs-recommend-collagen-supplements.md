@@ -3,6 +3,7 @@ title: "Does the NHS Recommend Collagen Supplements?"
 excerpt: "A specific, genuine question — what NHS-affiliated sources actually say about collagen for skin, sourced directly rather than assumed."
 readTime: "4 min"
 publishDate: "2026-09-12"
+cluster: right-for-me
 draft: true
 ---
 

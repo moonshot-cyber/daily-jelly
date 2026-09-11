@@ -4,6 +4,7 @@ excerpt: "Marine, bovine, and vegan collagen; pomegranate and Centella; the dose
 readTime: "5 min"
 publishDate: "2026-09-06"
 dateModified: "2026-09-08"
+cluster: types-and-ingredients
 image: "https://www.cloo9.com/cdn/shop/files/Peach_Collagen_Jelly.1_1919611a-4725-44a0-b1d0-2110b5d05e77.jpg?v=1761239312&width=800"
 imageCredit: "Cloo9"
 faqs:

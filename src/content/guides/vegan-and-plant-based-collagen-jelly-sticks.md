@@ -4,6 +4,7 @@ excerpt: "Bovine and marine collagen rule out vegetarians and vegans alike. Here
 readTime: "5 min"
 publishDate: "2026-09-06"
 dateModified: "2026-09-08"
+cluster: types-and-ingredients
 image: "https://yixo.co.uk/cdn/shop/files/YIXO_vegan_collagen_non-alcoholic_jellies.png?v=1777243406&width=1536"
 imageCredit: "YIXO"
 faqs:

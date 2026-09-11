@@ -4,17 +4,58 @@ Internal planning file, not published to the site (lives at the repo root,
 outside `src/`, so it never gets built into output). Status values:
 `briefed / drafted / scheduled / published / needs-refresh`.
 
-Cluster taxonomy (from the site-optimisation brief, 2026-09-09):
+Cluster taxonomy (from the site-optimisation brief, 2026-09-09; restructured
+into live `/guides/<slug>` hub pages on 2026-09-11 — see "Cluster hub
+restructure" below):
 - **A** — Collagen pillar (one page, parent of everything below)
-- **B** — Formats & dose (closest to current content — jelly sticks live here as the deepest branch)
-- **C** — Practical questions (fast to rank, thin competition)
-- **D** — Korean inner-beauty logistics (import/retailer specifics, feeds existing affiliate links)
-- **E** — Outcomes & audience
-- **F** — Commercial comparisons (money pages, vs named UK incumbents)
+- **B** → hub `types-and-ingredients` ("Types & Ingredients") — closest to
+  current content, jelly sticks live here as the deepest branch
+- **C** → hub `common-questions` ("Common Questions") — fast to rank, thin
+  competition
+- **D** → hub `korean-imports` ("Korean Imports & UK Availability") —
+  import/retailer specifics, feeds existing affiliate links
+- **E** → hub `right-for-me` ("Is It Right For Me?") — audience & outcomes
+- **F** → hub `comparisons` ("Buying Comparisons") — money pages, vs named
+  UK incumbents
 - **G** — UK collagen price index (standing page, own template — already live)
 - **H** — Peptide skincare — DEFERRED, do not build until A–F established
 
 No orphans: every new article must map to a cluster before it gets written.
+`cluster` is now a required field in the content schema (`src/content/config.ts`)
+— a new article with no cluster fails the build.
+
+## Cluster hub restructure (2026-09-11)
+
+`/guides` changed from a flat, recency-paginated list to a cluster index —
+one section per hub above, each linking to `/guides/<hub-slug>` (paginated
+internally at 12/page, though no hub needs pagination yet). The old flat
+"newest first" list still exists at `/guides/latest`. Homepage "Start here"
+changed from latest-6 to one-article-per-cluster, for the same reason the
+restructure happened at all: recency was starting to show an unrepresentative
+slice (mostly B/D) with zero visibility into thinner clusters.
+
+Two articles moved cluster as part of this restructure, both confirmed by
+re-reading the actual content, not just the title:
+- `do-collagen-jelly-sticks-actually-work`: **B → C** (`common-questions`).
+  It's a general "does it work" evidence piece, not format-specific — every
+  briefed C-cluster title already cited it as their evidence source, which
+  settled it.
+- `are-collagen-jelly-sticks-halal`: **B → E** (`right-for-me`). Re-read in
+  full — it's a dietary-compliance audience question, the same shape as the
+  men's/women's/NHS pieces, not a format or dose question. Only tagged B
+  originally because it filled a planned B-title slot.
+
+**PDRN flagged, not resolved**: `pdrn-jelly-sticks-explained` has now been
+called an imperfect fit for `types-and-ingredients` twice (originally in the
+cluster-mapping honesty note below, now again during this restructure). It's
+ingredient-specific *caution* content, not a format/dose comparison — it may
+be the first member of a safety-focused cluster that doesn't exist yet
+(other candidates if one gets built: any future ingredient-safety piece,
+possibly the deferred Cluster H peptide-skincare content). Left in
+`types-and-ingredients` for now rather than forced into a better-sounding
+but still-wrong home. Revisit once there's a second article that would
+actually justify a new cluster — one article isn't enough to split the
+taxonomy for.
 
 ## Published (9)
 
@@ -23,7 +64,7 @@ No orphans: every new article must map to a cluster before it gets written.
 | What Are Korean Collagen Jelly Sticks? | `what-are-korean-collagen-jelly-sticks` | B | 2026-09-01 |
 | Jelly Sticks vs Gummies vs Powders | `jelly-sticks-vs-gummies-powders` | B | 2026-09-02 |
 | Why Korea Is Snacking on Skincare (inner beauty) | `inner-beauty-trend-uk` | D | 2026-09-03 |
-| Do Collagen Jelly Sticks Actually Work? | `do-collagen-jelly-sticks-actually-work` | B | 2026-09-06 |
+| Do Collagen Jelly Sticks Actually Work? | `do-collagen-jelly-sticks-actually-work` | C (moved from B 2026-09-11, see restructure note above) | 2026-09-06 |
 | What's Actually Inside a Collagen Jelly Stick | `collagen-jelly-stick-benefits-and-ingredients` | B | 2026-09-06 |
 | Vegan Collagen Jelly Sticks | `vegan-and-plant-based-collagen-jelly-sticks` | B | 2026-09-06 — already covers the planned Cluster B title "'Vegan collagen' isn't collagen," no duplicate needed |
 | Why Boots/Superdrug/H&B Don't Stock Jelly Sticks | `why-boots-superdrug-holland-barrett-dont-stock-jelly-sticks` | D | 2026-09-07 |
@@ -35,7 +76,7 @@ No orphans: every new article must map to a cluster before it gets written.
 
 | Title | Slug | Cluster | Scheduled |
 |---|---|---|---|
-| Are Collagen Jelly Sticks Halal? | `are-collagen-jelly-sticks-halal` | B — matches planned "Is collagen halal?" title | 2026-09-10 |
+| Are Collagen Jelly Sticks Halal? | `are-collagen-jelly-sticks-halal` | E (moved from B 2026-09-11, see restructure note above) | 2026-09-10 |
 | Does the NHS Recommend Collagen Supplements? | `does-the-nhs-recommend-collagen-supplements` | E | 2026-09-12 |
 | Costco Sells a 42-Pack (US comparison) | `costco-collagen-jelly-sticks-uk-alternative` | D | 2026-09-14 |
 | Collagen on the Go (travel/commuting) | `collagen-jelly-sticks-vs-powders-on-the-go` | C | 2026-09-18 |

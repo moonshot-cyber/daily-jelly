@@ -3,12 +3,20 @@ import Base from '../layouts/Base.astro';
 import GuideCard from '../components/GuideCard.astro';
 import EmailCapture from '../components/EmailCapture.astro';
 import { getCollection } from 'astro:content';
-import { SITE, PRODUCTS, GUIDE_PRODUCTS } from '../lib/config';
+import { SITE, PRODUCTS, GUIDE_PRODUCTS, CLUSTERS } from '../lib/config';
 import ProductImage from '../components/ProductImage.astro';
 
-const latestGuides = (await getCollection('guides', (g) => !g.data.draft)).sort(
-  (a, b) => new Date(b.data.publishDate).valueOf() - new Date(a.data.publishDate).valueOf()
-).slice(0, 6);
+const guides = await getCollection('guides', (g) => !g.data.draft);
+// One per cluster, not recency — the latest-published articles tend to
+// cluster together (whatever's been drafted most recently), which shows an
+// unrepresentative slice of the site. Picking the most recent article from
+// each cluster instead gives a genuine cross-section every time, regardless
+// of publish order, and stays stable as new articles land.
+const startHereGuides = CLUSTERS.map((cluster) =>
+  guides
+    .filter((g) => g.data.cluster === cluster.slug)
+    .sort((a, b) => new Date(b.data.publishDate).valueOf() - new Date(a.data.publishDate).valueOf())[0]
+).filter(Boolean);
 const heroProduct = PRODUCTS[0];
 const amazonProduct = GUIDE_PRODUCTS.find(p => p.isAmazon);
 ---
@@ -69,7 +77,7 @@ const amazonProduct = GUIDE_PRODUCTS.find(p => p.isAmazon);
 
   <h2 style="font-size: 22px; margin: 8px 0 16px;">Start here</h2>
   <div>
-    {latestGuides.map(guide => (
+    {startHereGuides.map(guide => (
       <GuideCard slug={guide.slug} title={guide.data.title} excerpt={guide.data.excerpt} readTime={guide.data.readTime} />
     ))}
   </div>

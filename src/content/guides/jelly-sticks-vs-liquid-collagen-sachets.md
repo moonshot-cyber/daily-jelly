@@ -3,6 +3,7 @@ title: "Jelly Sticks vs Liquid Collagen Sachets: What's the Difference?"
 excerpt: "Absolute Collagen, Zooki, Revive Collagen — liquid sachets dominate the UK collagen market. Here's how they actually compare to jelly sticks."
 readTime: "5 min"
 publishDate: "2026-09-07"
+cluster: comparisons
 ---
 
 Search for collagen in the UK and you'll hit liquid sachets constantly — Absolute Collagen, Zooki, Revive Collagen, Benjamin Button. They're a much bigger, more established category here than jelly sticks are, and it's easy to conflate the two formats since both come in a small single-serve pouch. They're genuinely different products.

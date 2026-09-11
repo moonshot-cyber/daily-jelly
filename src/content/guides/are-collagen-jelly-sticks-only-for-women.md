@@ -3,6 +3,7 @@ title: "Are Collagen Jelly Sticks Only for Women? What's Actually Different (Not
 excerpt: "Every jelly stick on this site is styled and marketed toward women. Nothing about the format or the ingredients actually is — here's the honest split between packaging and formulation."
 readTime: "4 min"
 publishDate: "2026-09-22"
+cluster: right-for-me
 draft: true
 ---
 

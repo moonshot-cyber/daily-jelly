@@ -3,6 +3,7 @@ title: "Cutting Jelly vs Collagen Jelly Sticks: Same Pouch, Different Job"
 excerpt: "TikTok treats them like one product. They aren't. Here's the split for UK shoppers — and why we only cover one of them as a purchase."
 readTime: "6 min"
 publishDate: "2026-09-09"
+cluster: korean-imports
 ---
 
 If you've seen "Korean jelly stick" content on TikTok, you've probably seen two completely different products edited together as if they're the same thing: a fruit-flavoured pouch marketed around cutting down and appetite, and a fruit-flavoured pouch marketed around skin and collagen. Same format, same shelf-appeal packaging, same word — "jelly stick" — doing a lot of heavy lifting. They are not the same product, and mixing them up is the kind of mistake that costs UK shoppers money when the wrong one turns up.

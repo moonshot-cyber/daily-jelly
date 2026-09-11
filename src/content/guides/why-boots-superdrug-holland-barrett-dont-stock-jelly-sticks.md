@@ -3,6 +3,7 @@ title: "Where to Buy Collagen Jelly Sticks Near Me — Why Boots, Superdrug & Ho
 excerpt: "Searched for a UK shop selling jelly sticks and come up empty at the usual places? Here's why the high street doesn't have them, and where to actually buy them."
 readTime: "4 min"
 publishDate: "2026-09-07"
+cluster: korean-imports
 ---
 
 If you've searched for somewhere to buy a collagen jelly stick "near me," there's a good chance Google pointed you toward Boots, Superdrug, or Holland & Barrett — and there's an equally good chance you didn't find one when you got there. That's not you missing it on the shelf. It's genuinely not stocked.

@@ -3,6 +3,7 @@ title: "Collagen on the Go: Why Jelly Sticks Beat Powders for Travel and Commuti
 excerpt: "No scoop, no shaker, no water, and nothing that looks like a liquid at airport security — the case for jelly sticks specifically for travel and commuting."
 readTime: "4 min"
 publishDate: "2026-09-18"
+cluster: common-questions
 draft: true
 ---
 

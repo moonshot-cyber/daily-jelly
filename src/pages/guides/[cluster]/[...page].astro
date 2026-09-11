@@ -1,0 +1,63 @@
+---
+import Base from '../../../layouts/Base.astro';
+import GuideCard from '../../../components/GuideCard.astro';
+import { getCollection } from 'astro:content';
+import { SITE, CLUSTERS } from '../../../lib/config';
+
+export async function getStaticPaths({ paginate }) {
+  const guides = await getCollection('guides', (g) => !g.data.draft);
+  return CLUSTERS.flatMap((cluster) => {
+    const clusterGuides = guides
+      .filter((g) => g.data.cluster === cluster.slug)
+      .sort((a, b) => new Date(b.data.publishDate).valueOf() - new Date(a.data.publishDate).valueOf());
+    // pageSize 12, not 10 — set ahead of need. Only common-questions is close
+    // to this today (2 live + 8 briefed-not-drafted), but the template is
+    // shared by every cluster, so it's set once here rather than retrofitted
+    // per-cluster later.
+    return paginate(clusterGuides, { pageSize: 12, params: { cluster: cluster.slug } });
+  });
+}
+
+const { cluster: clusterSlug } = Astro.params;
+const { page } = Astro.props;
+const cluster = CLUSTERS.find((c) => c.slug === clusterSlug);
+
+const pageURL = new URL(`/guides/${clusterSlug}`, SITE.url).toString();
+const pageTitle = page.currentPage === 1 ? cluster.name : `${cluster.name} — Page ${page.currentPage}`;
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url },
+    { '@type': 'ListItem', position: 2, name: 'Guides', item: `${SITE.url}/guides` },
+    { '@type': 'ListItem', position: 3, name: cluster.name, item: pageURL },
+  ],
+};
+---
+
+<Base title={pageTitle} description={cluster.intro} activeNav="guides" jsonLd={breadcrumbSchema}>
+  <nav aria-label="Breadcrumb" style="font-size: 13px; color: var(--text-muted); margin-bottom: 14px;">
+    <a href="/" style="color: var(--text-muted);">Home</a> /
+    <a href="/guides" style="color: var(--text-muted);">Guides</a> /
+    <span>{cluster.name}</span>
+  </nav>
+  <h1 style="font-size: 30px; margin: 0 0 8px;">{cluster.name}</h1>
+  <p style="color: var(--text-muted); margin: 0 0 28px; font-size: 15px; max-width: 500px;">{cluster.intro}</p>
+
+  <div>
+    {page.data.map(guide => (
+      <GuideCard slug={guide.slug} title={guide.data.title} excerpt={guide.data.excerpt} readTime={guide.data.readTime} />
+    ))}
+  </div>
+
+  {page.lastPage > 1 && (
+    <nav aria-label="Cluster pagination" style="display: flex; justify-content: space-between; align-items: center; margin: 32px 0 8px;">
+      {page.url.prev ? <a href={page.url.prev} class="btn btn--outline">← Newer</a> : <span />}
+      <span style="font-size: 13px; color: var(--text-muted);">Page {page.currentPage} of {page.lastPage}</span>
+      {page.url.next ? <a href={page.url.next} class="btn btn--outline">Older →</a> : <span />}
+    </nav>
+  )}
+
+  <p style="margin: 32px 0 0; font-size: 13px;"><a href="/collagen">← Back to the full collagen guide</a></p>
+</Base>

@@ -3,6 +3,7 @@ title: "Is There Gelatine in Collagen Jelly Sticks? What's Actually in the Jelly
 excerpt: "The collagen itself is usually animal-derived, but the jelly texture isn't gelatine — checked against the real ingredient panel for all six UK-available sticks we track."
 readTime: "4 min"
 publishDate: "2026-09-26"
+cluster: types-and-ingredients
 image: "https://d1flfk77wl2xk4.cloudfront.net/Assets/19/869/XXL_p0189986919.jpg"
 imageCredit: "YesStyle"
 draft: true

@@ -4,6 +4,7 @@ excerpt: "The single most-asked question about this format, answered honestly â€
 readTime: "6 min"
 publishDate: "2026-09-06"
 dateModified: "2026-09-08"
+cluster: common-questions
 image: "https://welzo.com/cdn/shop/files/image_2024-07-05_6687c4b04b07d.jpg?v=1752225608&width=1500"
 imageCredit: "Welzo"
 faqs:

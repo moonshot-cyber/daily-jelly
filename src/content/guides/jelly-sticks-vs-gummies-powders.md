@@ -4,6 +4,7 @@ excerpt: "A straight comparison of the three main collagen formats on convenienc
 readTime: "6 min"
 publishDate: "2026-09-04"
 dateModified: "2026-09-09"
+cluster: types-and-ingredients
 image: "https://d1flfk77wl2xk4.cloudfront.net/Assets/92/884/XXL_p0211888492.jpg"
 imageCredit: "YesStyle"
 ---

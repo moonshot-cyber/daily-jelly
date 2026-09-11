@@ -15,6 +15,38 @@ export const SITE = {
   year: new Date().getFullYear(),
 };
 
+// Guide cluster hubs — single source of truth for display name, hub intro,
+// and slug, used by the hub pages, /guides index, the homepage, each guide's
+// "back to cluster" link, and the footer nav. Order here is display order
+// everywhere these are listed.
+export const CLUSTERS = [
+  {
+    slug: 'types-and-ingredients',
+    name: 'Types & Ingredients',
+    intro: 'What\'s actually in a jelly stick — collagen sources, doses, and how the six products we track compare.',
+  },
+  {
+    slug: 'common-questions',
+    name: 'Common Questions',
+    intro: 'Fast, honest answers to the specific things people actually ask about collagen and this format.',
+  },
+  {
+    slug: 'korean-imports',
+    name: 'Korean Imports & UK Availability',
+    intro: 'Why this format is everywhere in Korea and still rare here, and what that means for buying one.',
+  },
+  {
+    slug: 'right-for-me',
+    name: 'Is It Right For Me?',
+    intro: 'Audience-specific evidence and questions — age, sex, diet, and who the research actually applies to.',
+  },
+  {
+    slug: 'comparisons',
+    name: 'Buying Comparisons',
+    intro: 'Jelly sticks measured against the formats and categories already established in the UK.',
+  },
+];
+
 // Associates tracking ID for Daily Jelly, created in Associates Central
 // (Account Settings → Manage Your Tracking IDs).
 export const AMAZON_ASSOCIATES_TAG = 'dailyjelly-21';

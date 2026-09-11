@@ -7,6 +7,11 @@ const guides = defineCollection({
     excerpt: z.string(),
     readTime: z.string(),
     publishDate: z.string(),
+    // Which cluster hub this article belongs to (see CLUSTERS in
+    // src/lib/config.ts for display names/intros) — required, no default,
+    // so a new article with no cluster fails the build instead of silently
+    // never appearing on any hub or in any "back to cluster" link.
+    cluster: z.enum(['types-and-ingredients', 'common-questions', 'korean-imports', 'right-for-me', 'comparisons']),
     // Written but not yet due to ship, per the staggered publish schedule.
     // Filtered out of every collection read (index, [slug] routes, homepage)
     // so committing a draft has zero effect on the live site — publishing is

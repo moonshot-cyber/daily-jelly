@@ -3,6 +3,7 @@ title: "Collagen in Your 60s and Beyond: Joints and Muscle, Not Skin"
 excerpt: "The skin-elasticity story doesn't hold up as the reason to take collagen later in life. The genuinely useful evidence for this age group is about joint pain and muscle strength — at doses well above a single stick."
 readTime: "6 min"
 publishDate: "2026-09-30"
+cluster: right-for-me
 draft: true
 faqs:
   - q: "Does collagen help with joint pain in older adults?"

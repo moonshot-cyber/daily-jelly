@@ -3,6 +3,7 @@ title: "Does Collagen Help Runners' Knee and Training-Related Joint Pain?"
 excerpt: "Not the same question as collagen for age-related osteoarthritis — this is a younger, active population, with its own trials. The studied dose here is also the one place a single jelly stick genuinely gets close."
 readTime: "5 min"
 publishDate: "2026-10-02"
+cluster: right-for-me
 draft: true
 faqs:
   - q: "Is there evidence collagen helps runners' knee specifically?"

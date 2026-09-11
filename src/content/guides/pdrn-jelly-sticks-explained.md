@@ -3,6 +3,7 @@ title: "PDRN in a Jelly Stick? What This New Ingredient Actually Is — and Isn'
 excerpt: "A newer wave of jelly sticks uses PDRN, an ingredient with real clinical research behind it — but that research is about injections, not eating it. Here's the honest gap."
 readTime: "5 min"
 publishDate: "2026-09-20"
+cluster: types-and-ingredients
 draft: true
 ---
 

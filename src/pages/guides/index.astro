@@ -1,0 +1,45 @@
+---
+import Base from '../../layouts/Base.astro';
+import GuideCard from '../../components/GuideCard.astro';
+import { getCollection } from 'astro:content';
+import { CLUSTERS } from '../../lib/config';
+
+const guides = await getCollection('guides', (g) => !g.data.draft);
+
+const clustersWithGuides = CLUSTERS.map((cluster) => {
+  const clusterGuides = guides
+    .filter((g) => g.data.cluster === cluster.slug)
+    .sort((a, b) => new Date(b.data.publishDate).valueOf() - new Date(a.data.publishDate).valueOf());
+  return { ...cluster, guides: clusterGuides, count: clusterGuides.length };
+});
+---
+
+<Base title="Guides" description="Educational guides to Korean collagen jelly sticks and inner-beauty snack formats, grouped by topic." activeNav="guides">
+  <h1 style="font-size: 30px; margin: 0 0 8px;">Guides</h1>
+  <p style="color: var(--text-muted); margin: 0 0 12px; font-size: 15px; max-width: 500px;">
+    Everything we've published on the jelly-stick format, grouped by topic rather than by date.
+  </p>
+  <p style="color: var(--text-muted); margin: 0 0 28px; font-size: 15px; max-width: 500px;">
+    Looking for the wider picture? See our <a href="/collagen">collagen guide hub</a> — formats, types, doses, and
+    buying paths across the whole category, not just jelly sticks. Prefer to browse by date instead?
+    See <a href="/guides/latest">all guides, newest first</a>.
+  </p>
+
+  {clustersWithGuides.map(cluster => (
+    <section style="margin: 0 0 40px;">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; margin: 0 0 6px;">
+        <h2 style="font-size: 20px; margin: 0;"><a href={`/guides/${cluster.slug}`}>{cluster.name}</a></h2>
+        <span style="font-size: 13px; color: var(--text-muted);">{cluster.count} guide{cluster.count === 1 ? '' : 's'}</span>
+      </div>
+      <p style="color: var(--text-muted); margin: 0 0 16px; font-size: 14px; max-width: 500px;">{cluster.intro}</p>
+      <div>
+        {cluster.guides.slice(0, 3).map(guide => (
+          <GuideCard slug={guide.slug} title={guide.data.title} excerpt={guide.data.excerpt} readTime={guide.data.readTime} />
+        ))}
+      </div>
+      {cluster.count > 3 && (
+        <p style="margin: 12px 0 0; font-size: 13px;"><a href={`/guides/${cluster.slug}`}>See all {cluster.count} in {cluster.name} →</a></p>
+      )}
+    </section>
+  ))}
+</Base>

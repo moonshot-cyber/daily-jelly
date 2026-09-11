@@ -3,6 +3,7 @@ title: "Is Collagen Good for Men? What the Evidence Actually Says"
 excerpt: "Collagen marketing skews almost entirely female. The research doesn't — men-specific studies exist for muscle strength and joint pain, at doses most products don't come close to. Here's the honest version."
 readTime: "6 min"
 publishDate: "2026-09-28"
+cluster: right-for-me
 draft: true
 faqs:
   - q: "Does collagen boost testosterone?"
