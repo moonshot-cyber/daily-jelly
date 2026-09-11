@@ -6,9 +6,9 @@ import { getCollection } from 'astro:content';
 import { SITE, PRODUCTS, GUIDE_PRODUCTS } from '../lib/config';
 import ProductImage from '../components/ProductImage.astro';
 
-const guides = (await getCollection('guides', (g) => !g.data.draft)).sort(
+const latestGuides = (await getCollection('guides', (g) => !g.data.draft)).sort(
   (a, b) => new Date(b.data.publishDate).valueOf() - new Date(a.data.publishDate).valueOf()
-);
+).slice(0, 6);
 const heroProduct = PRODUCTS[0];
 const amazonProduct = GUIDE_PRODUCTS.find(p => p.isAmazon);
 ---
@@ -69,8 +69,9 @@ const amazonProduct = GUIDE_PRODUCTS.find(p => p.isAmazon);
 
   <h2 style="font-size: 22px; margin: 8px 0 16px;">Start here</h2>
   <div>
-    {guides.map(guide => (
+    {latestGuides.map(guide => (
       <GuideCard slug={guide.slug} title={guide.data.title} excerpt={guide.data.excerpt} readTime={guide.data.readTime} />
     ))}
   </div>
+  <p style="margin: 20px 0 0;"><a href="/guides" class="btn btn--outline">See all guides →</a></p>
 </Base>

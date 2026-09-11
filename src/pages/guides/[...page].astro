@@ -1,0 +1,40 @@
+---
+import Base from '../../layouts/Base.astro';
+import GuideCard from '../../components/GuideCard.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths({ paginate }) {
+  const guides = (await getCollection('guides', (g) => !g.data.draft)).sort(
+    (a, b) => new Date(b.data.publishDate).valueOf() - new Date(a.data.publishDate).valueOf()
+  );
+  return paginate(guides, { pageSize: 10 });
+}
+
+const { page } = Astro.props;
+const pageTitle = page.currentPage === 1 ? 'Guides' : `Guides — Page ${page.currentPage}`;
+---
+
+<Base title={pageTitle} description="Educational guides to Korean collagen jelly sticks and inner-beauty snack formats, written for a UK audience." activeNav="guides">
+  <h1 style="font-size: 30px; margin: 0 0 8px;">Guides</h1>
+  <p style="color: var(--text-muted); margin: 0 0 12px; font-size: 15px; max-width: 500px;">
+    Everything we've published on the jelly-stick format, in plain English.
+  </p>
+  <p style="color: var(--text-muted); margin: 0 0 28px; font-size: 15px; max-width: 500px;">
+    Looking for the wider picture? See our <a href="/collagen">collagen guide hub</a> — formats, types, doses, and
+    buying paths across the whole category, not just jelly sticks.
+  </p>
+
+  <div>
+    {page.data.map(guide => (
+      <GuideCard slug={guide.slug} title={guide.data.title} excerpt={guide.data.excerpt} readTime={guide.data.readTime} />
+    ))}
+  </div>
+
+  {page.lastPage > 1 && (
+    <nav aria-label="Guides pagination" style="display: flex; justify-content: space-between; align-items: center; margin: 32px 0 8px;">
+      {page.url.prev ? <a href={page.url.prev} class="btn btn--outline">← Newer</a> : <span />}
+      <span style="font-size: 13px; color: var(--text-muted);">Page {page.currentPage} of {page.lastPage}</span>
+      {page.url.next ? <a href={page.url.next} class="btn btn--outline">Older →</a> : <span />}
+    </nav>
+  )}
+</Base>
