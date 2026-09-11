@@ -4,6 +4,19 @@ Internal planning file, not published to the site (lives at the repo root,
 outside `src/`, so it never gets built into output). Status values:
 `briefed / drafted / scheduled / published / needs-refresh`.
 
+## ⚠ Temporary live-site item — needs removal
+
+**Awin ownership-verification text on `/about`** (added 2026-09-11, commit
+`8dd5a52`): the exact string `HELLO AWIN`, visible in rendered body content,
+requested by Awin to confirm site ownership before they finish reviewing our
+affiliate application — they check the live URL, not a screenshot. Confirmed
+live at `https://dailyjelly.co.uk/about/`.
+
+**Action needed**: once Awin confirm ownership, remove the `<p>HELLO AWIN</p>`
+line (and its code comment) from `src/pages/about.astro` — it's the last
+block before `</div></Base>`. Don't let this linger past confirmation;
+leftover verification strings on a live page read as neglect, not tidiness.
+
 Cluster taxonomy (from the site-optimisation brief, 2026-09-09; restructured
 into live `/guides/<slug>` hub pages on 2026-09-11 — see "Cluster hub
 restructure" below):
