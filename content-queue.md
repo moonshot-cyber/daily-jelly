@@ -45,8 +45,11 @@ No orphans: every new article must map to a cluster before it gets written.
 | Is There Gelatine in Collagen Jelly Sticks? | `is-there-gelatine-in-collagen-jelly-sticks` | B | 2026-09-26 |
 | Is Collagen Good for Men? What the Evidence Actually Says | `is-collagen-good-for-men` | E | 2026-09-28 |
 | Collagen in your 60s and beyond: joints and muscle, not skin | `collagen-in-your-60s-and-beyond` | E | 2026-09-30 |
+| Does Collagen Help Runners' Knee and Training-Related Joint Pain? | `does-collagen-help-runners-knee` | E | 2026-10-02 |
 
-Both rows above are now fully ready — same state as the other 8 in this table: drafted, committed with `draft: true`, and a scheduled task created for each. `is-collagen-good-for-men` → `daily-jelly-publish-men-angle`, fires 2026-09-28 11:15 UTC. `collagen-in-your-60s-and-beyond` → `daily-jelly-publish-60s-plus`, fires 2026-09-30 10:40 UTC (final task of this run — nothing currently scheduled after it).
+The first two rows above are fully ready — drafted, committed with `draft: true`, and a scheduled task created for each. `is-collagen-good-for-men` → `daily-jelly-publish-men-angle`, fires 2026-09-28 11:15 UTC. `collagen-in-your-60s-and-beyond` → `daily-jelly-publish-60s-plus`, fires 2026-09-30 10:40 UTC.
+
+`does-collagen-help-runners-knee` is fully ready — drafted, committed with `draft: true` (publishDate was already set to 2026-10-02 when written, matching this slot), and its scheduled task (`daily-jelly-publish-runners-knee`, fires 2026-10-02 12:05 UTC) is created. Final task of the run — nothing scheduled after it.
 
 ## Standing pages (not part of the drip-feed — updated in place)
 
