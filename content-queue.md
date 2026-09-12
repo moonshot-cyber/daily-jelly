@@ -124,18 +124,39 @@ The first two rows above are fully ready — drafted, committed with `draft: tru
 Per Phase 5: briefs are cheap and don't go stale, so the backlog is briefed
 up front even though drafting stays just-in-time. Each brief is target
 angle + data required + internal links, not a draft. Volume/difficulty
-ranking still needs real data (Search Console / Bing Keyword Tool /
-Keyword Planner) shared by the user before these are sequenced into
-tranches — see chat 2026-09-09 for the free-tool options. Draft order to
-be set after that data lands, prioritising titles flagged "ready" over
+data landed 2026-09-12 (see "Volume/difficulty findings" below) — draft
+order is now set by that data, prioritising titles flagged "ready" over
 titles flagged "needs research."
+
+## Volume/difficulty findings (2026-09-12)
+
+Tested via Bing Webmaster Tools Keyword Research (dailyjelly.co.uk site,
+UK, 3-month window) and cross-checked against Google Trends (UK, past 12
+months, since Bing's UK market share is too small to trust alone for a
+niche term). Five seed terms, one per live cluster plus the site's own
+core format term:
+
+| Term | Bing UK impressions (3mo) | Google Trends (UK, 12mo) | Read |
+|---|---|---|---|
+| collagen for men | 92 (324 global) | Sustained, steady interest all year, UK-wide (Wales 100, England 85, NI 80, Scotland 76) | Confirmed strong |
+| hydrolysed collagen | No trend data | Sustained, steady — comparable level to "collagen for men" | Confirmed strong — Bing undersold it |
+| collagen for hair | 6 (23 global) | Sustained, actually a higher baseline than "collagen for men" | Real demand, but SERP dominated by Cleveland Clinic, Cosmopolitan, Healthline — long-game ranking target, not a quick win |
+| collagen and perimenopause | No trend data | Flat all year bar one spike (~Apr 2026) — reads as Trends' relative-scaling noise off a near-zero baseline, not real demand | Confirmed thin |
+| collagen jelly sticks (site's own core term) | No trend data | Flat/near-zero all year, same noise-spike pattern, only England registers at all | Confirmed near-zero standalone UK demand |
+
+**Sequencing changes from this data:**
+- **Promoted**: "What 'hydrolysed collagen' means on a UK label" (Cluster B, below) — real, steady UK demand, contrary to what Bing's empty read alone suggested.
+- **Kept, expectations reset**: "Collagen for hair" pieces (Cluster E, below) — real demand confirmed, but the SERP is owned by major authority sites. Sequence it, don't expect fast traffic from it.
+- **Deprioritised**: "Collagen and perimenopause" (Cluster E, below) — thin/noise-level demand on both tools. Combined with its existing extra-care medical-sensitivity flag, do this for audience completeness/trust, not as a traffic play.
+- **Structural finding**: the site's own format term has near-zero standalone UK search demand. This confirms the site's traffic has to come from broad collagen-informational queries (men, hydrolysed, hair) that pivot into jelly-stick content via internal links — the same structure already used in the men's-angle piece — rather than from anyone searching "jelly sticks" directly. Lean into Cluster C/E informational pieces as the actual growth engine; format-specific content rides on their internal links, not its own search demand.
+- **Watch, not yet investigated**: "nutrition geeks" surfaced as a rising related query/topic on two of the five searches (+170%/+140%, on hydrolysed collagen) — likely a creator or brand gaining traction in this exact space. Worth a look as a competitor or content-gap signal.
 
 ### Cluster B — Formats & dose
 
 | Title | Angle | Data needed | Links up/across | Status |
 |---|---|---|---|---|
 | Collagen peptides vs collagen jelly sticks: what's actually different? | Clears up ingredient (hydrolysed peptides) vs format (jelly stick) confusion | None — reuses verified dose data | `/collagen`; benefits-and-ingredients, evidence roundup | ready |
-| What "hydrolysed collagen" means on a UK label | Plain definition + why nearly every UK product states it | None — general food-science fact | `/collagen`; benefits-and-ingredients | ready |
+| What "hydrolysed collagen" means on a UK label | Plain definition + why nearly every UK product states it | None — general food-science fact | `/collagen`; benefits-and-ingredients | ready — promoted, see Volume/difficulty findings (2026-09-12): confirmed real, steady UK demand |
 | Are collagen gummies worth it? The dose per sweet, counted | Dose-per-gummy vs stated daily serving, price per 1,000mg vs jelly sticks | **Needs research** — no real UK gummy product data verified yet (H&B own-brand, Vitabiotics Perfectil, etc.) | `/collagen`, `/collagen-price-index`; jelly-sticks-vs-gummies-powders | needs research |
 | Type I, II and III collagen: which UK products use which | Deep-dive table extending the pillar's type explainer per featured product | Mostly known; check whether any listing states type explicitly (may be "not stated" — an honest finding either way) | `/collagen`; benefits-and-ingredients | ready |
 
@@ -156,9 +177,9 @@ titles flagged "needs research."
 
 | Title | Angle | Data needed | Links up/across | Status |
 |---|---|---|---|---|
-| Collagen for hair: what the evidence shows | Independent literature check — do NOT reuse the skin-specific VERISOL data as if it applies to hair | **Needs research** — dedicated evidence check required, same rigor as the skin evidence piece | `/collagen`; evidence roundup | needs research |
+| Collagen for hair: what the evidence shows | Independent literature check — do NOT reuse the skin-specific VERISOL data as if it applies to hair | **Needs research** — dedicated evidence check required, same rigor as the skin evidence piece | `/collagen`; evidence roundup | needs research — see Volume/difficulty findings (2026-09-12): real UK demand confirmed, but SERP owned by Cleveland Clinic/Cosmopolitan/Healthline; sequence as a long-game ranking target, not a quick win |
 | Collagen for nails | Same — independent evidence check required | **Needs research** | `/collagen`; evidence roundup | needs research |
-| Collagen and perimenopause | **Needs the same guardrail as bone health in the original brief**: evidence-review framing only, no medical advice, do not imply collagen "helps with menopause symptoms" | **Needs research**, high care | `/collagen` | needs research + extra care |
+| Collagen and perimenopause | **Needs the same guardrail as bone health in the original brief**: evidence-review framing only, no medical advice, do not imply collagen "helps with menopause symptoms" | **Needs research**, high care | `/collagen` | needs research + extra care — deprioritised, see Volume/difficulty findings (2026-09-12): thin/noise-level demand on both Bing and Google Trends, one visible spike reads as scaling artifact not real interest; do for audience completeness, not as a traffic play |
 | Collagen for joints vs collagen for skin: are they different products? | Clarifies Type I (our sticks) vs Type II (UC-II joint supplements) — a real, common confusion | None — ties directly to the pillar's type section | `/collagen` | ready |
 | Collagen in your 60s and beyond: joints and muscle, not skin | Deliberately a different claim from the 30s/50s pieces, not a third repeat of "no ideal starting age" | **Drafted 2026-09-11** — confirmed the 2025 knee-OA trial is genuinely Type I (Pangasius fish-skin peptides, explicitly stated in the source), so cited directly. Reused the Zdzieblik et al. sarcopenic-men trial from the men's-angle piece for muscle/strength. Added a bone-density finding not in the original brief — a well-designed RCT in 102 postmenopausal women (König et al.) showing real BMD improvement — but flagged explicitly as the thinnest, single-population, single-trial finding of the three, not equal weight to the joint/muscle evidence. Each finding states plainly who was actually studied (joint: mixed-sex; muscle: men only; bone: women only) rather than implying any of it generalises | `/collagen`; `collagen-jelly-stick-benefits-and-ingredients`; evidence roundup (`do-collagen-jelly-sticks-actually-work`) | drafted, committed with `draft: true`, scheduled task `daily-jelly-publish-60s-plus` created (fires 2026-09-30) |
 | Starting collagen in your 30s: too early? | Honest "no evidence for an ideal starting age" answer | None | `/collagen`; evidence roundup | ready |
@@ -173,8 +194,8 @@ titles flagged "needs research."
 | Olive Young collagen: what's worth buying, landed cost included | Extends already-verified Olive Young Global logistics (4–5 day UK shipping, free over $60, tax at checkout) to specific products | **Needs research** — which Olive Young-exclusive products to feature | `/collagen`; vegan guide, inner-beauty-trend-uk | needs research |
 | Absolute Collagen: cost per serving, checked | Deeper single-brand profile; core price fact already published in the price index | Partial — price/dose already verified, full review needs more | `/collagen-price-index` | ready (low priority, overlaps standing page) |
 | Boots and Holland & Barrett collagen: worth the shelf price? | Natural extension of the existing "why don't they stock jelly sticks" piece — covers what they DO stock instead | **Needs research** — specific SKUs and prices not yet checked | `/collagen`; why-boots-superdrug-holland-barrett-dont-stock-jelly-sticks | needs research |
-| BB LAB vs Vitahalo | Direct brand comparison | **Needs research** — Vitahalo hasn't been verified as a real, currently-relevant brand yet; do not brief further until confirmed | — | blocked — verify brand first |
-| Revive Collagen vs Absolute Collagen | Direct brand comparison | **Needs research** — Revive Collagen's site returned an expired-certificate error on our last fetch attempt; no verified data | — | blocked — needs a working source |
+| BB LAB vs Vitahalo | Direct brand comparison | **Confirmed 2026-09-12** — Vitahalo is a real South Korean collagen jelly-stick brand (pomegranate flavour, fish collagen) — same format and category as BB LAB. No UK high-street stockist; sold via K-beauty import resellers (GoSupps, K-Kare), same buying pattern already used for BB LAB itself (YesStyle/Stylevana). Frame as a Cluster D-style Korean-import comparison, not a mainstream UK-retail one | — | ready |
+| Revive Collagen vs Absolute Collagen | Direct brand comparison | **Confirmed 2026-09-12** — site loads correctly now (cert error from 2026-09-09 appears to have been transient). Revive Collagen Ltd is a real, currently-operating UK company (Companies House #12062591, inc. 2019), sold via H&B and its own site. Note: their own marketing leans on "clinically proven" language — treat per the site's usual evidence-first voice, don't repeat the brand's claim uncritically | — | ready |
 
 ### Not briefed — flagged, not silently dropped
 
