@@ -151,6 +151,17 @@ core format term:
 - **Structural finding**: the site's own format term has near-zero standalone UK search demand. This confirms the site's traffic has to come from broad collagen-informational queries (men, hydrolysed, hair) that pivot into jelly-stick content via internal links — the same structure already used in the men's-angle piece — rather than from anyone searching "jelly sticks" directly. Lean into Cluster C/E informational pieces as the actual growth engine; format-specific content rides on their internal links, not its own search demand.
 - **Watch, not yet investigated**: "nutrition geeks" surfaced as a rising related query/topic on two of the five searches (+170%/+140%, on hydrolysed collagen) — likely a creator or brand gaining traction in this exact space. Worth a look as a competitor or content-gap signal.
 
+## Volume/difficulty findings (2026-09-13): skin elasticity
+
+Tested `skin elasticity` and `collagen elasticity` the same way (Bing Webmaster Tools + Google Trends, UK). Bing showed almost nothing (11 UK impressions/3mo on "skin elasticity"; no trend data at all on "collagen elasticity") — but Trends told a different story, same undersampling pattern as hydrolysed collagen and collagen-for-hair:
+
+- **Both terms show sustained, *rising* UK interest** all year (not just steady — trending upward toward Aug 2026), UK-wide (England strongest, then NI/Scotland/Wales).
+- **Rising/top related queries tie the two terms directly together and to collagen specifically**: "collagen" (+150%), "best collagen for skin elasticity" (+130%), "collagen supplements" (+120%), "collagen for skin elasticity" (+70%) — and on "collagen elasticity," the top related query is literally "skin elasticity" itself. Real, tightly-clustered, growing demand.
+- **The competitive caveat still applies to the bare term**: Bing's Top 10 for plain "skin elasticity" is owned by Vogue, Cleveland Clinic, WebMD, BBC, ScienceDaily — same problem as collagen-for-hair. Don't chase that generic phrase directly.
+- **The fix: target the collagen-specific long tail instead** — "does collagen improve skin elasticity" / "collagen for skin elasticity, what the evidence shows" — that's the phrasing rising in Trends, it's Daily Jelly's actual competitive category (supplement/evidence content, not dermatology publishers), and it reuses evidence the site already has cited elsewhere (the same VERISOL-type elasticity/hydration RCTs referenced in `do-collagen-jelly-sticks-actually-work`).
+
+**New title added to Cluster C** (below) on the strength of this: real evidence already on hand, real and rising demand, right competitive category — one of the better-supported additions from this whole exercise.
+
 ### Cluster B — Formats & dose
 
 | Title | Angle | Data needed | Links up/across | Status |
@@ -167,6 +178,7 @@ core format term:
 | Does collagen break a fast? | Caloric/metabolic fact-based answer, no fasting-protocol advice | **Needs research** — per-stick calorie counts not yet verified for our 6 products | `/collagen`; on-the-go piece | needs research |
 | Best time of day to take collagen | Honest answer: no evidence timing matters at studied doses; consistency > timing | None — reuses evidence-roundup | `/collagen`; do-collagen-jelly-sticks-actually-work | ready |
 | Can you take collagen with coffee? | Addresses the "heat denatures it" myth; notes this is really a powder-user question — jelly sticks sidestep it entirely | None — general food-science fact | `/collagen`; jelly-sticks-vs-gummies-powders | ready |
+| Does collagen improve skin elasticity? What the evidence actually shows | Direct evidence-review answer, reusing the site's existing elasticity/hydration RCT data rather than new research; targets the collagen-specific long tail, not the generic "skin elasticity" term (see Volume/difficulty findings 2026-09-13) | None — reuses evidence already cited in `do-collagen-jelly-sticks-actually-work` and `collagen-jelly-stick-benefits-and-ingredients` | `/collagen`; do-collagen-jelly-sticks-actually-work; collagen-jelly-stick-benefits-and-ingredients | ready — promoted, see Volume/difficulty findings (2026-09-13): confirmed real, sustained, rising UK demand (Bing undersold it); avoid the bare "skin elasticity" term (Vogue/Cleveland Clinic/WebMD/BBC own that SERP) |
 | How long does collagen take to work? | Reuses the VERISOL 8-week trial finding directly | None — already verified | `/collagen`; do-collagen-jelly-sticks-actually-work (heavy overlap, but a distinct high-volume query worth its own page) | ready |
 | Can you take too much collagen? | Documented safety profile only (no adverse events in the cited review); explicitly not dosing advice, defer to GP/pharmacist for medication interactions | None — reuses evidence piece + existing FAQ safety language | `/collagen`; evidence roundup, FAQ | ready |
 | Does collagen make you gain weight? | Calorie-count based factual answer | **Needs research** — same calorie-data gap as "breaks a fast" | `/collagen`; on-the-go, benefits-and-ingredients | needs research |
