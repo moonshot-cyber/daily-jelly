@@ -4,7 +4,7 @@ excerpt: "A specific, genuine question — what NHS-affiliated sources actually 
 readTime: "4 min"
 publishDate: "2026-09-12"
 cluster: right-for-me
-draft: true
+draft: false
 ---
 
 Short answer: no, not really — but "the NHS doesn't recommend it" is doing a lot of work in that sentence, and the actual reasoning is more useful than the headline.
