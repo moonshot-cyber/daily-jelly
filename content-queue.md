@@ -213,6 +213,7 @@ Tested `skin elasticity` and `collagen elasticity` the same way (Bing Webmaster 
 
 - **Peptide skincare cluster (6 titles)** — this is Cluster H in the original brief, explicitly marked "DEFERRED, do not build until Clusters A–F established." Left unbriefed on purpose, not an oversight.
 - **"Foodology Cutting Jelly vs Colla Q"** — questionable fit. Both are weight-management "cutting jelly" products, not collagen; a head-to-head comparison risks reading as an implicit recommendation for a weight-loss product, conflicting with the site's existing stance ("we explain cutting jelly, we don't sell or recommend it"). Recommend skipping this one rather than briefing it as-is.
+- **Collagen vs hyaluronic acid** — noticed, not briefed. Surfaced 2026-09-13 while checking "skin hydration" keyword volume: "hyaluronic acid" was the top rising related query (+120%), with no collagen tie-in at all, suggesting a real, distinct audience searching skin hydration from a hyaluronic-acid angle rather than a collagen one. Not investigated further — no evidence check, no volume check on the comparison term itself. Flagged as a genuinely different angle worth a look later, not assumed to be a good fit yet.
 
 ## Data ↔ prose coupling — watch on price/dose changes
 
