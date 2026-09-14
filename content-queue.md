@@ -4,18 +4,11 @@ Internal planning file, not published to the site (lives at the repo root,
 outside `src/`, so it never gets built into output). Status values:
 `briefed / drafted / scheduled / published / needs-refresh`.
 
-## ⚠ Temporary live-site item — needs removal
-
-**Awin ownership-verification text on `/about`** (added 2026-09-11, commit
-`8dd5a52`): the exact string `HELLO AWIN`, visible in rendered body content,
-requested by Awin to confirm site ownership before they finish reviewing our
-affiliate application — they check the live URL, not a screenshot. Confirmed
-live at `https://dailyjelly.co.uk/about/`.
-
-**Action needed**: once Awin confirm ownership, remove the `<p>HELLO AWIN</p>`
-line (and its code comment) from `src/pages/about.astro` — it's the last
-block before `</div></Base>`. Don't let this linger past confirmation;
-leftover verification strings on a live page read as neglect, not tidiness.
+**Awin**: account activated 2026-09-14, publisher ID 3091169. The temporary
+`HELLO AWIN` ownership-verification text on `/about` (added 2026-09-11,
+commit `8dd5a52`) was removed the same day, once confirmed. Next step is
+applying to individual advertiser programmes in the Awin directory — not
+started yet.
 
 Cluster taxonomy (from the site-optimisation brief, 2026-09-09; restructured
 into live `/guides/<slug>` hub pages on 2026-09-11 — see "Cluster hub
@@ -162,6 +155,23 @@ Tested `skin elasticity` and `collagen elasticity` the same way (Bing Webmaster 
 
 **New title added to Cluster C** (below) on the strength of this: real evidence already on hand, real and rising demand, right competitive category — one of the better-supported additions from this whole exercise.
 
+## Korean-source content ideas (2026-09-13)
+
+Searched Korean consumer press and retail sites for angles not yet covered — the goal was genuine UK-context tweaks, not translation. Two made the cut; two explicitly didn't (kept here so they aren't silently dropped either):
+
+- **Sugar content** — South Korea's Consumer Agency (한국소비자원) tested 20 Naver Shopping collagen products and found jelly sticks averaged 32% sugar by weight (6.4g in a 20g stick) vs 10% for powder sticks, with two jelly products reaching 50%. **Important framing note**: leading with that percentage reads as an attack on the exact format this site is built around. The honest, non-alarmist version reports grams-per-stick (6g is genuinely modest — about 1.5 teaspoons, less than a can of Coke, comparable to a small biscuit) and explains *why* jelly needs sugar for texture in a way powder doesn't — a tradeoff explanation, not a "watch out." New title added to Cluster B below on this basis. Korea's specific numbers are a Naver Shopping sample, not the six UK-tracked SKUs — the UK piece needs its own label check, not an imported statistic.
+- **Fatigue/energy marketing** — Korean marketing and user reviews lean heavily on jelly sticks as an office-worker fatigue snack (21% of surveyed users cited fatigue improvement) — a framing barely present in UK coverage. Collagen has no established fatigue mechanism, so this is a debunking piece, not an endorsement — same structure as the testosterone claim already debunked in `is-collagen-good-for-men`. New title added to Cluster C below.
+- **Sun/UV and collagen breakdown** — real mechanism (UV breaks down collagen), but Korean summer-beauty framing implies a supplement can "recover" existing damage, which isn't supported. Flagged as a future idea, not briefed yet — would need very careful prevention-vs-repair framing to avoid overclaiming.
+- **Suneung (수능) exam-gifting** — a huge, specific Korean gifting occasion (health/energy snacks given to exam-takers) with no UK equivalent event carrying that gifting intensity. Deliberately not adapted — flagged as "genuinely Korean, doesn't translate" rather than forced into a weak UK piece.
+
+## Seasonal keyword findings (2026-09-13): Christmas / New Year
+
+User's own idea — a UK Christmas-hamper/gifting angle, prompted by the Korean gifting-culture research above. Checked three phrasings via Google Trends (UK, 12 months) before briefing anything:
+
+- **"healthy christmas gifts"** — weak, dropped. Only England registers any subregional interest even at peak; the one spike lands in late Dec/early Jan rather than the Nov–early-Dec window real gift-shopping would need; worldwide view shows an unexplained second peak in May with no Christmas connection, suggesting noise rather than a clean seasonal signal.
+- **"healthy christmas"** — real and strong, but points to a different intent than gifting. Clean seasonal ramp (Oct→peak right at New Year→decline), UK-wide (England 100, Wales 94, Scotland 88, NI 76). But related rising queries are all recipe-focused ("healthy smoothie recipes," "healthy dinner recipes for two," "healthy snacks for work") — this is a post-Christmas "New Year health reset" query, not a gift-shopping or supplement-shopping one. **Used the timing insight, not the term itself** — see the new Cluster C title below.
+- **"christmas beauty"** — real, strong, and correctly timed pre-Christmas (ramps Oct, peaks mid-late Dec, UK-wide: NI 100, England 83, Scotland 80, Wales 73) — but overwhelmingly about beauty advent calendars specifically (Lookfantastic +1,050%, HUDA BEAUTY +900%, every top related query some variant of "advent calendar 2026"). Wrong competitive category (major retailers ranking for their own curated boxes) and a prestige-roundup shape ("best advent calendars") the site has deliberately avoided elsewhere. **Dropped for now** — the only narrow, honest angle (checking whether any real 2026 UK beauty advent calendar actually includes a collagen/inner-beauty snack) wasn't verified, so nothing briefed. Revisit only if that specific fact checks out.
+
 ### Cluster B — Formats & dose
 
 | Title | Angle | Data needed | Links up/across | Status |
@@ -170,6 +180,7 @@ Tested `skin elasticity` and `collagen elasticity` the same way (Bing Webmaster 
 | What "hydrolysed collagen" means on a UK label | Plain definition + why nearly every UK product states it | None — general food-science fact | `/collagen`; benefits-and-ingredients | ready — promoted, see Volume/difficulty findings (2026-09-12): confirmed real, steady UK demand |
 | Are collagen gummies worth it? The dose per sweet, counted | Dose-per-gummy vs stated daily serving, price per 1,000mg vs jelly sticks | **Needs research** — no real UK gummy product data verified yet (H&B own-brand, Vitabiotics Perfectil, etc.) | `/collagen`, `/collagen-price-index`; jelly-sticks-vs-gummies-powders | needs research |
 | Type I, II and III collagen: which UK products use which | Deep-dive table extending the pillar's type explainer per featured product | Mostly known; check whether any listing states type explicitly (may be "not stated" — an honest finding either way) | `/collagen`; benefits-and-ingredients | ready |
+| How much sugar is actually in a collagen jelly stick? We checked six UK labels | Report real per-stick sugar in grams (not percentage) across BB LAB, Cloo9, FOODOLOGY, HAMCHOROK, NOW Foods, YIXO; contextualise against everyday snacks (biscuit, Coke, fruit); explain the jelly-vs-powder sugar tradeoff honestly. Deliberately NOT framed as an anti-jelly "watch out" piece — see Korean-source content ideas (2026-09-13) for the framing reasoning | **Needs research** — nutrition labels not yet pulled for any of the six tracked products | `/collagen`; collagen-jelly-stick-benefits-and-ingredients; jelly-sticks-vs-gummies-powders | needs research |
 
 ### Cluster C — Practical questions
 
@@ -177,7 +188,9 @@ Tested `skin elasticity` and `collagen elasticity` the same way (Bing Webmaster 
 |---|---|---|---|---|
 | Does collagen break a fast? | Caloric/metabolic fact-based answer, no fasting-protocol advice | **Needs research** — per-stick calorie counts not yet verified for our 6 products | `/collagen`; on-the-go piece | needs research |
 | Best time of day to take collagen | Honest answer: no evidence timing matters at studied doses; consistency > timing | None — reuses evidence-roundup | `/collagen`; do-collagen-jelly-sticks-actually-work | ready |
+| New Year, new routine: does when you start collagen actually matter? | Reuses the "no evidence timing matters, consistency over timing" finding above, applied to the yearly New-Year's-resolution question instead of the daily one — same honest "no ideal time" answer as the 30s/50s pieces. See Seasonal keyword findings (2026-09-13) below for why this is timed, not evergreen | None — reuses evidence already established in this piece and the 30s/50s pieces | `/collagen`; best-time-of-day-to-take-collagen; starting-collagen-in-your-30s; collagen-after-50 | ready — **time-sensitive: target publish window is late Dec 2026 / early Jan 2027**, not a random slot, to catch the real seasonal search ramp |
 | Can you take collagen with coffee? | Addresses the "heat denatures it" myth; notes this is really a powder-user question — jelly sticks sidestep it entirely | None — general food-science fact | `/collagen`; jelly-sticks-vs-gummies-powders | ready |
+| Do collagen jelly sticks give you an energy boost? | Honest debunk — collagen has no established fatigue/energy mechanism, unlike the fatigue-relief framing common in Korean marketing (21% of surveyed users cited it). Check whether any UK-sold product actually adds caffeine or B-vitamins, which would be the real explanation if an effect exists. See Korean-source content ideas (2026-09-13) | **Needs research** — check UK ingredient lists for caffeine/B-vitamins; no dedicated fatigue RCT exists for collagen itself | `/collagen`; do-collagen-jelly-sticks-actually-work | needs research |
 | Does collagen improve skin elasticity? What the evidence actually shows | Direct evidence-review answer, reusing the site's existing elasticity/hydration RCT data rather than new research; targets the collagen-specific long tail, not the generic "skin elasticity" term (see Volume/difficulty findings 2026-09-13) | None — reuses evidence already cited in `do-collagen-jelly-sticks-actually-work` and `collagen-jelly-stick-benefits-and-ingredients` | `/collagen`; do-collagen-jelly-sticks-actually-work; collagen-jelly-stick-benefits-and-ingredients | ready — promoted, see Volume/difficulty findings (2026-09-13): confirmed real, sustained, rising UK demand (Bing undersold it); avoid the bare "skin elasticity" term (Vogue/Cleveland Clinic/WebMD/BBC own that SERP) |
 | How long does collagen take to work? | Reuses the VERISOL 8-week trial finding directly | None — already verified | `/collagen`; do-collagen-jelly-sticks-actually-work (heavy overlap, but a distinct high-volume query worth its own page) | ready |
 | Can you take too much collagen? | Documented safety profile only (no adverse events in the cited review); explicitly not dosing advice, defer to GP/pharmacist for medication interactions | None — reuses evidence piece + existing FAQ safety language | `/collagen`; evidence roundup, FAQ | ready |
