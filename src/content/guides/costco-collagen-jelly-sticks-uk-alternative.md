@@ -4,7 +4,7 @@ excerpt: "EVERYDAZE's jelly sticks come in a cheap 42-count value pack at US Cos
 readTime: "4 min"
 publishDate: "2026-09-14"
 cluster: korean-imports
-draft: true
+draft: false
 ---
 
 If you've seen American TikTok or Instagram posts about a huge box of collagen jelly sticks from Costco, that's real — and no, Costco UK doesn't have it. Here's what's actually going on, and the closest you can get here.
