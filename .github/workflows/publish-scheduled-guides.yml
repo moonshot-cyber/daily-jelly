@@ -1,0 +1,53 @@
+name: Publish scheduled guides
+
+# Runs daily and flips draft:false on any guide in src/content/guides/ whose
+# publishDate has arrived. Replaces the local Claude Code scheduled-tasks
+# mechanism, which depended on a specific machine being awake at a precise
+# fire time and stalled silently four times as a result (day2, reviews,
+# halal, costco all fired but never actually committed/pushed). This runs
+# on GitHub's own infrastructure, so publishing no longer depends on any
+# local device being on.
+#
+# To queue a new article: write it, set draft: true and a publishDate, and
+# it publishes itself automatically on or after that date -- no separate
+# scheduled task needs to be created per article the way the old mechanism
+# required.
+
+on:
+  schedule:
+    - cron: '0 9 * * *' # 09:00 UTC daily
+  workflow_dispatch: {} # allows a manual "Run workflow" for testing/backfill
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Publish any guides due today
+        id: publish
+        run: |
+          OUTPUT="$(node scripts/publish-scheduled-guides.mjs)"
+          echo "$OUTPUT"
+          PUBLISHED="$(echo "$OUTPUT" | grep '^PUBLISHED:' | cut -d: -f2)"
+          echo "published=$PUBLISHED" >> "$GITHUB_OUTPUT"
+
+      - name: Commit and push
+        if: steps.publish.outputs.published != ''
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/content/guides/
+          git commit -m "Publish scheduled guide(s): ${{ steps.publish.outputs.published }}
+
+          Automated publish via GitHub Actions -- flips draft:false on any
+          guide whose publishDate has arrived. See
+          .github/workflows/publish-scheduled-guides.yml."
+          git push
