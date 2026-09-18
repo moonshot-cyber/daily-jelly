@@ -4,7 +4,7 @@ excerpt: "No scoop, no shaker, no water, and nothing that looks like a liquid at
 readTime: "4 min"
 publishDate: "2026-09-18"
 cluster: common-questions
-draft: true
+draft: false
 ---
 
 If your collagen powder habit only survives at home — because a tub, a scoop, and a shaker bottle don't really work on a train, at a desk, or in hand luggage — that's a genuine gap jelly sticks are built for. This isn't a rehash of our [full format comparison](/guides/jelly-sticks-vs-gummies-powders); it's specifically about what changes when you take your collagen routine out of the house.
