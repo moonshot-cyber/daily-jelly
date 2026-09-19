@@ -83,21 +83,21 @@ export const PRODUCTS = [
     name: 'EVERYDAZE Essential Collagen Solution Jelly Stick',
     retailer: 'YesStyle',
     image: 'https://d1flfk77wl2xk4.cloudfront.net/Assets/92/884/XXL_p0211888492.jpg',
-    href: 'https://www.yesstyle.com/en/everydaze-essential-collagen-solution-jelly-stick-4-types-peach/info.html/pid.1130721642',
+    href: 'https://www.awin1.com/cread.php?awinmid=15448&awinaffid=3091169&ued=https%3A%2F%2Fwww.yesstyle.com%2Fen%2Feverydaze-essential-collagen-solution-jelly-stick-4-types-peach%2Finfo.html%2Fpid.1130721642',
   },
   {
     slug: 'grn-volume-up-collagen-jelly',
     name: 'grn+ Volume Up Collagen Jelly',
     retailer: 'YesStyle',
     image: 'https://d1flfk77wl2xk4.cloudfront.net/Assets/grn-volume-up-collagen-jelly-15g-x-14-sticks/12/264/XXL_p0219426412.jpg',
-    href: 'https://www.yesstyle.com/en/grn-volume-up-collagen-jelly-15g-x-14-sticks/info.html/pid.1134976961',
+    href: 'https://www.awin1.com/cread.php?awinmid=15448&awinaffid=3091169&ued=https%3A%2F%2Fwww.yesstyle.com%2Fen%2Fgrn-volume-up-collagen-jelly-15g-x-14-sticks%2Finfo.html%2Fpid.1134976961',
   },
   {
     slug: 'foodology-collagen-centella-jelly',
     name: 'FOODOLOGY Collagen Centella Jelly',
     retailer: 'YesStyle',
     image: 'https://d1flfk77wl2xk4.cloudfront.net/Assets/foodology-collagen-centella-jelly-25g-x-10-sticks/25/294/XXL_p0219429425.jpg',
-    href: 'https://www.yesstyle.com/en/foodology-collagen-centella-jelly-25g-x-10-sticks/info.html/pid.1134977380',
+    href: 'https://www.awin1.com/cread.php?awinmid=15448&awinaffid=3091169&ued=https%3A%2F%2Fwww.yesstyle.com%2Fen%2Ffoodology-collagen-centella-jelly-25g-x-10-sticks%2Finfo.html%2Fpid.1134977380',
   },
 ];
 
@@ -124,7 +124,7 @@ export const GUIDE_PRODUCTS = [
     priceHighGBP: 24,
     pricePerServing: '~£1.30–1.70 per stick',
     ukPath: [
-      { name: 'YesStyle', href: 'https://www.yesstyle.com/en/nutrione-bb-lab-pomegranate-collagen-s-20g-x-14-sticks/info.html/pid.1120234762' },
+      { name: 'YesStyle', href: 'https://www.awin1.com/cread.php?awinmid=15448&awinaffid=3091169&ued=https%3A%2F%2Fwww.yesstyle.com%2Fen%2Fnutrione-bb-lab-pomegranate-collagen-s-20g-x-14-sticks%2Finfo.html%2Fpid.1120234762' },
       { name: 'Stylevana', href: 'https://www.stylevana.com/en_EU/bb-lab-pomegranate-collagen-s-20g-14-packets-3ea-set.html' },
     ],
     pros: [
@@ -153,7 +153,7 @@ export const GUIDE_PRODUCTS = [
     priceHighGBP: 22,
     pricePerServing: '~£1.40–2.20 per stick',
     ukPath: [
-      { name: 'YesStyle', href: 'https://www.yesstyle.com/en/foodology-collagen-centella-jelly-25g-x-10-sticks/info.html/pid.1134977380' },
+      { name: 'YesStyle', href: 'https://www.awin1.com/cread.php?awinmid=15448&awinaffid=3091169&ued=https%3A%2F%2Fwww.yesstyle.com%2Fen%2Ffoodology-collagen-centella-jelly-25g-x-10-sticks%2Finfo.html%2Fpid.1134977380' },
     ],
     pros: [
       'Stocked across several Korean-beauty resellers, so easier to find in stock than most',
@@ -346,7 +346,7 @@ export const PRICE_INDEX = [
     doseMg: 1000,
     priceGBPLow: 18,
     priceGBPHigh: 24,
-    href: 'https://www.yesstyle.com/en/nutrione-bb-lab-pomegranate-collagen-s-20g-x-14-sticks/info.html/pid.1120234762',
+    href: 'https://www.awin1.com/cread.php?awinmid=15448&awinaffid=3091169&ued=https%3A%2F%2Fwww.yesstyle.com%2Fen%2Fnutrione-bb-lab-pomegranate-collagen-s-20g-x-14-sticks%2Finfo.html%2Fpid.1120234762',
     sourceNote: 'YesStyle listing — marine collagen, price checked as a band not a fixed figure',
   },
 ];
