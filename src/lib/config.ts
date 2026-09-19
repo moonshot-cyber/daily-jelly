@@ -240,7 +240,7 @@ export const GUIDE_PRODUCTS = [
     priceHighGBP: 16.03,
     pricePerServing: '~£1.60 per stick',
     ukPath: [
-      { name: 'Welzo', href: 'https://sovrn.co/1n8zrvx' },
+      { name: 'Welzo', href: 'https://welzo.com/products/now-foods-collagen-jelly-beauty-complex-10-jelly-sticks?sca_ref=12272194.sbfvZzpjwCn' },
     ],
     pros: [
       'NOW Foods is an established supplement brand most UK shoppers already recognise',
@@ -325,7 +325,7 @@ export const PRICE_INDEX = [
     packSize: '10 sticks',
     doseMg: 2500,
     priceGBP: 16.03,
-    href: 'https://sovrn.co/1n8zrvx',
+    href: 'https://welzo.com/products/now-foods-collagen-jelly-beauty-complex-10-jelly-sticks?sca_ref=12272194.sbfvZzpjwCn',
     sourceNote: 'Welzo listing — VERISOL bovine collagen peptide',
   },
   {
