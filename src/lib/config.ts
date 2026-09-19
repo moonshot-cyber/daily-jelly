@@ -125,7 +125,7 @@ export const GUIDE_PRODUCTS = [
     pricePerServing: '~£1.30–1.70 per stick',
     ukPath: [
       { name: 'YesStyle', href: 'https://www.awin1.com/cread.php?awinmid=15448&awinaffid=3091169&ued=https%3A%2F%2Fwww.yesstyle.com%2Fen%2Fnutrione-bb-lab-pomegranate-collagen-s-20g-x-14-sticks%2Finfo.html%2Fpid.1120234762' },
-      { name: 'Stylevana', href: 'https://www.stylevana.com/en_EU/bb-lab-pomegranate-collagen-s-20g-14-packets-3ea-set.html' },
+      { name: 'Stylevana', href: 'https://www.awin1.com/cread.php?awinmid=106621&awinaffid=3091169&ued=https%3A%2F%2Fwww.stylevana.com%2Fen_EU%2Fbb-lab-pomegranate-collagen-s-20g-14-packets-3ea-set.html' },
     ],
     pros: [
       'The Olive Young–famous format — closest thing to "the original" Korean jelly stick',
