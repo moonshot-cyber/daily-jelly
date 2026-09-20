@@ -4,7 +4,7 @@ excerpt: "A newer wave of jelly sticks uses PDRN, an ingredient with real clinic
 readTime: "5 min"
 publishDate: "2026-09-20"
 cluster: types-and-ingredients
-draft: true
+draft: false
 ---
 
 Searching around the wider jelly-stick category, we came across a newer product we haven't featured anywhere else on this site: FOODOLOGY's Jeltiful PDRN Ampoule Jelly, sold on YesStyle, Stylevana, and Olive Young Global. It's marketed with more clinical-sounding language than anything else in this format — "ampoule," "skin booster," DNA-based repair — so it's worth explaining honestly rather than either dismissing it or repeating the marketing.
