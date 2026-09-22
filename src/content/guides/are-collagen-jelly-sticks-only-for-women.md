@@ -4,7 +4,7 @@ excerpt: "Every jelly stick on this site is styled and marketed toward women. No
 readTime: "4 min"
 publishDate: "2026-09-22"
 cluster: right-for-me
-draft: true
+draft: false
 ---
 
 Look at any collagen jelly stick — pink pomegranate pouches, peach flavours, "inner beauty" branding — and the marketing makes a clear assumption about who's buying it. That's a packaging and category choice, not a fact about what's actually in the pouch.
