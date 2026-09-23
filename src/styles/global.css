@@ -454,6 +454,33 @@ img {
 .post-body strong {
   color: var(--text);
 }
+.post-body table {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0 28px;
+  font-size: 14px;
+}
+.post-body th,
+.post-body td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+.post-body th {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+.post-body td:first-child,
+.post-body th:first-child {
+  font-weight: 700;
+}
 
 /* --- FAQ --- */
 .faq-item {
