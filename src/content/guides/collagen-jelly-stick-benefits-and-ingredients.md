@@ -34,12 +34,12 @@ Collagen jelly sticks use one of three collagen sources — marine (fish), bovin
 
 | Product | Collagen source | Labelled dose |
 |---|---|---|
-| BB LAB Pomegranate Collagen S | Marine (fish) | ~1,000mg per stick |
-| FOODOLOGY Collagen Centella Jelly | Marine (fish) | Not confirmed on the listing |
-| Cloo9 Collagen Jelly | Marine (fish) | 5,000mg per stick |
-| YIXO Vegan Collagen Jelly | Plant-based (no true collagen) | Not stated as mg |
-| NOW Foods Collagen Jelly Beauty Complex | Bovine (VERISOL) | 2.5g (2,500mg) per stick |
-| HAMCHOROK Rg+ Pomegranate Collagen Jelly | Marine (fish) | Not stated on the listing |
+| [BB LAB Pomegranate Collagen S](/where-to-buy) | Marine (fish) | ~1,000mg per stick |
+| [FOODOLOGY Collagen Centella Jelly](/where-to-buy) | Marine (fish) | Not confirmed on the listing |
+| [Cloo9 Collagen Jelly](/where-to-buy) | Marine (fish) | 5,000mg per stick |
+| [YIXO Vegan Collagen Jelly](/where-to-buy) | Plant-based (no true collagen) | Not stated as mg |
+| [NOW Foods Collagen Jelly Beauty Complex](/where-to-buy) | Bovine (VERISOL) | 2.5g (2,500mg) per stick |
+| [HAMCHOROK Rg+ Pomegranate Collagen Jelly](/where-to-buy) | Marine (fish) | Not stated on the listing |
 
 Two things worth flagging about this table. First, a higher number isn't automatically "better" — the VERISOL research behind NOW Foods' product used exactly 2.5g, not 5g, so more collagen isn't necessarily more effect; it's simply what that particular brand chose to put in. Second, where we've written "not stated," that's deliberate — we're not going to guess a number that isn't on the label just to fill a table cell.
 
