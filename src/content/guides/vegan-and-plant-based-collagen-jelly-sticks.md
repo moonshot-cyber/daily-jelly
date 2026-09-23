@@ -3,7 +3,7 @@ title: "Vegan Collagen Jelly Sticks: The Real UK-Reachable Options"
 excerpt: "Bovine and marine collagen rule out vegetarians and vegans alike. Here are the genuine plant-based jelly sticks we could verify, with real pricing."
 readTime: "5 min"
 publishDate: "2026-09-06"
-dateModified: "2026-09-08"
+dateModified: "2026-09-23"
 cluster: types-and-ingredients
 image: "https://yixo.co.uk/cdn/shop/files/YIXO_vegan_collagen_non-alcoholic_jellies.png?v=1777243406&width=1536"
 imageCredit: "YIXO"
@@ -28,11 +28,11 @@ UK-based, and the option we already feature in our main [buying guide](/where-to
 
 ## EVERYDAZE Essential Collagen Solution Jelly Stick
 
-Already featured on our homepage, and — worth stating plainly since we hadn't flagged this before — genuinely vegan. YesStyle's own listing confirms it directly: *"These konjac jelly sticks contain plant-based collagen booster derived from hibiscus... It also contains glucomannan, a dietary fiber, to improve digestion."* Available in four flavours (peach, mango, green grape, pomegranate), and well-reviewed — 4.8 stars across 82 reviews on YesStyle at time of writing.
+Already featured on our homepage, and — worth stating plainly since we hadn't flagged this before — genuinely vegan. <a href="https://www.awin1.com/cread.php?awinmid=15448&awinaffid=3091169&ued=https%3A%2F%2Fwww.yesstyle.com%2Fen%2Feverydaze-essential-collagen-solution-jelly-stick-4-types-peach%2Finfo.html%2Fpid.1130721642" target="_blank" rel="noopener sponsored">YesStyle's own listing</a> confirms it directly: *"These konjac jelly sticks contain plant-based collagen booster derived from hibiscus... It also contains glucomannan, a dietary fiber, to improve digestion."* Available in four flavours (peach, mango, green grape, pomegranate), and well-reviewed — 4.8 stars across 82 reviews on YesStyle at time of writing.
 
 ## MIZON Inner's Bit Collagen 3300
 
-A new find, and the best-verified of the three. Sold on YesStyle (so no new retailer relationship needed) at **£47.47 for a 2-box bundle** (28 sticks total, 20g each) — working out to roughly £1.70 a stick. YesStyle's own product listing states plainly: *"100% Plant-based Vegan Collagen"* with *"no animal-derived ingredients,"* sourced from hibiscus grown in Laos — the same underlying plant source as EVERYDAZE, just a different brand's formulation. Comes with a longer added-ingredient list than the others (Vitamin C, hyaluronic acid, biotin), which may explain the "3300" naming, though we'd treat that number the same way as any other labelled dose — informative, not a guarantee of effect.
+A new find, and the best-verified of the three. Sold on YesStyle (so no new retailer relationship needed) at **£47.47 for a 2-box bundle** (28 sticks total, 20g each) — working out to roughly £1.70 a stick. <a href="https://www.awin1.com/cread.php?awinmid=15448&awinaffid=3091169&ued=https%3A%2F%2Fwww.yesstyle.com%2Fen%2Fmizon-inners-bit-collagen-3300-2pcs-bundle-set-20g-x-14-sticks-x-2%2Finfo.html%2Fpid.1137842986" target="_blank" rel="noopener sponsored">YesStyle's own product listing</a> states plainly: *"100% Plant-based Vegan Collagen"* with *"no animal-derived ingredients,"* sourced from hibiscus grown in Laos — the same underlying plant source as EVERYDAZE, just a different brand's formulation. Comes with a longer added-ingredient list than the others (Vitamin C, hyaluronic acid, biotin), which may explain the "3300" naming, though we'd treat that number the same way as any other labelled dose — informative, not a guarantee of effect.
 
 ## Two more that exist, but we couldn't fully verify
 
@@ -42,9 +42,9 @@ A new find, and the best-verified of the three. Sold on YesStyle (so no new reta
 
 | Product | UK path | Price | Vegan claim source |
 |---|---|---|---|
-| YIXO Vegan Collagen Jelly | yixo.co.uk (direct) | £26 / 21 jellies | Brand's own site |
-| EVERYDAZE Essential Collagen Solution | YesStyle | ~£11–15 / pack | YesStyle listing |
-| MIZON Inner's Bit Collagen 3300 | YesStyle | £47.47 / 2×14 sticks | YesStyle listing ("100% Plant-based") |
+| [YIXO Vegan Collagen Jelly](/where-to-buy) | yixo.co.uk (direct) | £26 / 21 jellies | Brand's own site |
+| <a href="https://www.awin1.com/cread.php?awinmid=15448&awinaffid=3091169&ued=https%3A%2F%2Fwww.yesstyle.com%2Fen%2Feverydaze-essential-collagen-solution-jelly-stick-4-types-peach%2Finfo.html%2Fpid.1130721642" target="_blank" rel="noopener sponsored">EVERYDAZE Essential Collagen Solution</a> | YesStyle | ~£11–15 / pack | YesStyle listing |
+| <a href="https://www.awin1.com/cread.php?awinmid=15448&awinaffid=3091169&ued=https%3A%2F%2Fwww.yesstyle.com%2Fen%2Fmizon-inners-bit-collagen-3300-2pcs-bundle-set-20g-x-14-sticks-x-2%2Finfo.html%2Fpid.1137842986" target="_blank" rel="noopener sponsored">MIZON Inner's Bit Collagen 3300</a> | YesStyle | £47.47 / 2×14 sticks | YesStyle listing ("100% Plant-based") |
 | PLANT Vegan Collagen | Olive Young Global | Not verified | Brand claims "certified vegan" |
 | Veganery by d'Alba | Olive Young Global | Not verified | Brand's own site |
 
