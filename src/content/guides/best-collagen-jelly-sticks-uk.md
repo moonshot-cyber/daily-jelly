@@ -7,7 +7,7 @@ dateModified: "2026-09-24"
 cluster: comparisons
 image: "https://d1flfk77wl2xk4.cloudfront.net/Assets/19/869/XXL_p0189986919.jpg"
 imageCredit: "YesStyle"
-draft: true
+draft: false
 faqs:
   - q: "What is the best collagen jelly stick overall in the UK?"
     a: "BB LAB Pomegranate Collagen S — the Olive Young-famous format, closest to the original Korean jelly stick, with clearly labelled fish collagen and pomegranate concentrate amounts. £18–24 for a 14-stick pack, sold via YesStyle and Stylevana."
