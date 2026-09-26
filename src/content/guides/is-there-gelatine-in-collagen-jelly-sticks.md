@@ -6,7 +6,7 @@ publishDate: "2026-09-26"
 cluster: types-and-ingredients
 image: "https://d1flfk77wl2xk4.cloudfront.net/Assets/19/869/XXL_p0189986919.jpg"
 imageCredit: "YesStyle"
-draft: true
+draft: false
 faqs:
   - q: "Do collagen jelly sticks contain gelatine?"
     a: "No — none of the six UK-available collagen jelly sticks we checked use gelatine. The jelly texture comes from a plant/algae-derived gum blend instead, most commonly locust bean gum, xanthan gum, agar, and tamarind gum."
