@@ -4,7 +4,7 @@ excerpt: "Collagen marketing skews almost entirely female. The research doesn't 
 readTime: "6 min"
 publishDate: "2026-09-28"
 cluster: right-for-me
-draft: true
+draft: false
 faqs:
   - q: "Does collagen boost testosterone?"
     a: "No — there's no clinical evidence in human trials that hydrolysed collagen peptides raise or lower testosterone. Collagen doesn't contain hormones. Any product marketing itself as a testosterone booster on the strength of its collagen content is going beyond what's been shown."
