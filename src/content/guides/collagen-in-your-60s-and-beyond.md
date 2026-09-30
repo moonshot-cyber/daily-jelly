@@ -4,7 +4,7 @@ excerpt: "The skin-elasticity story doesn't hold up as the reason to take collag
 readTime: "6 min"
 publishDate: "2026-09-30"
 cluster: right-for-me
-draft: true
+draft: false
 faqs:
   - q: "Does collagen help with joint pain in older adults?"
     a: "There's real evidence for it — a 2025 randomised, placebo-controlled trial gave 80 adults aged 40–75 with early knee osteoarthritis 3,000mg/day of Type I collagen peptides for 180 days and found significant improvement in pain and function scores versus placebo."
