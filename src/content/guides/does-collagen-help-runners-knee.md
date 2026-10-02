@@ -4,7 +4,7 @@ excerpt: "Not the same question as collagen for age-related osteoarthritis — t
 readTime: "5 min"
 publishDate: "2026-10-02"
 cluster: right-for-me
-draft: true
+draft: false
 faqs:
   - q: "Is there evidence collagen helps runners' knee specifically?"
     a: "There's evidence for activity-related knee pain in physically active people generally, including runners — a randomised controlled trial of 180 active 18-30 year olds with exercise-related knee pain found 5g/day of Type I collagen peptides for 12 weeks significantly reduced pain during and after exercise versus placebo. It wasn't a runners-only trial, but the population overlaps closely."
