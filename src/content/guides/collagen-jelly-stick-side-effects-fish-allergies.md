@@ -4,7 +4,7 @@ excerpt: "Four of the six jelly sticks we track use fish collagen — and checki
 readTime: "6 min"
 publishDate: "2026-10-04"
 cluster: common-questions
-draft: true
+draft: false
 faqs:
   - q: "Can I have a collagen jelly stick if I'm allergic to fish?"
     a: "Talk to your allergist or GP first if you have a diagnosed fish allergy — the evidence is genuinely mixed. Fish collagen is a documented allergen with confirmed cross-reactivity across fish species in some studies, but two separate European food-challenge studies found it's less clinically relevant than parvalbumin, the main fish allergen. There's no way to predict from a general fish-allergy diagnosis alone whether you'd react to collagen specifically."
