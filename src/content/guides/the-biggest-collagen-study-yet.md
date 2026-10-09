@@ -4,7 +4,7 @@ excerpt: "An umbrella review of 113 trials and nearly 8,000 people is the strong
 readTime: "5 min"
 publishDate: "2026-10-09"
 cluster: common-questions
-draft: true
+draft: false
 faqs:
   - q: "What is the biggest collagen study to date?"
     a: "An umbrella review published in Aesthetic Surgery Journal Open Forum in 2026, led by researchers at Anglia Ruskin University and KLNIK, which analysed 16 systematic reviews covering 113 randomised controlled trials and nearly 8,000 participants worldwide — the largest integrated analysis of collagen supplementation across all major health outcomes."
