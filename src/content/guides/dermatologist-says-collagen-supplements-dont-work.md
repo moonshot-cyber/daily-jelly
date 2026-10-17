@@ -4,7 +4,7 @@ excerpt: "Dr Farah Moustafa at Tufts says collagen supplements aren't recommende
 readTime: "6 min"
 publishDate: "2026-10-14"
 cluster: common-questions
-draft: true
+draft: false
 faqs:
   - q: "Do dermatologists recommend collagen supplements?"
     a: "Not universally. Dr Farah Moustafa at Tufts University School of Medicine says oral collagen is 'not currently recommended as a treatment for skin ageing,' though it can be considered alongside better-studied options like retinoids and sunscreen. Other dermatologists are more open to it, citing newer systematic reviews. There's no consensus."

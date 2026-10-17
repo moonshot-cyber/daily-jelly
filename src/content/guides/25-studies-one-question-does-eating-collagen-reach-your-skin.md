@@ -4,7 +4,7 @@ excerpt: "A 2026 systematic review of 25 randomised controlled trials found cons
 readTime: "6 min"
 publishDate: "2026-10-16"
 cluster: common-questions
-draft: true
+draft: false
 faqs:
   - q: "Does oral collagen actually reach your skin?"
     a: "There is evidence it does, at least in part. Collagen-derived dipeptides — particularly prolyl-hydroxyproline (Pro-Hyp) — have been detected in human blood within one to two hours of ingestion, peaking at concentrations shown in laboratory studies to stimulate skin fibroblast growth and hyaluronic acid production. That's not proof the supplement transforms your skin, but it does mean the mechanism isn't hypothetical."
