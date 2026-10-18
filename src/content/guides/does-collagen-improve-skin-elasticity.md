@@ -4,7 +4,7 @@ excerpt: "Three independent reviews in 2026 all point the same way — modest, r
 readTime: "6 min"
 publishDate: "2026-10-18"
 cluster: common-questions
-draft: true
+draft: false
 faqs:
   - q: "Does collagen improve skin elasticity?"
     a: "Multiple systematic reviews — including the largest umbrella review to date (113 RCTs, nearly 8,000 participants) — have found that oral collagen peptide supplementation is associated with modest improvements in skin elasticity, typically measurable after 8–12 weeks of consistent use. The effect is real but moderate, not dramatic."
