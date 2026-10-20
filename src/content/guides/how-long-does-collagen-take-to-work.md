@@ -4,7 +4,7 @@ excerpt: "No supplement works overnight. The clinical trials give real timelines
 readTime: "5 min"
 publishDate: "2026-10-20"
 cluster: common-questions
-draft: true
+draft: false
 faqs:
   - q: "How long does collagen take to work for skin?"
     a: "Clinical trials show measurable improvements in skin hydration from around 4 weeks, and in skin elasticity from 8–12 weeks. The best-studied trial (VERISOL, 2.5g/day for 8 weeks) found significant improvements in both hydration and elasticity at 8 weeks, with some signs of change as early as 4 weeks."
