@@ -4,7 +4,7 @@ excerpt: "Nearly every collagen supplement sold in the UK says 'hydrolysed' on t
 readTime: "5 min"
 publishDate: "2026-10-22"
 cluster: types-and-ingredients
-draft: true
+draft: false
 faqs:
   - q: "What does 'hydrolysed collagen' mean?"
     a: "It means the collagen protein has been broken down into much smaller peptide fragments using enzymes — from around 300,000 daltons per molecule down to roughly 2,000–5,000 daltons. This makes it soluble in water and small enough for your gut to absorb, which intact collagen isn't."
