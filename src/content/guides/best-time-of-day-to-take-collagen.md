@@ -4,7 +4,7 @@ excerpt: "No clinical trial has ever compared morning versus evening collagen su
 readTime: "4 min"
 publishDate: "2026-10-24"
 cluster: common-questions
-draft: true
+draft: false
 faqs:
   - q: "When is the best time to take collagen?"
     a: "Any time you'll take it consistently. No clinical trial has compared morning versus evening collagen supplementation, and no systematic review has identified an optimal time of day. The evidence consistently shows that duration and consistency of use — weeks and months, not hours — are what matter for outcomes."
