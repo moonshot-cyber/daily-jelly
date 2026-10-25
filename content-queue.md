@@ -251,6 +251,30 @@ User's own idea — a UK Christmas-hamper/gifting angle, prompted by the Korean 
 - **"Foodology Cutting Jelly vs Colla Q"** — questionable fit. Both are weight-management "cutting jelly" products, not collagen; a head-to-head comparison risks reading as an implicit recommendation for a weight-loss product, conflicting with the site's existing stance ("we explain cutting jelly, we don't sell or recommend it"). Recommend skipping this one rather than briefing it as-is.
 - **Collagen vs hyaluronic acid** — noticed, not briefed. Surfaced 2026-09-13 while checking "skin hydration" keyword volume: "hyaluronic acid" was the top rising related query (+120%), with no collagen tie-in at all, suggesting a real, distinct audience searching skin hydration from a hyaluronic-acid angle rather than a collagen one. Not investigated further — no evidence check, no volume check on the comparison term itself. Flagged as a genuinely different angle worth a look later, not assumed to be a good fit yet.
 
+## Search Console baseline — before the title/meta pass (2026-10-25)
+
+Recorded before any title or description change went live, so there is something to measure against.
+
+**Window:** 3 months, to 2026-10-25.
+
+| Metric | Value |
+|---|---|
+| Impressions | 968 |
+| Clicks | 14 |
+| CTR | 1.4% |
+| Average position | 14.3 |
+| Pages with impressions | 9 |
+
+**Top queries by impressions:** daily jelly 85 · collagen jelly stick 42 · collagen jelly to eat 31 · collagen jelly supplement 28 · jelly supplement 20 · marine collagen jelly 18 · collagen nhs 9 · jelly sticks 8.
+
+**Pattern behind the pass:** people search "collagen jelly", not "jelly sticks", and the site was built around the second phrase. Position 14.3 is bottom of page one, so better phrasing and more clickable titles are the lever.
+
+**Pages changed (the nine that had impressions; no other article was touched):** `/`, `/guides/`, `/guides/types-and-ingredients/`, `/where-to-buy/`, and the guides `best-collagen-jelly-sticks-uk`, `collagen-jelly-stick-benefits-and-ingredients`, `do-collagen-jelly-sticks-actually-work`, `what-are-korean-collagen-jelly-sticks`, `does-the-nhs-recommend-collagen-supplements`. Titles changed on the homepage, `/guides/`, the Types & Ingredients hub, and the benefits and "do they work" guides; descriptions changed on all nine. Titles deliberately left alone where they already carry the phrase: best-collagen-jelly-sticks-uk, what-are-korean-collagen-jelly-sticks, where-to-buy, and the NHS page.
+
+**Same pass, URL form:** the site now has one canonical form, the trailing-slash URL. `vercel.json` sets `trailingSlash: true` (non-slash URLs 308 to the slash form) and every internal link was given its slash, so none costs a redirect hop.
+
+**Do not evaluate this before mid-November 2026.** Title changes take roughly 2–4 weeks to be reflected in rankings, and Google sometimes rewrites a title in the results regardless of what the page says. Compare the same 3-month window and the same eight queries against the table above, and read CTR and position together rather than clicks alone — 14 clicks is too small a number to judge on.
+
 ## Content refresh flagged (not a new article)
 
 - **HAMCHOROK's con in `GUIDE_PRODUCTS`** ("The Amazon listing itself leans on unproven claims (anti-ageing, immunity)") — checked the live Amazon listing 2026-09-19 while mining reviews for content angles: the product's own title is literally *"HAMCHOROK Rg+ **Anti-Aging** Korean-Beauty Pomegranate Collagen Jelly Stick"*, and the description claims the ginseng content *"helps improve immunity and prevents the accumulation of fat cells."* Both go well beyond the one authorised UK/EU claim. The existing con is directionally right but vague — worth updating with this specific, dated, verifiable example rather than the current generic wording. Not urgent, just noted so it doesn't get lost.
