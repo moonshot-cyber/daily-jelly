@@ -4,6 +4,10 @@ import '../styles/global.css';
 
 interface Props {
   title?: string;
+  // Full <title> text, used verbatim (no " — Daily Jelly" suffix). Lets the
+  // homepage set its own title without touching SITE.tagline, which also
+  // renders as visible hero copy.
+  titleOverride?: string;
   description?: string;
   activeNav?: string;
   image?: string;
@@ -11,8 +15,8 @@ interface Props {
   jsonLd?: object | object[];
 }
 
-const { title, description, activeNav = 'home', image, ogType = 'website', jsonLd } = Astro.props;
-const pageTitle = title ? `${title} — ${SITE.name}` : `${SITE.name} — ${SITE.tagline}`;
+const { title, titleOverride, description, activeNav = 'home', image, ogType = 'website', jsonLd } = Astro.props;
+const pageTitle = titleOverride ?? (title ? `${title} — ${SITE.name}` : `${SITE.name} — ${SITE.tagline}`);
 const pageDescription = description || SITE.description;
 const canonicalURL = new URL(Astro.url.pathname, SITE.url).toString();
 const logoURL = `${SITE.url}/favicon.svg`;
@@ -70,12 +74,12 @@ const allSchema = [...siteSchema, ...pageSchema];
       <a href="/" class="site-logo">{SITE.name}</a>
       <nav class="site-nav">
         <a href="/" class:list={[{ active: activeNav === 'home' }]}>Home</a>
-        <a href="/collagen" class:list={[{ active: activeNav === 'collagen' }]}>Collagen Guide</a>
-        <a href="/guides" class:list={[{ active: activeNav === 'guides' }]}>Guides</a>
-        <a href="/where-to-buy" class:list={[{ active: activeNav === 'where-to-buy' }]}>Where to Buy</a>
-        <a href="/collagen-price-index" class:list={[{ active: activeNav === 'price-index' }]}>Price Index</a>
-        <a href="/faq" class:list={[{ active: activeNav === 'faq' }]}>FAQ</a>
-        <a href="/about" class:list={[{ active: activeNav === 'about' }]}>About</a>
+        <a href="/collagen/" class:list={[{ active: activeNav === 'collagen' }]}>Collagen Guide</a>
+        <a href="/guides/" class:list={[{ active: activeNav === 'guides' }]}>Guides</a>
+        <a href="/where-to-buy/" class:list={[{ active: activeNav === 'where-to-buy' }]}>Where to Buy</a>
+        <a href="/collagen-price-index/" class:list={[{ active: activeNav === 'price-index' }]}>Price Index</a>
+        <a href="/faq/" class:list={[{ active: activeNav === 'faq' }]}>FAQ</a>
+        <a href="/about/" class:list={[{ active: activeNav === 'about' }]}>About</a>
       </nav>
     </div>
   </header>
@@ -90,13 +94,13 @@ const allSchema = [...siteSchema, ...pageSchema];
         {CLUSTERS.map((cluster, i) => (
           <>
             {i > 0 && ' · '}
-            <a href={`/guides/${cluster.slug}`}>{cluster.name}</a>
+            <a href={`/guides/${cluster.slug}/`}>{cluster.name}</a>
           </>
         ))}
       </p>
       <p>&copy; {SITE.year} {SITE.name}. {SITE.affiliateDisclosure}</p>
       <p>{SITE.amazonDisclosure}</p>
-      <p>Independent, unofficial guide — not affiliated with any brand mentioned. <a href="/about">About &amp; disclosure</a> · <a href="/privacy">Privacy</a></p>
+      <p>Independent, unofficial guide — not affiliated with any brand mentioned. <a href="/about/">About &amp; disclosure</a> · <a href="/privacy/">Privacy</a></p>
     </div>
   </footer>
 </body>

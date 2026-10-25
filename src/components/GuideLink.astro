@@ -15,4 +15,4 @@ interface Props {
 const { slug } = Astro.props;
 const isLive = (await getCollection('guides', (g) => !g.data.draft)).some(g => g.slug === slug);
 ---
-{isLive ? <a href={`/guides/${slug}`}><slot /></a> : <slot />}
+{isLive ? <a href={`/guides/${slug}/`}><slot /></a> : <slot />}

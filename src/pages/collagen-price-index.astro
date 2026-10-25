@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import Disclosure from '../components/Disclosure.astro';
 import { PRICE_INDEX, PRICE_INDEX_LAST_CHECKED, SITE } from '../lib/config';
 
-const pageURL = new URL('/collagen-price-index', SITE.url).toString();
+const pageURL = new URL('/collagen-price-index/', SITE.url).toString();
 
 // Cost per 1,000mg, computed from the raw price/dose data — not a hardcoded
 // figure, so updating a price or dose in config.ts automatically recalculates
@@ -169,10 +169,10 @@ const jsonLd = [...productSchemas, breadcrumbSchema, faqSchema];
         labelled quantity.</li>
       <li>It doesn't measure convenience. Jelly sticks need no water or mixing; the sachet and powder products
         here generally do. Cheaper per mg isn't the same as easier to actually use daily — see our
-        <a href="/guides/jelly-sticks-vs-gummies-powders">full format comparison</a> for that trade-off.</li>
+        <a href="/guides/jelly-sticks-vs-gummies-powders/">full format comparison</a> for that trade-off.</li>
       <li>Only products with a dose stated on the retailer's own listing are included. Several jelly sticks we
         track elsewhere on this site (FOODOLOGY, YIXO, HAMCHOROK) aren't here because their listing doesn't state
-        an exact mg figure — see our <a href="/where-to-buy">full where-to-buy guide</a> for those, honestly
+        an exact mg figure — see our <a href="/where-to-buy/">full where-to-buy guide</a> for those, honestly
         labelled as "not stated."</li>
     </ul>
   </div>
@@ -191,6 +191,6 @@ const jsonLd = [...productSchemas, breadcrumbSchema, faqSchema];
     <strong>A reminder on claims:</strong> the only collagen-related health claim authorised in the UK/EU is that
     Vitamin C contributes to normal collagen formation for the normal function of skin. This page compares price
     and labelled dose only — it isn't a claim that any product here "works" better than another; see our
-    <a href="/guides/do-collagen-jelly-sticks-actually-work">evidence roundup</a> for what the research actually says.
+    <a href="/guides/do-collagen-jelly-sticks-actually-work/">evidence roundup</a> for what the research actually says.
   </div>
 </Base>

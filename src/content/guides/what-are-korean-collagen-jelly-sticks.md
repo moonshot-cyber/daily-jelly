@@ -1,6 +1,7 @@
 ---
 title: "What Are Korean Collagen Jelly Sticks?"
 excerpt: "The soft-pouch supplement format that's huge in Korea and almost unknown in the UK — what's actually inside one, and how people eat them."
+metaDescription: "What a Korean collagen jelly stick is: the soft-pouch format popular in Korea and still rare in the UK, what's inside one, and how you eat it."
 readTime: "5 min"
 publishDate: "2026-09-04"
 dateModified: "2026-09-09"

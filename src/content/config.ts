@@ -5,6 +5,11 @@ const guides = defineCollection({
   schema: z.object({
     title: z.string(),
     excerpt: z.string(),
+    // Search-result description, when it needs to differ from the excerpt.
+    // The excerpt also renders as the visible card blurb on every listing
+    // page, so keeping the two separate lets the meta description be tuned
+    // for search without changing what readers see on the cards.
+    metaDescription: z.string().optional(),
     readTime: z.string(),
     publishDate: z.string(),
     // Which cluster hub this article belongs to (see CLUSTERS in

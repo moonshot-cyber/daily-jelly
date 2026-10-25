@@ -24,6 +24,11 @@ export const CLUSTERS = [
     slug: 'types-and-ingredients',
     name: 'Types & Ingredients',
     intro: 'What\'s actually in a jelly stick — collagen sources, doses, and how the six products we track compare.',
+    // Search-result copy only — the nav label, footer link, breadcrumb and
+    // H1 keep using `name`. Optional on every cluster; falls back to
+    // name/intro when absent.
+    metaTitle: 'Collagen Jelly Ingredients, Types and Doses',
+    metaDescription: 'What\'s in a collagen jelly stick: marine, bovine and vegan collagen, the dose per stick, and how the six products we track compare.',
   },
   {
     slug: 'common-questions',

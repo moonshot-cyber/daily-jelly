@@ -7,6 +7,7 @@ import { getPublishedGuideSlugs } from './src/lib/guide-slugs.mjs';
 export default defineConfig({
   output: 'static',
   site: 'https://dailyjelly.co.uk',
+  trailingSlash: 'always',
   integrations: [sitemap()],
   build: {
     assets: '_assets'

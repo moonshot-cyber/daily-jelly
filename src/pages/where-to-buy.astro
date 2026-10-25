@@ -30,7 +30,7 @@ const quickPicks = [
   { key: 'amazon', label: "Best if you're already on Amazon" },
 ].map(qp => ({ ...qp, product: GUIDE_PRODUCTS.find(p => p.quickPick === qp.key) }));
 
-const pageURL = new URL('/where-to-buy', SITE.url).toString();
+const pageURL = new URL('/where-to-buy/', SITE.url).toString();
 
 const productSchemas = GUIDE_PRODUCTS.map(p => ({
   '@context': 'https://schema.org',
@@ -109,7 +109,7 @@ const jsonLd = [...productSchemas, breadcrumbSchema, faqSchema];
 
 <Base
   title="Where to Buy Collagen Jelly Sticks in the UK"
-  description="Compare BB LAB, FOODOLOGY, Cloo9, YIXO, NOW Foods and HAMCHOROK jelly sticks — UK delivery paths, pack maths, and an affiliate disclosure."
+  description="Where to buy collagen jelly in the UK: BB LAB, FOODOLOGY, Cloo9, YIXO, NOW Foods and HAMCHOROK compared on price per stick, delivery route and pack size."
   activeNav="where-to-buy"
   image={GUIDE_PRODUCTS[0].image}
   jsonLd={jsonLd}
@@ -129,7 +129,7 @@ const jsonLd = [...productSchemas, breadcrumbSchema, faqSchema];
   <Disclosure />
   <p style="font-size: 13px; color: var(--text-muted); margin: -18px 0 24px;"><strong>{SITE.amazonDisclosure}</strong></p>
   <p style="font-size: 13px; color: var(--text-muted); margin: 0 0 8px;">Just want the short version? Our <GuideLink slug="best-collagen-jelly-sticks-uk">best collagen jelly sticks UK</GuideLink> roundup covers the same six products, faster.</p>
-  <p style="font-size: 13px; color: var(--text-muted); margin: 0 0 24px;">Wondering if jelly sticks are actually good value? See our <a href="/collagen-price-index">UK collagen price index</a> — cost per 1,000mg across sachets, powders, and jelly sticks.</p>
+  <p style="font-size: 13px; color: var(--text-muted); margin: 0 0 24px;">Wondering if jelly sticks are actually good value? See our <a href="/collagen-price-index/">UK collagen price index</a> — cost per 1,000mg across sachets, powders, and jelly sticks.</p>
 
   <h2 style="font-size: 16px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin: 28px 0 12px;">Quick picks</h2>
   <div class="quick-picks">
@@ -172,7 +172,7 @@ const jsonLd = [...productSchemas, breadcrumbSchema, faqSchema];
       </tbody>
     </table>
   </div>
-  <p style="font-size: 12px; color: var(--text-muted); margin: -20px 0 32px;">Prices are indicative bands checked September 2026 — retailers change prices often, so check the live price before buying. Cost per 1,000mg uses only doses confirmed on the retailer's own listing — see our <a href="/collagen-price-index">full price index</a> for the wider comparison against powders and sachets.</p>
+  <p style="font-size: 12px; color: var(--text-muted); margin: -20px 0 32px;">Prices are indicative bands checked September 2026 — retailers change prices often, so check the live price before buying. Cost per 1,000mg uses only doses confirmed on the retailer's own listing — see our <a href="/collagen-price-index/">full price index</a> for the wider comparison against powders and sachets.</p>
 
   <h2 style="font-size: 20px; margin: 8px 0 20px;">The six sticks, in detail</h2>
   {GUIDE_PRODUCTS.map(p => <ProductGuideCard {...p} />)}
@@ -218,8 +218,8 @@ const jsonLd = [...productSchemas, breadcrumbSchema, faqSchema];
     actually compare to the gummies and powders already on UK shelves — convenience, dosing, and price
     per serving, side by side.
   </p>
-  <p style="margin: 0 0 8px;"><a href="/guides/jelly-sticks-vs-gummies-powders">Jelly Sticks vs Gummies vs Powders →</a></p>
-  <p style="margin: 0 0 32px;"><a href="/guides/cutting-jelly-vs-collagen-jelly">Confused by cutting jelly vs collagen jelly? Read the difference →</a></p>
+  <p style="margin: 0 0 8px;"><a href="/guides/jelly-sticks-vs-gummies-powders/">Jelly Sticks vs Gummies vs Powders →</a></p>
+  <p style="margin: 0 0 32px;"><a href="/guides/cutting-jelly-vs-collagen-jelly/">Confused by cutting jelly vs collagen jelly? Read the difference →</a></p>
 
   <h2 style="font-size: 20px; margin: 32px 0 16px;">Common questions</h2>
   <div>

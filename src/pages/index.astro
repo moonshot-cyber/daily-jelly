@@ -21,7 +21,12 @@ const heroProduct = PRODUCTS[0];
 const amazonProduct = GUIDE_PRODUCTS.find(p => p.isAmazon);
 ---
 
-<Base activeNav="home" image={heroProduct.image}>
+<Base
+  titleOverride="Daily Jelly — Collagen Jelly Sticks Compared, UK Prices"
+  description="Daily Jelly is an independent UK guide to collagen jelly sticks: what they are, how they compare with gummies and powders, and where to buy them."
+  activeNav="home"
+  image={heroProduct.image}
+>
   <div class="hero">
     <div class="hero__copy">
       <p class="hero-eyebrow">{SITE.tagline}</p>
@@ -51,9 +56,9 @@ const amazonProduct = GUIDE_PRODUCTS.find(p => p.isAmazon);
   </div>
 
   <div style="margin: 28px 0;">
-    <a href="/where-to-buy" class="btn">See where to buy jelly sticks in the UK →</a>
+    <a href="/where-to-buy/" class="btn">See where to buy jelly sticks in the UK →</a>
     <p style="font-size: 13px; color: var(--text-muted); margin: 10px 0 0;">Compare BB LAB, FOODOLOGY, Cloo9, YIXO, NOW &amp; Amazon UK — delivery paths compared.</p>
-    <p style="font-size: 13px; color: var(--text-muted); margin: 6px 0 0;">New to collagen supplements generally? Start with our <a href="/collagen">full collagen guide</a> — formats, types, and doses explained.</p>
+    <p style="font-size: 13px; color: var(--text-muted); margin: 6px 0 0;">New to collagen supplements generally? Start with our <a href="/collagen/">full collagen guide</a> — formats, types, and doses explained.</p>
   </div>
 
   {amazonProduct && (
@@ -81,5 +86,5 @@ const amazonProduct = GUIDE_PRODUCTS.find(p => p.isAmazon);
       <GuideCard slug={guide.slug} title={guide.data.title} excerpt={guide.data.excerpt} readTime={guide.data.readTime} />
     ))}
   </div>
-  <p style="margin: 20px 0 0;"><a href="/guides" class="btn btn--outline">See all guides →</a></p>
+  <p style="margin: 20px 0 0;"><a href="/guides/" class="btn btn--outline">See all guides →</a></p>
 </Base>

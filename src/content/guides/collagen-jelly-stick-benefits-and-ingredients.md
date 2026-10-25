@@ -1,6 +1,7 @@
 ---
-title: "What's Actually Inside a Collagen Jelly Stick? Ingredients and Doses Compared"
+title: "Collagen Jelly Stick Ingredients and Doses"
 excerpt: "Marine, bovine, and vegan collagen; pomegranate and Centella; the doses across six real UK-available sticks — what's genuinely in the pouch."
+metaDescription: "What's inside a collagen jelly stick: marine, bovine or vegan collagen, the fruit and botanical extras, and the labelled dose across six UK products."
 readTime: "5 min"
 publishDate: "2026-09-06"
 dateModified: "2026-09-23"

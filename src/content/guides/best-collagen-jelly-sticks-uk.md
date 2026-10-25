@@ -1,6 +1,7 @@
 ---
 title: "Best Collagen Jelly Sticks UK (2026)"
 excerpt: "Our current top picks across six real, currently-available collagen jelly sticks — best overall, best vegan, best value, and more, with the full comparison one click away."
+metaDescription: "Six collagen jelly sticks you can buy in the UK, compared on dose, price per stick and delivery, with picks for overall, vegan and value."
 readTime: "4 min"
 publishDate: "2026-09-24"
 dateModified: "2026-09-24"

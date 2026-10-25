@@ -1,6 +1,7 @@
 ---
-title: "Do Collagen Jelly Sticks Actually Work? What the Evidence Actually Says"
+title: "Do Collagen Jelly Sticks Work? The Evidence"
 excerpt: "The single most-asked question about this format, answered honestly — what collagen research actually shows, and what's just marketing."
+metaDescription: "Does eating collagen jelly do anything? What clinical trials show about collagen for skin, and where the marketing runs ahead of the evidence."
 readTime: "6 min"
 publishDate: "2026-09-06"
 dateModified: "2026-09-08"

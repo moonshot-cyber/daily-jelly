@@ -1,6 +1,7 @@
 ---
 title: "Does the NHS Recommend Collagen Supplements?"
 excerpt: "A specific, genuine question — what NHS-affiliated sources actually say about collagen for skin, sourced directly rather than assumed."
+metaDescription: "What an NHS trust says about collagen supplements: moderate evidence for skin elasticity and hydration, and a warning that marketing runs ahead of it."
 readTime: "4 min"
 publishDate: "2026-09-12"
 cluster: right-for-me

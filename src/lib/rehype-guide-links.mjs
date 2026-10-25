@@ -11,6 +11,18 @@ import { visit } from 'unist-util-visit';
 // directly in .md source, since by the time rehype runs both have already
 // been unified into the same hast tree (unlike a remark plugin, which would
 // only see markdown-syntax links and treat raw HTML as an opaque string).
+//
+// It also gives every surviving internal link a trailing slash (the site's
+// single canonical URL form — see vercel.json), so a link never costs a
+// redirect hop. External links, file paths with an extension, and
+// ?query / #hash suffixes are left as they are.
+function withTrailingSlash(href) {
+  if (!href.startsWith('/') || href.startsWith('//')) return href;
+  const [, path, suffix = ''] = href.match(/^([^?#]*)([?#].*)?$/);
+  if (path.endsWith('/') || /\.[^/]+$/.test(path)) return href;
+  return `${path}/${suffix}`;
+}
+
 export default function rehypeGuideLinks(options = {}) {
   const publishedSlugs = options.publishedSlugs ?? new Set();
 
@@ -19,9 +31,16 @@ export default function rehypeGuideLinks(options = {}) {
     visit(tree, 'element', (node, index, parent) => {
       if (node.tagName !== 'a' || !parent || index === null) return;
       const href = node.properties?.href;
-      if (typeof href !== 'string' || !href.startsWith('/guides/')) return;
+      if (typeof href !== 'string') return;
+      if (!href.startsWith('/guides/')) {
+        node.properties.href = withTrailingSlash(href);
+        return;
+      }
       const slug = href.replace(/^\/guides\//, '').replace(/\/$/, '');
-      if (publishedSlugs.has(slug)) return;
+      if (publishedSlugs.has(slug)) {
+        node.properties.href = withTrailingSlash(href);
+        return;
+      }
       matches.push({ node, index, parent, slug });
     });
 
