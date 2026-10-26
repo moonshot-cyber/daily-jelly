@@ -48,7 +48,7 @@ export const CLUSTERS = [
   {
     slug: 'comparisons',
     name: 'Buying Comparisons',
-    intro: 'Jelly sticks measured against the formats and categories already established in the UK.',
+    intro: 'Jelly sticks measured against the formats, brands and categories already established in the UK.',
   },
 ];
 
@@ -268,24 +268,25 @@ export const GUIDE_PRODUCTS = [
     packSize: '30 sticks, 20g each (confirmed from the nutrition label)',
     dose: 'Pomegranate concentrate, fermented black ginseng concentrate, and low-molecular-weight fish collagen — exact mg not stated on the listing',
     dailyUse: '1 stick a day',
-    priceGBP: '£38.99 per pack of 30',
-    priceLowGBP: 38.99,
-    priceHighGBP: 38.99,
-    pricePerServing: '~£1.30 per stick',
-    aggregateRating: { ratingValue: 4.4, reviewCount: 727 },
+    // Deliberately a band, not Amazon's live price, and no rating data, and no
+    // product image: Amazon's Associates IP Licence doesn't cover figures or
+    // photos copied from a listing. Every other product here is shown as a
+    // band too. Omitting `image` renders the typographic fallback tile.
+    priceGBP: '£36–42 per pack of 30',
+    priceLowGBP: 36,
+    priceHighGBP: 42,
+    pricePerServing: '~£1.20–1.40 per stick',
     ukPath: [
       { name: `Amazon UK`, href: `https://www.amazon.co.uk/dp/B0C4KQPXQ8?tag=${AMAZON_ASSOCIATES_TAG}` },
     ],
     pros: [
-      '727 ratings at 4.4 stars on Amazon UK — the most reviewed product on this list by far',
+      'The biggest pack on this list: 30 sticks, a full month at one a day',
       'Dispatched by Amazon, so Prime-speed UK delivery and Amazon\'s own returns process',
     ],
     cons: [
-      "The most expensive per-stick price after Cloo9's",
+      "The second-priciest pack on this list after Cloo9's, though with 30 sticks the cost per stick is among the lower on the list",
       'The Amazon listing itself leans on unproven claims (anti-ageing, immunity) — we don\'t repeat those; go by the ingredients, not the title',
     ],
-    image: 'https://m.media-amazon.com/images/I/61a0OWzY8wL._AC_SY450_.jpg',
-    imageRetailer: 'Amazon UK',
     isAmazon: true,
   },
 ];

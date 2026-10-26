@@ -5,6 +5,7 @@ interface UkPathLink { name: string; href: string }
 interface Props {
   slug: string;
   name: string;
+  brand?: string;
   bestFor: string;
   type: string;
   packSize: string;
@@ -15,22 +16,28 @@ interface Props {
   ukPath: UkPathLink[];
   pros: string[];
   cons: string[];
-  image: string;
-  imageRetailer: string;
+  image?: string;
+  imageRetailer?: string;
   isAmazon?: boolean;
 }
 const {
-  slug, name, bestFor, type, packSize, dose, dailyUse,
+  slug, name, brand, bestFor, type, packSize, dose, dailyUse,
   priceGBP, pricePerServing, ukPath, pros, cons, image, imageRetailer, isAmazon = false,
 } = Astro.props;
 const [primary, ...secondary] = ukPath;
 ---
 
 <article class="guide-card" id={slug}>
-  <a class="guide-card__photo" href={primary.href} target="_blank" rel="noopener sponsored">
-    <img src={image} alt={`${name} — product photo from ${imageRetailer}`} loading="lazy" width={160} height={160} />
-    <span class="product-photo__credit">Image: {imageRetailer}</span>
-  </a>
+  {image ? (
+    <a class="guide-card__photo" href={primary.href} target="_blank" rel="noopener sponsored">
+      <img src={image} alt={`${name} — product photo from ${imageRetailer}`} loading="lazy" width={160} height={160} />
+      <span class="product-photo__credit">Image: {imageRetailer}</span>
+    </a>
+  ) : (
+    <a class="guide-card__photo" href={primary.href} target="_blank" rel="noopener sponsored" aria-label={`${name} — view at ${primary.name}`}>
+      <span class="photo-tile" aria-hidden="true">{brand ?? name}</span>
+    </a>
+  )}
 
   <div class="guide-card__body">
     <h3>{name}</h3>

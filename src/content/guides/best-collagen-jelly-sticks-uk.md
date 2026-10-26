@@ -4,7 +4,7 @@ excerpt: "Our current top picks across six real, currently-available collagen je
 metaDescription: "Six collagen jelly sticks you can buy in the UK, compared on dose, price per stick and delivery, with picks for overall, vegan and value."
 readTime: "4 min"
 publishDate: "2026-09-24"
-dateModified: "2026-09-24"
+dateModified: "2026-10-26"
 cluster: comparisons
 image: "https://d1flfk77wl2xk4.cloudfront.net/Assets/19/869/XXL_p0189986919.jpg"
 imageCredit: "YesStyle"
@@ -15,7 +15,7 @@ faqs:
   - q: "What's the best vegan collagen jelly stick in the UK?"
     a: "YIXO Vegan Collagen Jelly — a UK-based brand selling direct, £26 for a 21-jelly pack. It's a plant-based collagen-support blend (Vitamin C and hyaluronic acid), not real collagen, since no plant source of animal collagen exists."
   - q: "Can you buy a collagen jelly stick on Amazon UK?"
-    a: "Yes — HAMCHOROK Rg+ Pomegranate Collagen Jelly Stick, £38.99 for 30 sticks, with Prime-speed delivery and Amazon's own returns process. It's also the most-reviewed jelly stick we track: 727 ratings at 4.4 stars."
+    a: "Yes — HAMCHOROK Rg+ Pomegranate Collagen Jelly Stick, roughly £36–42 for 30 sticks, with Prime-speed delivery and Amazon's own returns process. It's also the biggest pack we track."
   - q: "What's the highest-dose collagen jelly stick available in the UK?"
     a: "Cloo9 Collagen Jelly, at 5,000mg of marine collagen per stick as stated by the brand — more than double the next-highest option, though also the most expensive per stick at roughly £2.29. It's the cheapest per 1,000mg of collagen of the six, for the same reason."
 ---
@@ -44,7 +44,7 @@ Our current top pick overall is BB LAB Pomegranate Collagen S — the closest th
 
 ## Best if you're already on Amazon: HAMCHOROK Rg+ Pomegranate Collagen Jelly Stick
 
-£38.99 for 30 sticks. The most-reviewed jelly stick we track — 727 ratings at 4.4 stars — dispatched by Amazon for Prime-speed delivery and Amazon's own returns process.
+Roughly £36–42 for 30 sticks. The biggest pack we track, dispatched by Amazon for Prime-speed delivery and Amazon's own returns process.
 
 ## The full comparison
 

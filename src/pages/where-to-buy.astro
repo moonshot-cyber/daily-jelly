@@ -38,7 +38,7 @@ const productSchemas = GUIDE_PRODUCTS.map(p => ({
   name: p.name,
   description: p.bestFor,
   brand: { '@type': 'Brand', name: p.brand },
-  image: p.image,
+  ...(p.image ? { image: p.image } : {}),
   offers: p.priceLowGBP === p.priceHighGBP
     ? {
         '@type': 'Offer',
@@ -55,13 +55,6 @@ const productSchemas = GUIDE_PRODUCTS.map(p => ({
         offerCount: p.ukPath.length,
         url: p.ukPath[0].href,
       },
-  ...(p.aggregateRating ? {
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: p.aggregateRating.ratingValue,
-      reviewCount: p.aggregateRating.reviewCount,
-    },
-  } : {}),
 }));
 
 const breadcrumbSchema = {
@@ -86,7 +79,7 @@ const faqs = [
   },
   {
     q: 'Can I buy a collagen jelly stick on Amazon UK?',
-    a: "Yes — HAMCHOROK Rg+ Pomegranate Collagen Jelly Stick is available on Amazon UK with Prime-speed delivery and Amazon's own returns process. It's also the most-reviewed product we track, with 727 ratings at 4.4 stars at time of writing.",
+    a: "Yes — HAMCHOROK Rg+ Pomegranate Collagen Jelly Stick is available on Amazon UK with Prime-speed delivery and Amazon's own returns process. It's also the largest pack we track, at 30 sticks.",
   },
   {
     q: 'Do I have to pay customs or VAT ordering collagen jelly sticks from Korea?',

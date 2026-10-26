@@ -65,6 +65,7 @@ const amazonProduct = GUIDE_PRODUCTS.find(p => p.isAmazon);
     <div class="amazon-feature">
       <ProductImage
         name={amazonProduct.name}
+        brand={amazonProduct.brand}
         retailer={amazonProduct.imageRetailer}
         image={amazonProduct.image}
         href={amazonProduct.ukPath[0].href}

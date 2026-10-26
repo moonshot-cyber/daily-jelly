@@ -3,6 +3,7 @@ title: "Collagen Jelly Stick Reviews: BB LAB vs HAMCHOROK vs Cloo9 vs YIXO vs NO
 excerpt: "Six real jelly sticks, reviewed head to head — who each one actually suits, and where the price-per-stick maths gets uncomfortable."
 readTime: "7 min"
 publishDate: "2026-09-08"
+dateModified: "2026-10-26"
 cluster: types-and-ingredients
 ---
 
@@ -38,9 +39,9 @@ NOW Foods is a recognisable, established supplement brand, sold through Welzo ra
 
 **Skip it if:** you're specifically chasing the Korean "inner beauty" format and branding — this reads as a conventional Western supplement in jelly form, not a K-beauty snack.
 
-## HAMCHOROK Rg+ Pomegranate Collagen Jelly Stick — most-reviewed by far
+## HAMCHOROK Rg+ Pomegranate Collagen Jelly Stick — the biggest pack
 
-727 ratings at 4.4 stars on Amazon UK makes this the single most-reviewed product on our list, and it's genuinely useful to have that much real buyer feedback behind a jelly stick rather than the handful of reviews most of these brands have. Dispatched by Amazon means Prime-speed delivery too. The Amazon listing itself leans hard on unproven claims (anti-ageing, immunity) in its title and bullets — ignore those and judge it on the ingredients (pomegranate concentrate, fermented black ginseng, low-molecular fish collagen), which are genuine.
+At 30 sticks it's the biggest pack on our list, a full month at one a day, and it's the one on our list we link through Amazon UK. Dispatched by Amazon means Prime-speed delivery too. The Amazon listing itself leans hard on unproven claims (anti-ageing, immunity) in its title and bullets — ignore those and judge it on the ingredients (pomegranate concentrate, fermented black ginseng, low-molecular fish collagen), which are genuine.
 
 **Skip it if:** you don't want to wade through overclaimed marketing copy to get to the actual ingredient list — though that's true of most supplement listings on Amazon, not unique to this one.
 
