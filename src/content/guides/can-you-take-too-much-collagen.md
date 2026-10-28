@@ -4,7 +4,7 @@ excerpt: "No serious adverse events have been reported in clinical trials using 
 readTime: "5 min"
 publishDate: "2026-10-28"
 cluster: common-questions
-draft: true
+draft: false
 faqs:
   - q: "Is there an upper limit for collagen supplements?"
     a: "No regulatory body has set a tolerable upper intake level for collagen. The European Food Safety Authority has assessed collagen as safe, and the US FDA classifies it as Generally Recognised as Safe. Clinical trials have used doses from 2.5g to 36g per day without reporting serious adverse events — but the absence of a limit isn't an endorsement of high doses, just a reflection of how the evidence stands."
