@@ -5,7 +5,7 @@ metaDescription: "'Collagen stick' can mean a jelly stick you eat or a balm or w
 readTime: "5 min"
 publishDate: "2026-10-29"
 cluster: common-questions
-draft: true
+draft: false
 faqs:
   - q: "Is a collagen stick the same as a collagen wand?"
     a: "No. A collagen jelly stick is an edible food supplement in a pouch. A collagen balm stick, often sold as a 'collagen wand stick', is a skincare product applied to the skin and labelled for external use only. 'Collagen wand' is also used for handheld devices, a third thing again."
