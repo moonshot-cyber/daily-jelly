@@ -5,7 +5,7 @@ metaDescription: "Can skin absorb collagen? Whole collagen is far too big. What 
 readTime: "6 min"
 publishDate: "2026-10-30"
 cluster: common-questions
-draft: true
+draft: false
 faqs:
   - q: "Can collagen be absorbed through the skin?"
     a: "Whole collagen can't be: at around 300,000 daltons it is far too large to cross the skin's outer layer, and a review paper proposed that compounds generally need to weigh under about 500 daltons to be absorbed. Smaller collagen fragments are less clear-cut, and a few lab studies report partial penetration, but nothing we found shows that carrying over to a visible effect in people."
