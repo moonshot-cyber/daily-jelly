@@ -5,7 +5,7 @@ metaDescription: "Elavate collagen powder: what the label says, the collagen per
 readTime: "6 min"
 publishDate: "2026-11-02"
 cluster: comparisons
-draft: true
+draft: false
 faqs:
   - q: "What is in Elavate collagen?"
     a: "Per the brand's own label for the chocolate flavour, a 12g serving (2 teaspoons) contains an 8,090mg multi-collagen blend (7,900mg bovine, 150mg marine, 40mg chicken), 300mg liposomal vitamin C, 120mg hyaluronic acid, 5mg biotin, 50 million probiotic CFUs, and small amounts of zinc and vitamins B12, D3 and K2. We haven't tested it; this is the label."
