@@ -5,7 +5,7 @@ metaDescription: "Nutrition Geeks Collagen Glow Up: the label, the dose per serv
 readTime: "6 min"
 publishDate: "2026-11-03"
 cluster: comparisons
-draft: true
+draft: false
 faqs:
   - q: "What is in Nutrition Geeks Collagen Glow Up?"
     a: "One ingredient: hydrolysed bovine collagen peptides. The label gives a 14g serving (two flat tablespoons) containing 12.6g of protein, with 50 kcal and no fat, carbohydrate or sugar, plus a full amino acid breakdown. The brand says it is sourced from grass-fed Brazilian cattle and is not suitable for vegetarians or vegans. We haven't tested it; this is the label."
