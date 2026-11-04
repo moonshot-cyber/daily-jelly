@@ -4,7 +4,7 @@ excerpt: "The labels say milligrams; the trials used grams. Here's a plain compa
 readTime: "6 min"
 publishDate: "2026-11-04"
 cluster: types-and-ingredients
-draft: true
+draft: false
 faqs:
   - q: "How much collagen should I take per day?"
     a: "There's no single recommended dose. Clinical trials have used anything from 2.5g to 15g per day, depending on the outcome studied. For skin, 2.5g was enough to produce measurable changes in the VERISOL trial. For joints in active people, 5g worked. For muscle strength in older men, 15g was used. The 2026 Batool et al. meta-analysis of 35 RCTs found no significant dose-response relationship — meaning higher doses didn't produce better skin results than lower ones."
