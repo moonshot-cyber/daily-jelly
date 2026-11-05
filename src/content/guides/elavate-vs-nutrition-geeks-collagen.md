@@ -5,7 +5,7 @@ metaDescription: "Elavate vs Nutrition Geeks collagen: what each label says, the
 readTime: "6 min"
 publishDate: "2026-11-05"
 cluster: comparisons
-draft: true
+draft: false
 faqs:
   - q: "Is Elavate or Nutrition Geeks collagen better?"
     a: "We haven't tested either product, so we can't say which is better. What we can compare is the label: Elavate is a multi-ingredient blend (8,090mg collagen plus vitamin C, hyaluronic acid, biotin and probiotics) at roughly £1.95–£2.45 a serving; Nutrition Geeks is a single-ingredient bovine collagen powder (12.6g protein per serving) at roughly £0.42–£0.57. The collagen dose, source, added ingredients and price are all different."
