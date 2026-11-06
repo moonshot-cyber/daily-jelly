@@ -4,7 +4,7 @@ excerpt: "No clinical trial has ever compared starting collagen at 25 versus 35 
 readTime: "5 min"
 publishDate: "2026-11-06"
 cluster: right-for-me
-draft: true
+draft: false
 faqs:
   - q: "What age should you start taking collagen?"
     a: "No clinical trial has identified an ideal starting age. The trials that found measurable results — skin hydration, elasticity, joint comfort — included participants from their mid-thirties to their mid-sixties, and none compared age groups to show that starting earlier produces better outcomes. The decision is personal, not evidence-prescribed."
