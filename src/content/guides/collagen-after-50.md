@@ -4,7 +4,7 @@ excerpt: "Your fifties are when collagen decline accelerates — menopause sees 
 readTime: "6 min"
 publishDate: "2026-11-09"
 cluster: right-for-me
-draft: true
+draft: false
 faqs:
   - q: "Does collagen supplementation help after menopause?"
     a: "There's no clinical trial testing collagen supplements specifically for menopause-related skin changes. The most-cited skin trial (VERISOL, Proksch et al.) enrolled women aged 35–55, so some participants were likely perimenopausal or postmenopausal, but the study wasn't designed to measure menopause-related outcomes. The one trial directly relevant to postmenopausal women tested bone density, not skin — and found a genuine positive result."
