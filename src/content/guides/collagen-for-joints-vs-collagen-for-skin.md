@@ -4,7 +4,7 @@ excerpt: "Usually, yes — and the difference matters more than most supplement 
 readTime: "5 min"
 publishDate: "2026-11-10"
 cluster: right-for-me
-draft: true
+draft: false
 faqs:
   - q: "Is collagen for joints the same as collagen for skin?"
     a: "Usually not. Most skin-targeted supplements use hydrolysed Type I collagen at gram-level doses (2.5–15g), while the best-evidenced joint-specific supplements use undenatured Type II collagen (UC-II) at just 40mg. They come from different sources, work by different mechanisms, and the clinical trials behind them studied different outcomes."
