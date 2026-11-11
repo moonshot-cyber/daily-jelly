@@ -4,7 +4,7 @@ excerpt: "Vitamin C is a required cofactor for collagen synthesis — without it
 readTime: "5 min"
 publishDate: "2026-11-11"
 cluster: common-questions
-draft: true
+draft: false
 faqs:
   - q: "Why is vitamin C added to collagen supplements?"
     a: "Because vitamin C is an essential cofactor for the enzymes (prolyl hydroxylase and lysyl hydroxylase) that stabilise collagen's triple-helix structure. Without adequate vitamin C, your body can't produce stable collagen — that's the biochemistry behind scurvy. It's also the basis for the only EU/UK-authorised health claim these products can make: 'Vitamin C contributes to normal collagen formation for the normal function of skin.'"
