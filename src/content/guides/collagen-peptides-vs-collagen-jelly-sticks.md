@@ -4,7 +4,7 @@ excerpt: "One is an ingredient, the other is a format. Most of the confusion aro
 readTime: "5 min"
 publishDate: "2026-11-12"
 cluster: types-and-ingredients
-draft: true
+draft: false
 faqs:
   - q: "Are collagen peptides and collagen jelly sticks the same thing?"
     a: "No — collagen peptides are the ingredient (collagen protein broken into small, absorbable fragments), while a jelly stick is the format (a flavoured jelly pouch you eat). Most jelly sticks contain collagen peptides as their active ingredient, the same way a capsule or powder does. The peptides are the same; the packaging is different."

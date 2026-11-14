@@ -4,7 +4,7 @@ excerpt: "Yes — and the 'heat denatures it' worry misunderstands what hydrolys
 readTime: "6 min"
 publishDate: "2026-11-13"
 cluster: common-questions
-draft: true
+draft: false
 faqs:
   - q: "Can you put collagen powder in coffee?"
     a: "Yes. The common worry is that heat 'denatures' the collagen, but hydrolysed collagen has already been broken down into short peptides during manufacturing — there's no folded structure left for a hot drink to disrupt. The temperatures at which amino acids actually decompose are measured in the hundreds of degrees, not the 60–90°C of a coffee."
