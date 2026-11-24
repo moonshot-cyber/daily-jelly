@@ -114,7 +114,7 @@ taxonomy for.
 | Why Collagen and Vitamin C Are Sold Together | `why-collagen-and-vitamin-c-are-sold-together` | C | 2026-11-11 (row added 2026-11-24, was missing) |
 | Collagen Peptides vs Collagen Jelly Sticks | `collagen-peptides-vs-collagen-jelly-sticks` | B | 2026-11-12 (row added 2026-11-24, was missing) |
 | Can You Take Collagen With Coffee? | `can-you-take-collagen-with-coffee` | C | 2026-11-13 (row added 2026-11-24, was missing) |
-| Collagen for Knee Pain: What a Six-Month Korean Trial Actually Found | `korean-collagen-knee-osteoarthritis-trial` | E | 2026-11-25 |
+| Collagen for Knee Pain: What a Six-Month Korean Trial Actually Found | `korean-collagen-knee-osteoarthritis-trial` | E | 2026-11-24 |
 | Collagen Jelly Is in Target Now. What That Does and Doesn't Mean for UK Buyers | `collagen-jelly-at-target` | D | 2026-11-26 |
 
 **Buffer (2026-11-24): empty before this run.** Nothing was scheduled after 11/13, so 11/16 to 11/24 had no article. Rather than backdate, the knee-trial piece takes the next weekday from today, 11/25 (Wednesday). Buffer is two deep after the 11/26 Target piece; the rule is five, so drafting is the priority.
