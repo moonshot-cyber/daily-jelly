@@ -2,7 +2,7 @@
 title: "Collagen for Knee Pain: What a Six-Month Korean Trial Actually Found"
 excerpt: "A 2025 Pusan National University trial found 3g a day of fish-skin collagen peptides eased knee pain in early osteoarthritis more than a placebo did. Here's the full picture, including the measures that didn't move."
 readTime: "7 min"
-publishDate: "2026-11-25"
+publishDate: "2026-11-24"
 cluster: right-for-me
 draft: true
 faqs:
