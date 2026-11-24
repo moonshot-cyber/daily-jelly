@@ -4,7 +4,7 @@ excerpt: "A 2025 Pusan National University trial found 3g a day of fish-skin col
 readTime: "7 min"
 publishDate: "2026-11-24"
 cluster: right-for-me
-draft: true
+draft: false
 faqs:
   - q: "Does collagen help knee osteoarthritis?"
     a: "One 2025 randomised, double-blind, placebo-controlled trial from Pusan National University found that 3,000mg a day of low-molecular-weight fish-skin collagen peptides for 180 days reduced WOMAC knee-pain scores more than a placebo in adults aged 40 to 75 with early-stage (Kellgren-Lawrence grade I or II) knee osteoarthritis. Several other measures, including a separate pain scale, stiffness and X-ray joint space, showed no difference between the groups. It is one trial, not proof."
