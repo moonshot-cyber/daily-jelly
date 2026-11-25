@@ -35,17 +35,17 @@ The type a supplement contains depends on what it was made from. Reviews of fish
 
 This table covers every collagen product the site currently tracks or has reviewed. "Not stated" means we found no type in the listing details we recorded. It doesn't prove the physical pack never mentions one.
 
-| Product | Format | Collagen source (as listed) | Type stated? | Where we read it |
+| Product | Type stated? | Collagen source (as listed) | Format | Checked |
 |---|---|---|---|---|
-| Cloo9 Collagen Jelly | Jelly stick, 5,000mg | Marine, hydrolysed | **Type I** | Cloo9 product page, checked September 2026 |
-| NOW Foods Collagen Jelly Beauty Complex | Jelly stick, 2.5g | Bovine, VERISOL peptides | **Types I & III** | NOW Foods product page, read 25 November 2026 |
-| Nutrition Geeks Collagen Glow Up | Powder | Bovine (Brazilian cattle) | **Types I & III**, proportions not given | Brand product page, read 26 October 2026 |
-| Holland & Barrett Collagen UCII T2 40mg | Capsule, 40mg | UC-II (undenatured) | **Type II** ("T2" in the product name) | Holland & Barrett listing title, 25 November 2026 |
-| BB LAB Pomegranate Collagen S | Jelly stick, ~1,000mg | Fish | Not stated | YesStyle listing, checked September 2026 |
-| HAMCHOROK Rg+ Pomegranate Collagen Jelly | Jelly stick, mg not given | Low-molecular-weight fish collagen | Not stated | Amazon UK listing, checked September 2026 |
-| FOODOLOGY Collagen Centella Jelly | Jelly stick, mg not given | Collagen peptides (marine, per our ingredients guide) | Not stated | YesStyle listing, checked September 2026 |
-| Elavate Collagen | Powder, 8,090mg blend | Bovine 7,900mg, marine 150mg, chicken 40mg | Not stated | Brand label, read 26 October 2026 |
-| YIXO Vegan Collagen Jelly | Jelly | Plant-based "collagen-support" blend | n/a: contains no collagen | YIXO product page, checked September 2026 |
+| Cloo9 Collagen Jelly | **Type I** | Marine, hydrolysed | Jelly stick, 5,000mg | Brand page, Sep 2026 |
+| NOW Foods Collagen Jelly Beauty Complex | **Types I & III** | Bovine, VERISOL peptides | Jelly stick, 2.5g | Brand page, 25 Nov 2026 |
+| Nutrition Geeks Collagen Glow Up | **Types I & III** (proportions not given) | Bovine (Brazilian cattle) | Powder | Brand page, 26 Oct 2026 |
+| Holland & Barrett Collagen UCII T2 40mg | **Type II** ("T2" in the name) | UC-II (undenatured) | Capsule, 40mg | H&B listing title, 25 Nov 2026 |
+| BB LAB Pomegranate Collagen S | Not stated | Fish | Jelly stick, ~1,000mg | YesStyle, Sep 2026 |
+| HAMCHOROK Rg+ Pomegranate Collagen Jelly | Not stated | Low-molecular-weight fish collagen | Jelly stick, mg not given | Amazon UK, Sep 2026 |
+| FOODOLOGY Collagen Centella Jelly | Not stated | Collagen peptides (marine, per our ingredients guide) | Jelly stick, mg not given | YesStyle, Sep 2026 |
+| Elavate Collagen | Not stated | Bovine 7,900mg, marine 150mg, chicken 40mg | Powder, 8,090mg blend | Brand label, 26 Oct 2026 |
+| YIXO Vegan Collagen Jelly | n/a: no collagen | Plant-based "collagen-support" blend | Jelly | Brand page, Sep 2026 |
 
 Totals: three gram-dose products state Type I or Types I and III, one states Type II, four don't say, and one has no collagen to type.
 
