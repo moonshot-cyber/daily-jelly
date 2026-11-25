@@ -3,9 +3,10 @@ import Base from '../../layouts/Base.astro';
 import EmailCapture from '../../components/EmailCapture.astro';
 import { getCollection } from 'astro:content';
 import { SITE, CLUSTERS } from '../../lib/config';
+import { SHOW_DRAFTS } from '../../lib/preview.mjs';
 
 export async function getStaticPaths() {
-  const guides = await getCollection('guides', (g) => !g.data.draft);
+  const guides = await getCollection('guides', (g) => SHOW_DRAFTS || !g.data.draft);
   return guides.map(guide => ({
     params: { slug: guide.slug },
     props: { guide },
@@ -66,7 +67,13 @@ const jsonLd = [articleSchema, breadcrumbSchema, ...(faqSchema ? [faqSchema] : [
   image={guide.data.image}
   ogType="article"
   jsonLd={jsonLd}
+  noindex={guide.data.draft}
 >
+  {guide.data.draft && (
+    <div role="note" style="background: #fff4d6; border: 1px solid #e0b84a; color: #5a4500; padding: 10px 14px; border-radius: 6px; margin-bottom: 18px; font-size: 14px;">
+      <strong>Draft preview.</strong> Not live yet. Scheduled to publish on {guide.data.publishDate} once this PR is merged. <a href="/drafts/" style="color: inherit;">All drafts</a>
+    </div>
+  )}
   <nav aria-label="Breadcrumb" style="font-size: 13px; color: var(--text-muted); margin-bottom: 14px;">
     <a href="/" style="color: var(--text-muted);">Home</a> /
     <a href="/guides/" style="color: var(--text-muted);">Guides</a> /
