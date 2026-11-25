@@ -13,9 +13,11 @@ interface Props {
   image?: string;
   ogType?: 'website' | 'article';
   jsonLd?: object | object[];
+  // Set on draft previews (Vercel preview builds only) so they're never indexed.
+  noindex?: boolean;
 }
 
-const { title, titleOverride, description, activeNav = 'home', image, ogType = 'website', jsonLd } = Astro.props;
+const { title, titleOverride, description, activeNav = 'home', image, ogType = 'website', jsonLd, noindex = false } = Astro.props;
 const pageTitle = titleOverride ?? (title ? `${title} — ${SITE.name}` : `${SITE.name} — ${SITE.tagline}`);
 const pageDescription = description || SITE.description;
 const canonicalURL = new URL(Astro.url.pathname, SITE.url).toString();
@@ -51,6 +53,7 @@ const allSchema = [...siteSchema, ...pageSchema];
   <title>{pageTitle}</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="canonical" href={canonicalURL} />
+  {noindex && <meta name="robots" content="noindex, nofollow" />}
 
   <meta property="og:site_name" content={SITE.name} />
   <meta property="og:title" content={pageTitle} />

@@ -1,0 +1,35 @@
+---
+// QA index of draft guides. Only exists on preview builds (see
+// src/lib/preview.mjs): in production getStaticPaths returns nothing, so no
+// /drafts/ page is generated at all.
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import { SHOW_DRAFTS } from '../../lib/preview.mjs';
+
+export async function getStaticPaths() {
+  return SHOW_DRAFTS ? [{ params: { index: undefined } }] : [];
+}
+
+const drafts = (await getCollection('guides', (g) => g.data.draft)).sort(
+  (a, b) => a.data.publishDate.localeCompare(b.data.publishDate)
+);
+---
+
+<Base title="Draft previews" noindex={true}>
+  <h1 style="font-size: 28px; margin: 0 0 8px;">Draft previews</h1>
+  <p style="color: var(--text-muted); margin: 0 0 24px;">
+    Every guide with <code>draft: true</code> in this build, by scheduled publish date. This page only exists on preview deployments.
+  </p>
+  {drafts.length === 0 ? (
+    <p>No drafts in this build.</p>
+  ) : (
+    <ul style="padding-left: 18px;">
+      {drafts.map((g) => (
+        <li style="margin-bottom: 10px;">
+          <a href={`/guides/${g.slug}/`}>{g.data.title}</a>
+          <span style="color: var(--text-muted); font-size: 13px;"> · publishes {g.data.publishDate} · {g.data.cluster}</span>
+        </li>
+      ))}
+    </ul>
+  )}
+</Base>

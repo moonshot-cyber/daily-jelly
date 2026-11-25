@@ -1,6 +1,7 @@
 import { readdirSync, readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
+import { SHOW_DRAFTS } from './preview.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const GUIDES_DIR = join(__dirname, '..', 'content', 'guides');
@@ -16,7 +17,8 @@ export function getPublishedGuideSlugs() {
     const raw = readFileSync(join(GUIDES_DIR, filename), 'utf-8');
     const frontmatter = raw.split('---')[1] ?? '';
     const isDraft = /^draft:\s*true\s*$/m.test(frontmatter);
-    if (!isDraft) slugs.add(filename.replace(/\.md$/, ''));
+    // On preview builds drafts are real pages too, so links to them stay live.
+    if (!isDraft || SHOW_DRAFTS) slugs.add(filename.replace(/\.md$/, ''));
   }
   return slugs;
 }
