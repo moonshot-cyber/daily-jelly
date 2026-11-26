@@ -4,7 +4,7 @@ excerpt: "A collagen konjac jelly brand launched in Target's US beauty aisle in 
 readTime: "5 min"
 publishDate: "2026-11-26"
 cluster: korean-imports
-draft: true
+draft: false
 faqs:
   - q: "Does Target sell collagen jelly?"
     a: "Yes, in the US. Mimitime, a collagen konjac jelly brand, launched exclusively in Target's beauty aisle in August 2026 at $2.99 a pouch, according to trade press. Target's website also lists NOW Foods Collagen Jelly Beauty Complex and EVERYDAZE Essential Collagen Solution Jelly Stick, both sold through Target's online marketplace by other sellers."
