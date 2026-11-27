@@ -5,7 +5,7 @@ metaDescription: "Type I, II or III collagen? What the labels of nine UK-availab
 readTime: "6 min"
 publishDate: "2026-11-27"
 cluster: types-and-ingredients
-draft: true
+draft: false
 faqs:
   - q: "What type of collagen is in collagen jelly sticks?"
     a: "Of the jelly sticks we track, Cloo9 states Type I and NOW Foods states Types I and III. BB LAB, HAMCHOROK and FOODOLOGY give a source (fish collagen) but no type in the listing details we recorded. Fish skin and scale collagen is typically Type I according to published reviews, so Type I is the likely answer, but that's an inference from the source, not a label statement. YIXO is vegan and contains no collagen."
