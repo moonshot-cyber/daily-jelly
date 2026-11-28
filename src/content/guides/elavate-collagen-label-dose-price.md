@@ -1,11 +1,12 @@
 ---
-title: "Elavate Collagen: What's in It, What It Costs"
+title: "Elavate (Elevate) Collagen UK: Price, Label & Calories"
 excerpt: "A UK multi-collagen powder with a lot on the label. Here's what the label and product page actually state, the price per serving worked out, and what the page doesn't tell you. We haven't tested it."
-metaDescription: "Elavate collagen powder: what the label says, the collagen per serving, the price per serving worked out, and what the page leaves out. Not tested."
+metaDescription: "Elavate collagen: £0.98–£2.45 per full serving, depending on bag and bundle. The full label: 8g collagen (98% bovine), 39 calories, the biotin dose explained."
 readTime: "6 min"
 publishDate: "2026-11-02"
 cluster: comparisons
 draft: false
+dateModified: "2026-11-28"
 faqs:
   - q: "What is in Elavate collagen?"
     a: "Per the brand's own label for the chocolate flavour, a 12g serving (2 teaspoons) contains an 8,090mg multi-collagen blend (7,900mg bovine, 150mg marine, 40mg chicken), 300mg liposomal vitamin C, 120mg hyaluronic acid, 5mg biotin, 50 million probiotic CFUs, and small amounts of zinc and vitamins B12, D3 and K2. We haven't tested it; this is the label."
@@ -20,6 +21,8 @@ faqs:
 ---
 
 Elavate is a multi-collagen powder that the brand says is made in York, sold through its own website. This guide sets out what the brand's own label and product page say, works out the price per serving, and flags what the page doesn't tell you. **We haven't tested this product.** Everything below comes from the brand's label and listing as read on 26 October 2026, plus our own arithmetic. Nothing here is a verdict on whether it works, and we have no first-hand experience of how it tastes or mixes.
+
+**Price per serving, in short:** at a full 12g serving and 20 servings a bag, Elavate works out at £2.45 a serving on a one-off £49 bag, £1.95 on a £39 subscription bag, and £1.13 or £0.98 on the six- and nine-bag bundles. If a bag stretches to 40 servings, those figures halve. These are the brand's prices as shown on 26 October 2026; the [full price table](#what-it-costs) is below.
 
 A note on the name: the brand spells it "Elavate". Many people search for "Elevate", and on Holland & Barrett's site that spelling returns unrelated products.
 
